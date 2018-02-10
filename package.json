@@ -1,0 +1,15 @@
+{
+  "name": "ketakisrao",
+  "version": "1.0.0",
+  "description": "My Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github-personal:ketakisrao/ketakisrao.github.io.git"
+  },
+  "author": "Ketaki Rao",
+  "license": "ISC"
+}
