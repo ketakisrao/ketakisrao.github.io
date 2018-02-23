@@ -1,0 +1,25 @@
+.grid-container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	padding: 10px;
+	background-color: #ddd;
+}
+.grid-item {
+	border: 1px solid #000;
+	width: 200px;
+	height: 140px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.grid-item img{
+	max-width: 100%;
+}
+.puzzle-container {
+	border: 1px solid black;
+}
+.instruction {
+	font-weight: bold;
+	font-size: 18px;
+	text-align: center;
+}
