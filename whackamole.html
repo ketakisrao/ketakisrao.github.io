@@ -25,9 +25,9 @@
 		window.onload = function(){
 			var grid = document.getElementById('whackGrid');
 			var p = "";
-			var width = window.innerHeight/6 - 20;
+			var height = grid.clientWidth/6;
 			for(i=0; i<36; i++){
-				p += '<div class="grid-item" style="height:' + width + 'px;" id="box_' + (i + 1) + '" onClick="moleHit(this)"></div>';
+				p += '<div class="grid-item" style="height:' + height + 'px;" id="box_' + (i + 1) + '" onClick="moleHit(this)"></div>';
 			}
 			grid.innerHTML = p;
 			counterHolder = document.getElementById("counterHolder");
