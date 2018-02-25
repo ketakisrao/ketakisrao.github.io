@@ -22,8 +22,14 @@
 	</div>
 	<script type="text/javascript">
 		var counter = 0;
-		var counterHolder, inter, timeout;
+		var counterHolder, inter, timeout, interval;
 		window.onload = function(){
+			if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				interval = 700;
+			}
+			else{
+				interval = 1200;
+			}
 			var grid = document.getElementById('whackGrid');
 			var p = "";
 			var height = grid.clientWidth/6;
@@ -71,8 +77,9 @@
 		function startGame(){
 			var button = document.getElementById("start");
 			if(button.innerHTML == 'Start'){
+				console.log(interval);
 				counter = 0;
-				inter = setInterval(generateMoles, 1000);
+				inter = setInterval(generateMoles, interval);
 				button.innerHTML = "Stop";
 				timeout = setTimeout(function(){
 					gameOver(inter);
