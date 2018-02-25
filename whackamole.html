@@ -6,10 +6,19 @@
 	<link rel="stylesheet" href="css/whackamole.css"/>
 </head>
 <body>
-	<div id="whackGrid" class="grid-container">
+	<div class="container">
+		<div class="row equal">
+			<div class="col-md-6">
+				<div id="whackGrid" class="grid-container">
+				</div>
+				<button id="start" onClick="startGame()">Start</button>
+				<span id="counterHolder"></span>
+			</div>
+			<div class="col-md-6 instruction">
+				Whack the red tiles(moles) to get the highest score. Hurry, you have only 30 seconds!
+			</div>
+		</div>
 	</div>
-	<button id="start" onClick="startGame()">Start</button>
-	<span id="counterHolder"></span>
 	<script type="text/javascript">
 		var counter = 0;
 		var counterHolder, inter, timeout;
@@ -62,7 +71,7 @@
 			var button = document.getElementById("start");
 			if(button.innerHTML == 'Start'){
 				counter = 0;
-				inter = setInterval(generateMoles, 1500);
+				inter = setInterval(generateMoles, 1200);
 				button.innerHTML = "Stop";
 				timeout = setTimeout(function(){
 					gameOver(inter);
