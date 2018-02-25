@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Whack-a-mole</title>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<link rel="stylesheet" href="css/whackamole.css"/>
+</head>
+<body>
+	<div id="whackGrid" class="grid-container">
+	</div>
+	<button id="start" onClick="startGame()">Start</button>
+	<span id="counterHolder"></span>
+	<script type="text/javascript">
+		var counter = 0;
+		var counterHolder, inter, timeout;
+		window.onload = function(){
+			var grid = document.getElementById('whackGrid');
+			var p = "";
+			var width = window.innerHeight/6 - 20;
+			for(i=0; i<36; i++){
+				p += '<div class="grid-item" style="height:' + width + 'px;" id="box_' + (i + 1) + '" onClick="moleHit(this)"></div>';
+			}
+			grid.innerHTML = p;
+			counterHolder = document.getElementById("counterHolder");
+		}
+		function getRandom(){
+			return (Math.random() * 10)%6;
+		}
+		function clearMoles(){
+			for(i=1; i<=36; i++){
+				var box = document.getElementById("box_" + i);
+				box.style.backgroundColor = '';
+			}
+		}
+		function generateMoles(){
+			clearMoles();
+			var rows = [getRandom(), getRandom()];
+			var cols = [getRandom(), getRandom()];
+			for(i=0; i<rows.length; i++){
+				for(j=0; j<rows.length; j++){
+					var boxNo = rows[i] * 6 + cols[j] + 1;
+					if(boxNo <= 36)
+					{
+						var box = document.getElementById("box_" + Math.trunc(boxNo));
+						box.style.backgroundColor = 'red';
+					}
+				}
+			}
+		}
+		function gameOver(inter, timeout){
+			var button = document.getElementById("start");
+			button.innerHTML = "Start";
+			counterHolder.innerHTML = '';
+			clearInterval(inter);
+			if(timeout){
+				clearTimeout(timeout);
+			}
+			clearMoles();
+			alert("Game Over, your score is " + counter + "!");
+		}
+		function startGame(){
+			var button = document.getElementById("start");
+			if(button.innerHTML == 'Start'){
+				counter = 0;
+				inter = setInterval(generateMoles, 1500);
+				button.innerHTML = "Stop";
+				timeout = setTimeout(function(){
+					gameOver(inter);
+				}, 30000);
+			}
+			else{
+				gameOver(inter, timeout);
+			}
+		}
+		function moleHit(obj){
+			if(obj.style.backgroundColor == 'red'){
+				counter ++;
+				obj.style.backgroundColor = '';
+				counterHolder.innerHTML = counter;
+			}
+		}
+	</script>
+</body>
+</html>
