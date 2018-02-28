@@ -3,24 +3,19 @@
 <head>
 	<title>Whack-a-mole</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="css/jquery-ui.css"/>
 	<link rel="stylesheet" href="css/bootstrap.css"/>
 	<link rel="stylesheet" href="css/whackamole.css"/>
 </head>
 <body>
-	<div class="container">
-		<div class="row equal">
-			<div class="col-md-6">
-				<div id="whackGrid" class="grid-container">
-				</div>
-				<button id="start" onClick="startGame()">Start</button>
-				<span id="counterHolder"></span>
-			</div>
-			<div class="col-md-6 instruction">
-				Whack(click) the moles to get the highest score. Hurry, you have only 30 seconds!
-			</div>
-		</div>
+	<div id="whackGrid" class="grid-container">
+	</div>
+	<button id="start" onClick="startGame()">Start</button>
+	<span id="counterHolder"></span>
+	Whack(click) the moles to get the highest score. Hurry, you have only 30 seconds!
 	</div>
 	<script src="js/jquery.js"></script>
+	<script src='js/jquery-ui.min.js'></script>
 	<script src="js/popper.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script type="text/javascript">
@@ -28,7 +23,7 @@
 		var maxTime = 2000;
 		var minTime = 700;
 		var counterHolder, inter, timeout, interval;
-		window.onload = function(){
+		$(document).ready(function(){
 			if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 				interval = 1000;
 				minTime = 600;
@@ -39,13 +34,13 @@
 			}
 			var grid = document.getElementById('whackGrid');
 			var p = "";
-			var height = grid.clientWidth/6;
+			// var height = grid.clientWidth/6;
 			for(i=0; i<36; i++){
-				p += '<div class="grid-item" style="height:' + height + 'px;" id="box_' + (i + 1) + '" onClick="moleHit(this)"></div>';
+				p += '<div class="grid-item" style="height: 100px;" id="box_' + (i + 1) + '" onClick="moleHit(this.id)"><img src="whackamole/mole.png" style="display:none; max-width: 100%"/></div>';
 			}
 			grid.innerHTML = p;
 			counterHolder = document.getElementById("counterHolder");
-		}
+		});
 		function getRandom(min, max){
 			if(min)
 				return Math.random() * (max - min) + min;
@@ -54,7 +49,7 @@
 		}
 		function clearMoles(){
 			for(i=1; i<=36; i++){
-				$("#box_" + i).removeClass('molePopup');
+				$("#box_" + i + " img").hide();
 			}
 		}
 		function generateMoles(){
@@ -63,14 +58,12 @@
 			var boxNo = row * 6 + col + 1;
 			if(boxNo <= 36)
 			{
-				if(!$("#box_" + boxNo).hasClass('molePopup')){
-					$("#box_" + boxNo).addClass('molePopup');
-					(function(b){
-						setTimeout(function(){
-							$("#box_" + b).removeClass('molePopup');
-						}, getRandom(minTime, maxTime));
-					})(boxNo);
-				}
+				$("#box_" + boxNo + " img").show('slide', {direction: 'down'}, 500);
+				(function(b){
+					setTimeout(function(){
+						$("#box_" + boxNo + " img").hide('slide', {direction: 'down'}, 500);
+					}, getRandom(minTime, maxTime));
+				})(boxNo);
 			}
 		}
 		function gameOver(inter, timeout){
@@ -103,10 +96,10 @@
 				gameOver(inter, timeout);
 			}
 		}
-		function moleHit(obj){
-			if($(obj).hasClass('molePopup')){
+		function moleHit(boxNo){
+			if($("#" + boxNo + " img").css('display') != 'none'){
 				counter ++;
-				$(obj).removeClass('molePopup');
+				$("#" + boxNo + " img").hide();
 				counterHolder.innerHTML = counter;
 			}
 		}
