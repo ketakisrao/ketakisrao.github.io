@@ -89,8 +89,10 @@
 			if(button.innerHTML == 'Start'){
 				counter = 0;
 				inter = setInterval(function(){
-					generateMoles();
-					generateMoles();
+					var times = getRandom();
+					for(i=0; i<times; i++){
+						generateMoles();
+					}
 				}, interval);
 				button.innerHTML = "Stop";
 				timeout = setTimeout(function(){
