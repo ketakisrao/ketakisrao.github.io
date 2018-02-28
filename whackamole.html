@@ -8,12 +8,21 @@
 	<link rel="stylesheet" href="css/whackamole.css"/>
 </head>
 <body>
-	<div id="whackGrid" class="grid-container">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-7">
+				<div id="whackGrid" class="grid-container">
+				</div>
+				<button id="start" onClick="startGame()">Start</button>
+				<span id="counterHolder"></span>
+			</div>
+			<div class="col-md-5 instruction">
+				Whack(click) the moles to get the highest score. Hurry, you have only 30 seconds!
+				</div>
+			</div>
+		</div>
 	</div>
-	<button id="start" onClick="startGame()">Start</button>
-	<span id="counterHolder"></span>
-	Whack(click) the moles to get the highest score. Hurry, you have only 30 seconds!
-	</div>
+	
 	<script src="js/jquery.js"></script>
 	<script src='js/jquery-ui.min.js'></script>
 	<script src="js/popper.js"></script>
@@ -34,9 +43,14 @@
 			}
 			var grid = document.getElementById('whackGrid');
 			var p = "";
-			// var height = grid.clientWidth/6;
+			var gridTemp = "";
+			var height = grid.clientWidth/6;
+			for(i=0; i<6; i++){
+				gridTemp += height + "px "
+			}
+			$(grid).css('grid-template-columns', gridTemp);
 			for(i=0; i<36; i++){
-				p += '<div class="grid-item" style="height: 100px;" id="box_' + (i + 1) + '" onClick="moleHit(this.id)"><img src="whackamole/mole.png" style="display:none; max-width: 100%"/></div>';
+				p += '<div class="grid-item" style="height: ' + height + 'px;" id="box_' + (i + 1) + '" onClick="moleHit(this.id)"><img draggable="false" src="whackamole/mole.png" style="display:none; max-width: 100%"/></div>';
 			}
 			grid.innerHTML = p;
 			counterHolder = document.getElementById("counterHolder");
