@@ -113,7 +113,7 @@
 		function moleHit(boxNo){
 			if($("#" + boxNo + " img").css('display') != 'none'){
 				counter ++;
-				$("#" + boxNo + " img").hide();
+				$("#" + boxNo + " img").hide('puff', 150);
 				counterHolder.innerHTML = counter;
 			}
 		}

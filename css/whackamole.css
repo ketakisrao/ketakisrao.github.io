@@ -17,7 +17,3 @@
 	align-items: center;
 	justify-content: center;
 }
-.molePopup {
-	background-image: url(../whackamole/mole.png);
-	background-size: contain;
-}
