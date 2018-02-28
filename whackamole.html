@@ -63,12 +63,14 @@
 			var boxNo = row * 6 + col + 1;
 			if(boxNo <= 36)
 			{
-				$("#box_" + boxNo).addClass('molePopup');
-				(function(b){
-					setTimeout(function(){
-						$("#box_" + b).removeClass('molePopup');
-					}, getRandom(minTime, maxTime));
-				})(boxNo);
+				if(!$("#box_" + boxNo).hasClass('molePopup')){
+					$("#box_" + boxNo).addClass('molePopup');
+					(function(b){
+						setTimeout(function(){
+							$("#box_" + b).removeClass('molePopup');
+						}, getRandom(minTime, maxTime));
+					})(boxNo);
+				}
 			}
 		}
 		function gameOver(inter, timeout){
