@@ -5,13 +5,19 @@
 	background-color: #ddd;
 }
 .grid-item {
+	background-size: contain;
 	border: 1px solid #000;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	transition: background-image 500ms linear;
 }
 .instruction {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+.molePopup {
+	background-image: url(../whackamole/mole.png);
+	background-size: contain;
 }
