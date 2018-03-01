@@ -12,8 +12,9 @@
 	justify-content: center;
 	transition: background-image 500ms linear;
 }
-.instruction {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+body {
+	/*background-color: #26de81;*/
+}
+.center {
+	margin: 0 auto;
 }
