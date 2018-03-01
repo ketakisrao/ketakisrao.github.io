@@ -10,16 +10,14 @@
 <body>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6 center">
-				<div id="whackGrid" class="grid-container">
-				</div>
-				<button id="start" onClick="startGame()">Start</button>
-				<span id="counterHolder"></span>
+			<div class="col-md-6 center" id="whackGrid">
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-sm-6 center">
-				Whack(click) the moles to get the highest score. Hurry, you have only 30 seconds!
+				<button id="start" onClick="startGame()">Start</button>
+				<span id="counterHolder"></span>
+				<p>Whack(click) the moles to get the highest score. Hurry, you have only 30 seconds!</p>
 			</div>
 		</div>
 	</div>
@@ -40,18 +38,22 @@
 				maxTime = 1500;
 			}
 			else{
-				interval = 1500;
+				interval = 1400;
 			}
 			var grid = document.getElementById('whackGrid');
 			var p = "";
 			var gridTemp = "";
-			var height = grid.clientWidth/6;
+			var height = Math.trunc(grid.clientWidth/6);
 			for(i=0; i<6; i++){
-				gridTemp += height + "px "
+				gridTemp += height + "px ";
 			}
 			$(grid).css('grid-template-columns', gridTemp);
-			for(i=0; i<36; i++){
-				p += '<div class="grid-item" style="height: ' + height + 'px;" id="box_' + (i + 1) + '" onClick="moleHit(this.id)"><img draggable="false" src="whackamole/mole.png" style="display:none; max-width: 100%"/></div>';
+			for(i=0; i<6; i++){
+				p += '<div class="row">';
+				for(j=0; j<6; j++){
+					p += '<div class="col-sm-2" style="height: ' + height + 'px;" id="box_' + (i * 6 + j + 1) + '" onClick="moleHit(this.id)"><img draggable="false" src="whackamole/mole.png" style="display:none; max-width: 100%"/></div>';
+				}
+				p += '</div>';
 			}
 			grid.innerHTML = p;
 			counterHolder = document.getElementById("counterHolder");
@@ -102,6 +104,7 @@
 						generateMoles();
 					}
 				}, interval);
+				console.log(inter);
 				button.innerHTML = "Stop";
 				timeout = setTimeout(function(){
 					gameOver(inter);

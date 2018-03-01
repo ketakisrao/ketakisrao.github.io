@@ -1,20 +1,12 @@
-.grid-container {
-	display: grid;
-	width: 100%;
-	padding: 10px;
-	user-select: none;
-}
-.grid-item {
-	background-size: contain;
-	border: 1px solid #000;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	transition: background-image 500ms linear;
-}
 body {
-	/*background-color: #26de81;*/
+	/*background-color: #fc5c65;*/
 }
 .center {
 	margin: 0 auto;
+}
+.col-sm-2 {
+	display: flex;
+	align-items: center;
+	border: 1px solid #000;
+	user-select: none;
 }
