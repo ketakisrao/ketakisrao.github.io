@@ -8,20 +8,36 @@
 	<link rel="stylesheet" href="css/whackamole.css"/>
 </head>
 <body>
-	<div class="container">
+	<div class="container top">
 		<div class="row">
-			<div class="col-md-6 center" id="whackGrid">
+			<div class="col-md-5 center" id="whackGrid">
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-sm-6 center">
-				<button id="start" onClick="startGame()">Start</button>
+			<div class="col-md-5 center">
+				<button class="btn btn-warning start-btn" id="start" onClick="startGame()">Start</button>
 				<span id="counterHolder"></span>
-				<p>Whack(click) the moles to get the highest score. Hurry, you have only 30 seconds!</p>
+				<p class="instruction">Whack(click) the moles to get the highest score. Hurry, you have only 30 seconds!</p>
 			</div>
 		</div>
 	</div>
-	
+	<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="game-over-modal">
+					<div class="modal-top">
+						<div class="icon-container">
+							<img src="whackamole/mole.png"/>
+						</div>
+					</div>
+					<div class="modal-bottom">
+						<p id="score"></p>
+						<button class="btn btn-primary" data-dismiss="modal">Okay</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script src="js/jquery.js"></script>
 	<script src='js/jquery-ui.min.js'></script>
 	<script src="js/popper.js"></script>
@@ -92,7 +108,8 @@
 				clearTimeout(timeout);
 			}
 			clearMoles();
-			alert("Game Over, your score is " + counter + "!");
+			$("#score").text("Your score is " + counter);
+			$("#myModal").modal({keyboard: false, backdrop: false});
 		}
 		function startGame(){
 			var button = document.getElementById("start");
@@ -104,7 +121,6 @@
 						generateMoles();
 					}
 				}, interval);
-				console.log(inter);
 				button.innerHTML = "Stop";
 				timeout = setTimeout(function(){
 					gameOver(inter);

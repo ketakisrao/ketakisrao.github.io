@@ -3,10 +3,46 @@ body {
 }
 .center {
 	margin: 0 auto;
+	text-align: center;
 }
 .col-sm-2 {
 	display: flex;
 	align-items: center;
 	border: 1px solid #000;
+}
+.top {
+	margin-top: 20px;
 	user-select: none;
+}
+.start-btn {
+	margin-top: 20px;
+}
+.game-over-modal {
+	height: 500px;
+}
+.modal-top {
+	background-color: #fd9644;
+	height: 30%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.icon-container {
+	background-color: #fd9644;
+	margin-top: 30%;
+	height: 100px;
+	width: 100px;
+	transform: rotate(-45deg);
+	border-radius: 0.3rem;
+}
+.icon-container img{
+	max-width: 100%;
+	transform: rotate(45deg);
+}
+.modal-bottom {
+	height: 70%;
+	text-align: center;
+}
+.modal-bottom p {
+	margin-top: 120px;
 }
