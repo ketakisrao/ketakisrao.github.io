@@ -11,11 +11,9 @@
 	<div class="container top">
 		<div class="row">
 			<div class="col-md-5 center">
-				<div>
-					<div id="whackGrid"></div>
-					<button class="btn btn-warning start-btn" id="start" onClick="startGame()">Start</button>
-				</div>
-				<span id="counterHolder"></span>
+				<div id="whackGrid"></div>
+				<button class="btn btn-warning start-btn" id="start" onClick="startGame()">Start</button>
+				<div id="counterHolder">&nbsp;</div>
 				<div id="myModal" class="game-over">
 					<div class="game-over-modal">
 						<div class="modal-top">
@@ -25,7 +23,8 @@
 						</div>
 						<div class="score">
 							<p id="score"></p>
-							<button class="btn btn-warning" onCLick="hideScore()">Play Again?</button>
+							<button class="btn btn-warning" onCLick="hideScore(true)">Play Again?</button>
+							<button class="btn btn-warning" onCLick="hideScore()">Back</button>
 						</div>
 					</div>
 				</div>	
@@ -137,9 +136,10 @@
 				counterHolder.innerHTML = counter;
 			}
 		}
-		function hideScore(){
+		function hideScore(replay){
 			$("#myModal").hide('slide', {direction: 'up'}, 500);
-			startGame();
+			if(replay)
+				startGame();
 		}
 	</script>
 </body>
