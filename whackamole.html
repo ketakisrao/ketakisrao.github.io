@@ -10,31 +10,30 @@
 <body>
 	<div class="container top">
 		<div class="row">
-			<div class="col-md-5 center" id="whackGrid">
+			<div class="col-md-5 center">
+				<div>
+					<div id="whackGrid"></div>
+					<button class="btn btn-warning start-btn" id="start" onClick="startGame()">Start</button>
+				</div>
+				<span id="counterHolder"></span>
+				<div id="myModal" class="game-over">
+					<div class="game-over-modal">
+						<div class="modal-top">
+							<div class="icon-container">
+								<img src="whackamole/mole.png"/>
+							</div>
+						</div>
+						<div class="score">
+							<p id="score"></p>
+							<button class="btn btn-warning" onCLick="hideScore()">Play Again?</button>
+						</div>
+					</div>
+				</div>	
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-md-5 center">
-				<button class="btn btn-warning start-btn" id="start" onClick="startGame()">Start</button>
-				<span id="counterHolder"></span>
 				<p class="instruction">Whack(click) the moles to get the highest score. Hurry, you have only 30 seconds!</p>
-			</div>
-		</div>
-	</div>
-	<div id="myModal" class="modal fade" role="dialog">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="game-over-modal">
-					<div class="modal-top">
-						<div class="icon-container">
-							<img src="whackamole/mole.png"/>
-						</div>
-					</div>
-					<div class="modal-bottom">
-						<p id="score"></p>
-						<button class="btn btn-primary" data-dismiss="modal">Okay</button>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -109,7 +108,8 @@
 			}
 			clearMoles();
 			$("#score").text("Your score is " + counter);
-			$("#myModal").modal({keyboard: false, backdrop: false});
+			// $("#myModal").modal({keyboard: false, backdrop: false});
+			$("#myModal").show('slide', {direction: 'up'}, 500);
 		}
 		function startGame(){
 			var button = document.getElementById("start");
@@ -136,6 +136,10 @@
 				$("#" + boxNo + " img").hide('puff', 150);
 				counterHolder.innerHTML = counter;
 			}
+		}
+		function hideScore(){
+			$("#myModal").hide('slide', {direction: 'up'}, 500);
+			startGame();
 		}
 	</script>
 </body>

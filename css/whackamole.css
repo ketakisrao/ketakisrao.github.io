@@ -14,8 +14,18 @@
 .start-btn {
 	margin-top: 20px;
 }
+.game-over {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
+}
 .game-over-modal {
-	height: 500px;
+	position: relative;
+	background-color: #ffffff;
+	height: 101%;
 }
 .modal-top {
 	background-color: #fd9644;
@@ -36,10 +46,9 @@
 	max-width: 100%;
 	transform: rotate(45deg);
 }
-.modal-bottom {
-	height: 70%;
-	text-align: center;
+.score {
+	margin-top: 30%;
 }
-.modal-bottom p {
-	margin-top: 120px;
+.btn {
+	cursor: pointer;
 }
