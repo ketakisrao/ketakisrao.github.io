@@ -156,3 +156,32 @@
 .btn-1d:hover {
 	background-color: #f29e0d;
 }
+.btn-1e {
+	background-color: #58B19F;
+	overflow: hidden;
+}
+.btn-1e span {
+	display: inline-block;
+	transition: all 0.3s;
+}
+.btn-1e:before {
+	font-family: FontAwesome;
+	font-size: 1.5em;
+	content: '\f013';
+	position: absolute;
+	top: -100%;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	color: #ffffff;
+	background-color: transparent;
+	line-height: 50px;
+	vertical-align: middle;
+	transition: all 0.3s;
+}
+.btn-1e:hover:before {
+	top: 0;
+}
+.btn-1e:hover span {
+	transform: translatey(300%);
+}
