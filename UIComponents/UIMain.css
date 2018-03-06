@@ -169,19 +169,33 @@
 	font-size: 1.5em;
 	content: '\f013';
 	position: absolute;
-	top: -100%;
+	top: 0;
 	left: 0;
 	height: 100%;
 	width: 100%;
-	color: #ffffff;
 	background-color: transparent;
+	color: #58B19F;
 	line-height: 50px;
 	vertical-align: middle;
 	transition: all 0.3s;
 }
-.btn-1e:hover:before {
-	top: 0;
+.vertical1e:before {
+	top: -100%;
 }
-.btn-1e:hover span {
+.horizontal1e:before {
+	left: -100%;
+}
+.vertical1e:hover:before {
+	top: 0;
+	color: #ffffff;
+}
+.vertical1e:hover span {
 	transform: translatey(300%);
+}
+.horizontal1e:hover:before {
+	left: 0;
+	color: #ffffff;	
+}
+.horizontal1e:hover span {
+	transform: translateX(300%);
 }
