@@ -14,13 +14,6 @@
 	margin-top: 80px;
 }
 
-.card-btn {
-	height: 200px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
 .myCard {
 	height: 340px;
 	border: 1px solid rgba(0, 0, 0, 0.125);
@@ -28,10 +21,21 @@
 	box-shadow: 4px 2px 10px #dddddd;
 }
 
+.card-btn {
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .card-content {
 	padding: 1.25rem;
 	max-height: 140px;
 	overflow-y: scroll;
+}
+
+.content-holder .row {
+	margin-top: 30px;
 }
 
 /*BUTTON STYLES*/
@@ -45,6 +49,8 @@
 	outline: none;
 	position: relative;
 	transition: all 0.3s;
+	text-transform: uppercase;
+	border: none;
 }
 
 .btn-flat:focus {
@@ -57,7 +63,6 @@
 
 .btn-1a {
 	background-color: #FD7272;
-	border: none;
 	box-shadow: 2px 2px 10px grey;
 }
 
@@ -112,4 +117,42 @@
 .horizontal:hover:before{
 	width: 100%;
 	background-color: #ffffff;
+}
+
+.btn-1c-bkg {
+	display: block;
+	height: 50px;
+}
+
+.btn-1c {
+	background-color: #cb4e4e;
+	box-shadow: 0 6px #ab3c3c;
+	transition: none;
+}
+
+.btn-1c:hover {
+	box-shadow: 0 4px #ab3c3c;
+	top: 2px;
+}
+.btn-1d-bkg {
+	background-color: #fcd04b;
+}
+.btn-1d {
+	padding-left: 15%;
+	background-color: #fcad26;
+}
+.btn-1d:before {
+	font-family: FontAwesome;
+	content: "\f07a";
+	position: absolute;
+	width: 20%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.05);
+	top: 0;
+	left: 0;
+	line-height: 50px;
+	vertical-align: middle;
+}
+.btn-1d:hover {
+	background-color: #f29e0d;
 }

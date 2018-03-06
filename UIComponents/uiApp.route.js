@@ -14,9 +14,7 @@ uiApp.config([
 		});
 		$urlRouterProvider.when("/", "/buttons");
 		$urlRouterProvider.otherwise(function($injector){
-			console.log("Otherwise")
 			var state = $injector.get('$state');
-			console.log(state);
 			state.go('buttons');
 		});
 	}
