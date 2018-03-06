@@ -3,5 +3,6 @@ RewriteEngine on
 # Don't rewrite files or directories
 #RewriteBase /
 RewriteCond %{REQUEST_URI} ^/UIComponents [NC]
-# redirect other to index.shtml
+RewriteCond %{REQUEST_FILENAME} !-f
+# redirect other to index.html
 RewriteRule . UIComponents/index.html [L]
