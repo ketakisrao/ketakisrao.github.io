@@ -1,0 +1,35 @@
+@font-face {
+    font-family: felt;
+    src: url(../../fonts/MarkerFelt.ttf);
+}
+
+.main-header {
+	font-family: felt;
+	text-align: center;
+	font-size: 80pt;
+	text-shadow: 23px 18px 20px darkgrey;
+}
+
+.content-holder {
+	margin-top: 80px;
+}
+
+.card-btn {
+	height: 200px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.myCard {
+	height: 340px;
+	border: 1px solid rgba(0, 0, 0, 0.125);
+	border-radius: 0.25rem;
+	box-shadow: 4px 2px 10px #dddddd;
+}
+
+.card-content {
+	padding: 1.25rem;
+	max-height: 140px;
+	overflow-y: scroll;
+}
