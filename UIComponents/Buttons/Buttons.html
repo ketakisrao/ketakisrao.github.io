@@ -16,13 +16,16 @@
 					</div>
 				</div>
 				<div class="col-md-3">
-					<div class="myCard">
+					<div class="myCard" ng-init="top='h'">
 						<div class="card-btn btn-1b-bkg">
-							<button class="btn-flat btn-1b">Add Button</button>
+							<button class="btn-flat btn-1b" ng-class="{vertical: top == 'v', horizontal: top == 'h'}">Add Button</button>
 						</div>
 						<div class="card-content">
 							<h5 class="card-title">Clear Hover Button</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+							<p class="card-text">
+								<input name="myRad" type="radio" ng-model="top" value="h">&nbsp;&nbsp;Horizontal
+								<input name="myRad" type="radio" ng-model="top" value="v">&nbsp;&nbsp;Vertical
+							</p>
 						</div>
 					</div>
 				</div>

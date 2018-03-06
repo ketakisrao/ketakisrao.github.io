@@ -89,14 +89,27 @@
 	content: '';
 	position: absolute;
 	transition: all 0.3s;
-	width: 100%;
-	height: 0;
 	top: 0;
 	left: 0;
+	height: 100%;
+	width: 100%;
 	z-index: -1;
+}
+
+.vertical:before {
+	height: 0;
+}
+
+.horizontal:before {
+	width: 0;
+}
+
+.vertical:hover:before{
+	height: 100%;
 	background-color: #ffffff;
 }
 
-.btn-1b:hover:before{
-	height: 100%;
+.horizontal:hover:before{
+	width: 100%;
+	background-color: #ffffff;
 }
