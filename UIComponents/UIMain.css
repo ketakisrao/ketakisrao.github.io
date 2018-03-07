@@ -199,3 +199,33 @@
 .horizontal1e:hover span {
 	transform: translateX(300%);
 }
+
+.btn-1f {
+	background-color: #58B19F;
+	overflow: hidden;
+}
+.btn-1f:after {
+	font-family: FontAwesome;
+	font-size: 1.5em;
+	content: '\f0d1';
+	margin-left: 10px;
+	transition: all 0.7s;
+}
+.btnActive:after {
+	animation: moveLeft 0.5s;
+}
+.btnActive span {
+	animation: fadeOutIn 0.5s;
+}
+@keyframes moveLeft {
+	80% {opacity: 1; margin-left: -300px;}
+	81% {opacity: 0; margin-left: -300px;}
+	82% {opacity: 0; margin-left: 100px;}
+	83% {opacity: 1; margin-left: 100px;}
+	100% {margin-left: 10px;}
+}
+@keyframes fadeOutIn {
+	0% {opacity: 0;}
+	80% {opacity: 0;}
+	100% {opacity: 1;}
+}

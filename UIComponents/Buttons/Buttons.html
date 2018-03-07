@@ -18,7 +18,7 @@
 				<div class="col-md-4">
 					<div class="myCard" ng-init="top='h'">
 						<div class="card-btn btn-1b-bkg">
-							<button class="btn-flat btn-1b" ng-class="{vertical: top == 'v', horizontal: top == 'h'}">Add User</button>
+							<button class="btn-flat btn-1b" ng-class="{vertical: top == 'v', horizontal: top == 'h'}">Submit</button>
 						</div>
 						<div class="card-content">
 							<h5 class="card-title">Clear Hover Button</h5>
@@ -32,7 +32,7 @@
 				<div class="col-md-4">
 					<div class="myCard">
 						<div class="card-btn">
-							<button class="btn-flat btn-1c">Add User</button>
+							<button class="btn-flat btn-1c">Ok</button>
 						</div>
 						<div class="card-content">
 							<h5 class="card-title">Press Button Flat</h5>
@@ -61,8 +61,21 @@
 						<div class="card-content">
 							<h5 class="card-title">Plain Flat Button</h5>
 							<p class="card-text">
-								<input name="myRad" type="radio" ng-model="top1e" value="h">&nbsp;&nbsp;Horizontal
-								<input name="myRad" type="radio" ng-model="top1e" value="v">&nbsp;&nbsp;Vertical</p>
+								<input name="radio1e" type="radio" ng-model="top1e" value="h">&nbsp;&nbsp;Horizontal
+								<input name="radio1e" type="radio" ng-model="top1e" value="v">&nbsp;&nbsp;Vertical
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="myCard">
+						<div class="card-btn">
+							<button class="btn-flat btn-1f" ng-class="{btnActive: btn1fClick}" ng-click="activateBtn()"><span>Order</span></button>
+						</div>
+						<div class="card-content">
+							<h5 class="card-title">Plain Flat Button</h5>
+							<p class="card-text">
+							</p>
 						</div>
 					</div>
 				</div>
