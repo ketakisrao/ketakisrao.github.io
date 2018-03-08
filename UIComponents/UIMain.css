@@ -199,9 +199,11 @@
 .horizontal1e:hover span {
 	transform: translateX(300%);
 }
-
+.btn-1f-bkg {
+	background-color: #AEBD38;
+}
 .btn-1f {
-	background-color: #58B19F;
+	background-color: #598234;
 	overflow: hidden;
 }
 .btn-1f:after {
@@ -210,12 +212,13 @@
 	content: '\f0d1';
 	margin-left: 10px;
 	transition: all 0.7s;
+	color: #AEBD38;
 }
 .btnActive:after {
 	animation: moveLeft 0.5s;
 }
 .btnActive span {
-	animation: fadeOutIn 0.5s;
+	animation: fadeOutIn 1s;
 }
 @keyframes moveLeft {
 	80% {opacity: 1; margin-left: -300px;}
@@ -225,7 +228,7 @@
 	100% {margin-left: 10px;}
 }
 @keyframes fadeOutIn {
-	0% {opacity: 0;}
-	80% {opacity: 0;}
-	100% {opacity: 1;}
+	0% {color: transparent;}
+	50% {color: transparent;}
+	100% {color: #ffffff;}
 }

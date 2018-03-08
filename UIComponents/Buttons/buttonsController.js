@@ -4,6 +4,6 @@ uiApp.controller("buttonsController", ["$scope", "$timeout", function($scope, $t
 		$scope.btn1fClick = true;
 		$timeout(function(){
 			$scope.btn1fClick = false;
-		}, 500);
+		}, 700);
 	};
 }]);
