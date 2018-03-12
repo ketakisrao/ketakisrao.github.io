@@ -233,6 +233,43 @@
 	100% {color: #ffffff;}
 }
 
+.btn-round {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	color: #ffffff;
+	cursor: pointer;
+	outline: none;
+	position: relative;
+	transition: all 0.3s;
+	text-transform: uppercase;
+	border: none;
+}
+
+.btn-round:focus {
+	outline: none;
+}
+
+.btn-round:active {
+	outline: none;
+}
 .btn-2a {
-	
+	font-size: 30px;
+	background-color: green;
+}
+.tl {
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+.tr {
+	align-items: flex-start;
+	justify-content: flex-end;
+}
+.bl {
+	align-items: flex-end;
+	justify-content: flex-start;
+}
+.br {
+	align-items: flex-end;
+	justify-content: flex-end;
 }

@@ -94,5 +94,60 @@
 				</div>
 			</div>
 		</section>
+		<section class="content-holder">
+			<div class="container">
+				<h1>Round Buttons</h1>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="myCard">
+							<div class="card-btn">
+								<button class="btn-round btn-2a">
+									<span>+</span>
+								</button>
+							</div>
+							<div class="card-content">
+								<h5 class="card-title">Plain Round Button</h5>
+								<p class="card-text">
+									<input name="plainRound" type="radio" ng-model="btn2a" value="add">&nbsp;&nbsp;Add<br>
+									<input name="plainRound" type="radio" ng-model="btn2a" value="del">&nbsp;&nbsp;Delete<br>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="myCard">
+							<div class="card-btn" ng-class="{tl: btn2b == 'tl', tr: btn2b =='tr', bl: btn2b =='bl', br: btn2b == 'br'}">
+								<button class="btn-round btn-2a">
+									<span>+</span>
+								</button>
+							</div>
+							<div class="card-content">
+								<h5 class="card-title">Fixed Round Button</h5>
+								<p class="card-text">
+									<input name="fixedRound" type="radio" ng-model="btn2b" value="tl">&nbsp;&nbsp;TopLeft<br>
+									<input name="fixedRound" type="radio" ng-model="btn2b" value="tr">&nbsp;&nbsp;TopRight<br>
+									<input name="fixedRound" type="radio" ng-model="btn2b" value="bl">&nbsp;&nbsp;BottomLeft<br>
+									<input name="fixedRound" type="radio" ng-model="btn2b" value="br">&nbsp;&nbsp;BottomRight
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="myCard">
+							<div class="card-btn">
+								<button class="btn-round btn-2a">
+									<span>+</span>
+								</button>
+							</div>
+							<div class="card-content">
+								<h5 class="card-title">Plain Round Button</h5>
+								<p class="card-text">
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</body>
 </html>
