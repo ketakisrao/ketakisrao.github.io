@@ -1,6 +1,6 @@
 @font-face {
     font-family: felt;
-    src: url(../../fonts/MarkerFelt.ttf);
+    src: url(../fonts/MarkerFelt.ttf);
 }
 /*COMMON STYLES*/
 .main-header {
@@ -231,4 +231,8 @@
 	0% {color: transparent;}
 	50% {color: transparent;}
 	100% {color: #ffffff;}
+}
+
+.btn-2a {
+	
 }
