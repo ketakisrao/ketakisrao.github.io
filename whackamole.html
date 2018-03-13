@@ -97,6 +97,14 @@
 				})(boxNo);
 			}
 		}
+		function stopAllTimeouts()
+		{
+			var id = window.setTimeout(null,0);
+			while (id--) 
+			{
+				window.clearTimeout(id);
+			}
+		}
 		function gameOver(inter, timeout){
 			var button = document.getElementById("start");
 			button.innerHTML = "Start";
@@ -105,10 +113,12 @@
 			if(timeout){
 				clearTimeout(timeout);
 			}
-			setTimeout(clearMoles, 1000);
+			stopAllTimeouts();
+			clearMoles();
 			$("#score").text("Your score is " + counter);
 			// $("#myModal").modal({keyboard: false, backdrop: false});
 			$("#myModal").show('slide', {direction: 'up'}, 500);
+			counter = 0;
 		}
 		function startGame(){
 			var button = document.getElementById("start");
