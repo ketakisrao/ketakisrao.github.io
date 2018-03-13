@@ -105,7 +105,7 @@
 			if(timeout){
 				clearTimeout(timeout);
 			}
-			clearMoles();
+			setTimeout(clearMoles, 1000;
 			$("#score").text("Your score is " + counter);
 			// $("#myModal").modal({keyboard: false, backdrop: false});
 			$("#myModal").show('slide', {direction: 'up'}, 500);
