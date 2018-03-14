@@ -113,12 +113,14 @@
 			if(timeout){
 				clearTimeout(timeout);
 			}
-			stopAllTimeouts();
-			clearMoles();
 			$("#score").text("Your score is " + counter);
 			// $("#myModal").modal({keyboard: false, backdrop: false});
 			$("#myModal").show('slide', {direction: 'up'}, 500);
 			counter = 0;
+			setTimeout(function(){
+				stopAllTimeouts();
+				clearMoles();
+			}, 2000);
 		}
 		function startGame(){
 			var button = document.getElementById("start");
