@@ -6,10 +6,11 @@
 	display: flex;
 	height: 150px;
 	justify-content: center;
+	margin-top: -75px;
 }
 .title {
 	background-color: #ff9f43;
-	height: 400px;
+	height: 275px;
 }
 .logo {
 	background-color: #ffffff;
