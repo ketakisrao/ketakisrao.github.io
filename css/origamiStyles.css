@@ -1,16 +1,52 @@
+@font-face {
+    font-family: logo;
+    src: url(../fonts/MarkerFelt.ttf);
+}
+.main {
+	margin-top: 40px;
+}
 .logo {
 	display: inline-block;
 	height: 180px;
 	width: 180px;
 	background-color: #cdcdcd;
 	border-radius: 50%;
-	box-shadow: 10px 10px 20px #dfdfdf;
+	box-shadow: 10px 10px 20px #eeeeee;
+	text-align: center;
+	font-family: logo;
+	font-size: 30px;
 }
 .origamiLogo {
-	margin-top: 15px;
 	height: 150px;
 }
 .logoContainer {
 	display: flex;
 	justify-content: center;
+	margin-top: 15px;
+}
+.center {
+	justify-content: center;
+}
+.blog {
+	margin-top: 20px;
+	border-top: 5px solid #f7c147;
+	padding: 10px;
+}
+.blog-img {
+	max-width: 80%;
+	margin: 0 auto;
+	border-radius: 3px;
+}
+.blog .header {
+	font-family: logo;
+}
+.blog .secondaryHeader {
+	color: #aaaaaa;
+	font-size: 14px;
+	line-height: 20px;
+	display: inline-block;
+	margin-right: 20px;
+}
+.content {
+	margin-top: 30px;
 }
