@@ -2,7 +2,7 @@
 	display: grid;
 	grid-template-columns: auto auto auto;
 	padding: 10px;
-	background-color: #ddd;
+	/*background-color: #ddd;*/
 }
 .grid-item {
 	border: 1px solid #000;
@@ -16,7 +16,7 @@
 	max-width: 100%;
 }
 .puzzle-container {
-	border: 1px solid black;
+	/*border: 1px solid black;*/
 }
 .instruction {
 	font-weight: bold;
