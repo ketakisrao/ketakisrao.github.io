@@ -2,15 +2,18 @@
     font-family: logo;
     src: url(../fonts/jmh-coronilla.regular.ttf);
 }
+@font-face {
+    font-family: love;
+    src: url(../fonts/love.ttf);
+}
+body {
+	font-family: Arial;
+}
 .logo-top {
 	display: flex;
 	height: 150px;
 	justify-content: center;
 	margin-top: -100px;
-}
-.title {
-	background-color: #ff9f43;
-	height: 175px;
 }
 .logo {
 	background-color: #ffffff;
@@ -30,9 +33,11 @@
 	align-items: flex-end;
 	justify-content: center;
 	font-size: 50px;
+	background-color: #ff9f43;
+	height: 225px;
+	font-family: logo;
+	padding-bottom: 30px;
 }
-
-
 .work{
 	margin-top: 100px;
 }
@@ -70,4 +75,12 @@
 }
 .logoImg img {
 	height: 100px;
+}
+.btn {
+	border-radius: 1px;
+	border: none;
+	background-color: #ffb168;
+}
+.btn:hover {
+	background-color: #ff9f43;
 }
