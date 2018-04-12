@@ -116,7 +116,6 @@
 			$("#score").text("Your score is " + counter);
 			// $("#myModal").modal({keyboard: false, backdrop: false});
 			$("#myModal").show('slide', {direction: 'up'}, 500);
-			counter = 0;
 			setTimeout(function(){
 				stopAllTimeouts();
 				clearMoles();
@@ -149,6 +148,7 @@
 			}
 		}
 		function hideScore(replay){
+			counter = 0;
 			$("#myModal").hide('slide', {direction: 'up'}, 500);
 			if(replay)
 				startGame();
