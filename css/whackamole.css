@@ -52,3 +52,12 @@
 .btn {
 	cursor: pointer;
 }
+#counterHolder {
+	height: 20px;
+}
+#whackGrid {
+	cursor: url('../images/Hammer.png'), auto;
+}
+#whackGrid:active {
+	cursor: url('../images/HammerHit.png'), auto;
+}
