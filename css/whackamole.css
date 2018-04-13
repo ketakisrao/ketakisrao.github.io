@@ -61,3 +61,6 @@
 #whackGrid:active {
 	cursor: url('../images/HammerHit.png'), auto;
 }
+#sound {
+	min-width: 50px;
+}

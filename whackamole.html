@@ -4,15 +4,20 @@
 	<title>Whack-a-mole</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 	<link rel="stylesheet" href="css/jquery-ui.css"/>
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.css"/>
 	<link rel="stylesheet" href="css/bootstrap.css"/>
 	<link rel="stylesheet" href="css/whackamole.css"/>
 </head>
 <body>
+	<audio id="whackSound">
+		<source src="images/whack.mp3"/>
+	</audio>
 	<div class="container top">
 		<div class="row">
 			<div class="col-md-5 center">
 				<div id="whackGrid"></div>
 				<button class="btn btn-warning start-btn" id="start" onClick="startGame()">Start</button>
+				<button class="btn btn-warning start-btn" id="sound" onClick="soundToggle()"><i class="fa fa-volume-up"></i></button>
 				<div id="counterHolder">&nbsp;</div>
 				<div id="myModal" class="game-over">
 					<div class="game-over-modal">
@@ -45,6 +50,9 @@
 		var maxTime = 2000;
 		var minTime = 700;
 		var counterHolder, inter, timeout, interval;
+		var whack = document.getElementById("whackSound");
+		var play = document.getElementById("play");
+		// audio.play();
 		$(document).ready(function(){
 			if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 				interval = 1000;
@@ -145,6 +153,7 @@
 			if($("#" + boxNo + " img").css('display') != 'none'){
 				counter ++;
 				$("#" + boxNo + " img").hide('puff', 150);
+				whack.play();
 				counterHolder.innerHTML = counter;
 			}
 		}
@@ -152,6 +161,19 @@
 			$("#myModal").hide('slide', {direction: 'up'}, 500);
 			if(replay)
 				startGame();
+		}
+		function soundToggle() {
+			var btn = $("#sound i");
+			if(btn.hasClass('fa-volume-up')){
+				whack.muted = true;
+				btn.removeClass('fa-volume-up');
+				btn.addClass('fa-volume-off');
+			}
+			else{
+				whack.muted = false;
+				btn.removeClass('fa-volume-off');
+				btn.addClass('fa-volume-up');
+			}
 		}
 	</script>
 </body>
