@@ -53,7 +53,9 @@
 	cursor: pointer;
 }
 #counterHolder {
-	height: 20px;
+	height: 40px;
+	padding: 10px;
+	font-size: 30px;
 }
 #whackGrid {
 	cursor: url('../images/Hammer.png'), auto;
