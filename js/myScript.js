@@ -11,3 +11,30 @@ $(document).ready(function(){
 		console.log("Tag Cloud not initialised");
 	}
 });
+$(document).ready(function(){
+	$('input').focus(function(){
+		$(this).parents('.group').addClass('focused');
+	});
+	$('input').blur(function(){
+		var inputValue = $(this).val();
+		if ( inputValue == "" ) {
+			$(this).removeClass('filled');
+			$(this).parents('.group').removeClass('focused');  
+		} else {
+			$(this).addClass('filled');
+		}
+	});
+	$('textarea').focus(function(){
+		$(this).parents('.group').addClass('focused');
+		console.log("Here");
+	});
+	$('textarea').blur(function(){
+		var inputValue = $(this).val();
+		if ( inputValue == "" ) {
+			$(this).removeClass('filled');
+			$(this).parents('.group').removeClass('focused');  
+		} else {
+			$(this).addClass('filled');
+		}
+	});
+});
