@@ -2,64 +2,79 @@
     font-family: logo;
     src: url(../fonts/jmh-coronilla.regular.ttf);
 }
-@font-face {
-    font-family: love;
-    src: url(../fonts/love.ttf);
-}
 body {
 	font-family: Arial;
 }
 .logo-top {
-	display: flex;
-	height: 150px;
-	justify-content: center;
-	margin-top: -100px;
+	height: 340px;
 }
 .logo {
 	background-color: #ffffff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 75px;
 	height: 150px;
 	width: 150px;
 	transform: rotate(-45deg);
 	border-radius: 4px;
 	font-size: 70pt;
 	font-family: logo;
+	margin: 0 auto;
 }
 .title {
-	display: flex;
-	align-items: flex-end;
-	justify-content: center;
-	font-size: 50px;
-	background-color: #ff9f43;
-	height: 225px;
-	font-family: logo;
-	padding-bottom: 30px;
+	font-family: 'Great Vibes';
+	font-size: 80px;
+	margin-top: 30px;
+	color: #ffffff;
+	text-shadow: 2px 2px #000000;
 }
+.creative {
+	position: relative;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.top{
+	background-image: url('../images/KetakiCover.png');
+	height: 90vh;
+}
+
 .work{
-	margin-top: 100px;
+	padding-top: 50px;
+	text-align: center;
+	height: 200px;
+	background-color: #282E34;
+	color: #ffffff;
+}
+.origami{
+	background-image: url('../images/origamiprev/DragonCover.png');
+	height: 500px;
 }
 .work-button {
 	position: absolute;
 	bottom: 0;
 	right: 50px;
 }
-.work .description {
-	margin-bottom: 50px;
-}
-.work-items h2{
+.work-items h2 {
 	text-align: center
 }
 .work-items p {
 	text-align: justify;
 	padding: 15px 30px;
+	margin-bottom: 40px;
 }
 
 .skills{
-	margin-top: 100px;
-	background-color: #ffffff;
+	height: 900px;
+	padding-top: 30px;
+	background-color: #282E34;
+	text-align: center;
+	color: #ffffff;
+	position: relative;
 }
 #skillsCanvas a{
 	pointer-events: none;
@@ -77,10 +92,49 @@ body {
 	height: 100px;
 }
 .btn {
-	border-radius: 1px;
+	border-radius: 2px;
 	border: none;
-	background-color: #ffb168;
+	background-color: #282E34;
+	color: #ffffff;
 }
 .btn:hover {
-	background-color: #ff9f43;
+}
+.contact {
+	width: 60%;
+	background-color: #52596a;
+	box-shadow: 2px 2px 20px rgb(10, 10, 10, 0.4);
+	height: 400px;
+	position: absolute;
+	top: 700px;
+	left: 20%;
+	z-index: 2;
+}
+.contactBack {
+	background-image: url('../images/Work.png');
+	height: 500px;
+}
+.footer {
+	padding-top: 30px;
+	height: 100px;
+	background-color: #282E34;
+	color: #ffffff;
+	text-align: center;
+}
+.fa-heart {
+	color: red;
+}
+.logo-bottom {
+	background-color: #ffffff;
+	/*display: flex;
+	justify-content: center;
+	align-items: center;*/
+	margin-left: 30px;
+	display: inline-block;
+	height: 38px;
+	width: 38px;
+	transform: rotate(-45deg);
+	border-radius: 4px;
+	font-size: 20pt;
+	font-family: logo;
+	color: #000000;
 }
