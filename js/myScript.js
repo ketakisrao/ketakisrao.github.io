@@ -37,4 +37,7 @@ $(document).ready(function(){
 			$(this).addClass('filled');
 		}
 	});
+	$(function () {
+		$('[data-toggle="tooltip"]').tooltip();
+	});
 });
