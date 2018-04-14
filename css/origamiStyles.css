@@ -2,16 +2,12 @@
     font-family: logo;
     src: url(../fonts/MarkerFelt.ttf);
 }
-.main {
-	margin-top: 40px;
-}
 .logo {
 	display: inline-block;
 	height: 180px;
 	width: 180px;
-	background-color: #cdcdcd;
+	background-color: #dddddd;
 	border-radius: 50%;
-	box-shadow: 10px 10px 20px #eeeeee;
 	text-align: center;
 	font-family: logo;
 	font-size: 30px;
@@ -24,30 +20,51 @@
 	justify-content: center;
 	margin-top: 15px;
 }
-.center {
-	justify-content: center;
+.hideme {
+	opacity:0;
 }
-.blog {
-	margin-top: 20px;
-	border-top: 5px solid #f7c147;
-	padding: 10px;
-}
-.blog-img {
-	max-width: 80%;
-	margin: 0 auto;
-	border-radius: 3px;
-	max-height: 250px;
-}
-.blog .header {
-	font-family: logo;
-}
-.blog .secondaryHeader {
-	color: #aaaaaa;
-	font-size: 14px;
-	line-height: 20px;
-	display: inline-block;
-	margin-right: 20px;
+body {
+	background-color: #282E34;
+	color: #ffffff;
+	height: 1500px;
 }
 .content {
 	margin-top: 30px;
+}
+.timeline {
+	margin-top: 100px;
+}
+.timeline ul li {
+	list-style-type: none;
+	position: relative;
+	width: 2px;
+	margin: 0 auto;
+	background: #fff;
+}
+.timeline ul li::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background: inherit;
+}
+.timeline ul li .main {
+  position: relative;
+  width: 45vw;
+  padding: 10px;
+  top: 0;
+}
+.timeline ul li:nth-child(odd) .main {
+	left: -50vw;
+}
+.timeline ul li:nth-child(even) .main {
+	left: 3vw;
+}
+.main img {
+	width: 100%;
+	border-radius: 4px;
 }
