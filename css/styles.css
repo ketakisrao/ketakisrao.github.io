@@ -79,10 +79,15 @@ body {
 #skillsCanvas a{
 	pointer-events: none;
 }
-.skill-cloud{
+.skill-mid {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+.skill-cloud{
+	background-color: #ffffe0;
+	width: 600px;
+	border-radius: 50%;
 }
 .logoImg {
 	display: flex;
