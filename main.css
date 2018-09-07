@@ -1,0 +1,57 @@
+  .MainContainer {
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  
+  .ContentContainer {
+    position: relative;
+    display: block;
+    background-color: white;
+    z-index: 1;
+  }
+  
+  .Content {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 75px 0;
+  }
+
+  .ParallaxContainer {
+    display: flex;
+    flex: 1 0 auto;
+    position: relative;
+    z-index: -1;
+    height: 100vh;
+    flex-wrap: wrap;
+    transform: translateZ(-1px) scale(2);
+    background-color: rgb(253, 183, 23);
+  }
+  .ParallaxContainer>img:hover {
+      filter: opacity(1);
+  }
+  .ParallaxContainer>img:not(:hover) {
+      filter: opacity(0.4);
+      transition-delay: 2s;
+  }
+  .ParallaxContainer>img {
+      margin: -15px 0;
+      padding: 0 30px;
+      max-width: 64px;
+      filter: opacity(0.4);
+  }
+
+  .ParallaxContainer>.content {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    z-index: 2;
+    font-size: 60px;
+    color: white;
+    font-weight: light;
+    font-family: "Open Sans";
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800');
