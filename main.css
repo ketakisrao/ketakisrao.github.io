@@ -1,7 +1,25 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+/* @font-face {
+    font-family: april;
+    src: url("FGApril_trial.ttf");
+} */
+
+body {
+    font-family: Roboto;
+}
+.header {
+    position: fixed;
+    top: 0;
+    height: 70px;
+    width: 100%;
+    z-index: 2;
+}
+
   .MainContainer {
     perspective: 1px;
     transform-style: preserve-3d;
-    height: 100vh;
+    height: 95vh;
     overflow-x: hidden;
     overflow-y: scroll;
   }
@@ -39,19 +57,23 @@
   .ParallaxContainer>img {
       margin: -15px 0;
       padding: 0 30px;
-      max-width: 64px;
+      max-width: 80px;
       filter: opacity(0.4);
   }
 
   .ParallaxContainer>.content {
     position: absolute;
-    top: 40%;
-    left: 10%;
+    top: 35%;
+    left: 27%;
     z-index: 2;
-    font-size: 60px;
-    color: white;
-    font-weight: light;
-    font-family: "Open Sans";
+    font-size: 40px;
+    color: #fff;
+    /* font-weight: 300; */
+    
+    text-align: center;
 }
-
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,800');
+ .ParallaxContainer>.content>.title {
+     font-size: 80px;
+     letter-spacing: 20px;
+     font-weight: bold;
+ }
