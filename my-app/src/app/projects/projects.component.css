@@ -7,8 +7,6 @@
 }
 .projects .card {
     height: 200px;
-    display: flex;
-    align-items: center;
 }
 img {
     max-width: 100%;
@@ -36,4 +34,8 @@ img {
     padding: 10px 0;
     height: 200px;
     margin: 0 auto;
+}
+.lrm {
+    margin: 10%;
+    width: 80%;
 }

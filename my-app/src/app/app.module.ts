@@ -7,13 +7,17 @@ import { ProjectsComponent } from './projects/projects.component';
 import { AboutComponent } from './about/about.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { LivereachmediaComponent } from './livereachmedia/livereachmedia.component';
+import { RmgComponent } from './rmg/rmg.component';
+import { BlackKnightsComponent } from './black-knights/black-knights.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProjectsComponent,
     AboutComponent,
-    LivereachmediaComponent
+    LivereachmediaComponent,
+    RmgComponent,
+    BlackKnightsComponent
   ],
   imports: [
     BrowserModule,
