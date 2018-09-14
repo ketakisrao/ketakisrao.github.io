@@ -1,0 +1,39 @@
+.projects {
+    padding: 0 120px;
+    padding-top: 80px;
+}
+.projects .row {
+    margin-top: 100px;
+}
+.projects .card {
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+img {
+    max-width: 100%;
+}
+.col-sm-6 {
+    padding: 0 30px;
+}
+.text-container {
+    color: #7f8c8d;
+    font-family: Roboto;
+}
+.text-container h4 {
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+.technologies {
+    font-size: 12px;
+    letter-spacing: 0.1rem;
+    color: rgb(253, 183, 23);
+}
+.dark {
+    background-color: #363636;
+}
+.dark img {
+    padding: 10px 0;
+    height: 200px;
+    margin: 0 auto;
+}
