@@ -1,9 +1,5 @@
-.projects {
-    padding: 0 120px;
-    padding-top: 80px;
-}
 .projects .row {
-    margin-top: 100px;
+    margin-bottom: 100px;
 }
 .projects .card {
     height: 200px;
