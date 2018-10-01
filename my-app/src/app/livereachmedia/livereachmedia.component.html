@@ -45,98 +45,111 @@
         Many features are abstracted and are not easy to carry out without prior knowledge
       </p>
     </div>
-    Zones: are special areas of interest in a site, of whose analytics are helpful to us.
+    <!-- Zones: are special areas of interest in a site, of whose analytics are helpful to us.
     Locations: Where is the inventory based/ state region etc
-    Site: Hold indoor maps of areas where the digital inventory is present.
+    Site: Hold indoor maps of areas where the digital inventory is present. -->
   </div>
-  <div>
-    <h2>Process</h2>
-    <h3>A) Problem Identification</h3>
-    <img src="assets/LRMDesignFlaws.png" class="full-img" />
-  </div>
-  <div>
-    <h3>B) Restructuring Inventory Hierarchy</h3>
-    <div class="row">
-      <div class="col-sm-6">
-        After understanding the user's requirements, we finalized the following types of inventory:
-        1. Location: A point on a google map denoting the physical co-ordinates of the inventory.
-        2. Site: An image of a site layout containing multiple devices.
-        3. Zone: A cut out from a site, which is a special area of interest for data & metric visualization.
-        4. Device: A physical device that logs data which is required to compute our metrics.
-      </div>
-      <div class="col-sm-6">
-        <img src="assets/Hierarchy.png" />
-      </div>
+  <h2 class="margin-row">Process</h2>
+  <h3>A) Problem Identification</h3>
+  <img src="assets/LRMDesignFlaws.png" class="full-img" />
+  <h3 class="margin-row">B) Restructuring Inventory Hierarchy</h3>
+  <div class="row">
+    <div class="col-sm-7">
+      After understanding the user's requirements, we finalized the following types of inventory:
+      <ol>
+        <li>Location: A point on a google map denoting the physical co-ordinates of the inventory.</li>
+        <li>Site: An image of a site layout containing multiple devices.</li>
+        <li>Device: A physical device that logs data which is required to compute our metrics.</li>
+        <li>Zone: A cut out from a site, which is a special area of interest for data & metric visualization.</li>
+      </ol>
+    </div>
+    <div class="col-sm-5">
+      <img src="assets/Hierarchy.png" class="full-img" />
     </div>
   </div>
-  <div>
-    <h3>C) Problem correction</h3>
-    <img src="assets/LRMCorrection.png" class="full-img" />
-  </div>
-  <div>
-    <h3>D) Inventory Addition</h3>
-    <div>
-      <h4>Adding Locations</h4>
-      <p>Improvements made:
-        Added location categories
-        Added search bar for locations to make it easier to add them.
-        Implemented draggable pin to precisely adjust the location.
-      </p>
+  <h3 class="margin-row">C) Problem correction</h3>
+  <img src="assets/LRMCorrection.png" class="full-img" />
+  <h3 class="margin-row">D) Inventory Addition</h3>
+  <h4>Adding Locations</h4>
+  <div class="row">
+    <div class="col-sm-8">
       <video autoplay loop>
         <source src="assets/AddLocation.mp4" type="video/mp4">
       </video>
     </div>
-    <div>
-      <h4>Adding Sites</h4>
-      <p>Improvements made:
-        Added location categories
-        Added search bar for locations to make it easier to add them.
-        Implemented draggable pin to precisely adjust the location.
-      </p>
+    <div class="col-sm-4">
+      <h5 class="text-align-center">Improvements made</h5>
+      <ul>
+        <li>Added location categories so as to distinguish between inventory types and quick access</li>
+        <li>Map area increased at the time of addition so as to have wider area for plotting</li>
+        <li>Enabled searching with address input box to speed up the location plot process.</li>
+        <li>Pins are made draggable to adjust location easily & precisely.</li>
+      </ul>
+    </div>
+  </div>
+  <h4 class="margin-row">Adding Sites</h4>
+  <div class="row">
+    <div class="col-sm-4">
+      <h5 class="text-align-center">Improvements made</h5>
+      <ol>
+        <li>Widened site map area to precisely edit site image.</li>
+        <li>Added image editing tools so that site images can be edited on the go, one need not search for editors to
+          crop and rotate images.</li>
+      </ol>
+    </div>
+    <div class="col-sm-8">
       <video autoplay loop>
         <source src="assets/AddSite.mp4" type="video/mp4">
       </video>
     </div>
-    <div>
-      <h4>Adding Devices</h4>
-      <p>Improvements made:
-        Added location categories
-        Added search bar for locations to make it easier to add them.
-        Implemented draggable pin to precisely adjust the location.
-      </p>
+  </div>
+  <h4 class="margin-row">Adding Devices</h4>
+  <div class="row">
+    <div class="col-sm-8">
       <video autoplay loop>
         <source src="assets/AddDevice.mp4" type="video/mp4">
       </video>
     </div>
-    <div>
-      <h4>Adding Zones</h4>
-      <p>Improvements made:
-        Added location categories
-        Added search bar for locations to make it easier to add them.
-        Implemented draggable pin to precisely adjust the location.
-      </p>
-      <video autoplay loop>
-        <source src="assets/AddZone.mp4" type="video/mp4">
-      </video>
+    <div class="col-sm-4">
+      <h5 class="text-align-center">Improvements made</h5>
+      <ol>
+        <li>Enabled zooming(bottom right corner) into images for precise plotting of device pins.</li>
+        <li>As users need to add multiple devices at a given time, the page doesn't refresh/go back to the display
+          inventory page unless you hit "Done".</li>
+        <li>Implemented draggable pins to precisely adjust the pins.</li>
+      </ol>
     </div>
   </div>
-  <div>
-    <h2>Feature Addition</h2>
-    <h3>Heat Maps</h3>
-    <p><b>Task: </b>Live tracking of population in a restricted area(zone) to be able to determine trends in movement</p>
-    <p>In order to track and present movement of people at a place</p>
-    <img src="assets/Heatmap.png" class="full-img" />
-    <h3>Path Visualization</h3>
-    <p><b>Task: </b>Given a source zone, track movements between zones and visualize this data to determine the top
-      popular and populous paths.</p>
-    <p>In order to track and present movement of people at a place</p>
-    <img src="assets/PathVis.png" class="full-img" />
-    <h3>Analytics Design</h3>
-    <p>Wireframes developed</p>
-    <img src="assets/LivereachWF1.png" class="full-img"/>
-    <p>Wireframes developed</p>
-    <img src="assets/LivereachWF2.png" class="full-img"/>
-    <p>Quick Mockup of the finalized version</p>
-    <img src="assets/Analytics.png" class="full-img" />
+  <h4 class="margin-row">Adding Zones</h4>
+  <div class="row">
+    <div class="col-sm-4">
+      <h5>Improvements made</h5>
+      <ol>
+        <li>Zoom and Crop options to easily cut out zones.</li>
+        <li>Zones can be cut out from a minimum of three devices and hence added appropriate error messages, refer below</li>
+      </ol>
+      <img src="assets/Device_error.png" class="full-img" />
+    </div>
+    <div class="col-sm-8">
+      <video autoplay loop>
+        <source src="assets/AddZone.mp4" type="video/mp4">
+      </video></div>
   </div>
+  <h2 class="margin-row">Feature Addition</h2>
+  <h3 class="margin-row">Heat Maps</h3>
+  <p><b>Task: </b>Live tracking of population in a restricted area(zone) to be able to determine trends in movement</p>
+  <p>In order to track and present movement of people at a place</p>
+  <img src="assets/Heatmap.png" class="full-img" />
+  <h3 class="margin-row">Path Visualization</h3>
+  <p><b>Task: </b>Given a source zone, track movements between zones and visualize this data to determine the top
+    popular and populous paths.</p>
+  <p>In order to track and present movement of people at a place</p>
+  <img src="assets/PathVis.png" class="full-img" />
+  <h3 class="margin-row">Analytics Design</h3>
+  <p>Wireframes developed</p>
+  <img src="assets/LivereachWF1.png" class="full-img" />
+  <p>Wireframes developed</p>
+  <img src="assets/LivereachWF2.png" class="full-img" />
+  <p>Quick Mockup of the finalized version</p>
+  <img src="assets/Analytics.png" class="full-img" />
 </div>
