@@ -1,0 +1,106 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+/* @font-face {
+    font-family: april;
+    src: url("FGApril_trial.ttf");
+} */
+
+body {
+    font-family: Roboto;
+}
+.header {
+    position: fixed;
+    top: 0;
+    height: 70px;
+    width: 100%;
+    z-index: 2;
+}
+
+  .MainContainer {
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 95vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  
+  .ContentContainer {
+    position: relative;
+    display: block;
+    background-color: white;
+    z-index: 1;
+  }
+  
+  .Content {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 75px 0;
+  }
+
+  .ParallaxContainer {
+    display: flex;
+    flex: 1 0 auto;
+    position: relative;
+    z-index: -1;
+    height: 100vh;
+    flex-wrap: wrap;
+    transform: translateZ(-1px) scale(2);
+    background-color: rgb(253, 183, 23);
+  }
+  .ParallaxContainer>img:hover {
+      filter: opacity(1);
+  }
+  .ParallaxContainer>img:not(:hover) {
+      filter: opacity(0.4);
+      transition-delay: 2s;
+  }
+  .ParallaxContainer>img {
+      margin: -15px 0;
+      padding: 0 30px;
+      max-width: 80px;
+      filter: opacity(0.4);
+  }
+
+  .ParallaxContainer>.content {
+    position: absolute;
+    top: 35%;
+    left: 27%;
+    z-index: 2;
+    font-size: 40px;
+    color: #fff;
+    /* font-weight: 300; */
+    
+    text-align: center;
+}
+ .ParallaxContainer>.content>.title {
+     font-size: 80px;
+     letter-spacing: 20px;
+     font-weight: bold;
+ }
+
+ .md-custom {
+     font-size: 20px;
+     background-color: rgb(253, 183, 23)!important;
+     border: 2px solid white!important;
+ }
+
+ /* .fab-action-custom {
+    background-color: rgb(253, 183, 23);
+ } */
+
+ .fab-action-custom>div {
+     margin: 0 20px;
+     padding: 7px 10px 5px 10px;
+     /* background-color: white; */
+     border-radius: 2px;
+     font-weight: bold;
+     letter-spacing: 5px;
+     font-size: 20px;
+     background-color: rgb(253, 183, 23);
+     border: 2px solid #fff;
+ }
+
+ .fab-action-custom>div>a {
+     text-decoration: none;
+     color: #fff;
+ }
