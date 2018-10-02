@@ -90,6 +90,7 @@ body {
  .projects {
     padding: 0 120px;
     padding-top: 100px;
+    padding-bottom: 30px;
 }
 .projects-header {
     padding-bottom: 20px;
@@ -123,7 +124,9 @@ body {
     background-color: rgb(253, 183, 23)!important;
     border-color: #fdbf30!important;
 }
-html, body { height: 100%; }
+html, body {
+    height: 100%;
+}
 body { margin: 0; font-family: 'Roboto', sans-serif; }
 .img-left {
     float: left;
@@ -132,7 +135,7 @@ body { margin: 0; font-family: 'Roboto', sans-serif; }
 .full-img {
     width: 100%; 
 }
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
     /* text-align: center; */
     color: #7f8c8d;
 }
@@ -159,4 +162,8 @@ video {
 }
 .text-align-center {
     text-align: center;
+}
+img, video {
+    border: 1px solid #ddd;
+    box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
 }
