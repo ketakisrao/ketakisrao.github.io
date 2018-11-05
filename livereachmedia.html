@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+        <head>
+                <meta charset="utf-8" />
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <meta name="viewport" content="width=device-width, initial-scale=1">
+                <title>Ketaki's Portfolio</title>
+                <link rel="stylesheet" href="css/bootstrap.css" />
+                <link rel="stylesheet" href="css/custom.css" />
+        </head>
+
+        <body>
+                <div class="container projects">
+                        <h1 class="projects-header">Live Reach Media - Web Application</h1>
+                        <div>
+                                <div class="summary">
+                                        <p class="summary-head">About the company:</p>
+                                        <p class="summary-block">We facilitate and provide analytical insights into
+                                                digital out-of-home
+                                                advertising.</p>
+                                </div>
+                                <div class="summary">
+                                        <p class="summary-head">Users:</p>
+                                        <p class="summary-block">There are two types of users,
+                                                <br>
+                                                Publishers: ones who maintain the digital inventory (for
+                                                example digital displays and billboards, their locations etc).
+                                                <br>
+                                                Advertisers: who wish to play their advertisements on the inventory
+                                                maintained by the
+                                                publisher.
+                                </div>
+                                <div class="summary">
+                                        <p class="summary-head">Purpose of the product:</p>
+                                        <p class="summary-block">To provide analytics based solutions for digital
+                                                out-of-home
+                                                advertising and
+                                                facilitating
+                                                interactions between display owners & advertisers.</p>
+                                </div>
+                                <div class="summary">
+                                        <p class="summary-head">My Role:</p>
+                                        <p class="summary-block">To design and develop a more suitable interface for
+                                                the above
+                                                operations and visualize
+                                                the analytics we produce.</p>
+                                </div>
+                                <div class="summary">
+                                        <p class="summary-head">Team Members:</p>
+                                        <p class="summary-block">2 UI developers along side.</p>
+                                </div>
+                                <div class="summary">
+                                        <p class="summary-head">User feedback:</p>
+                                        <p class="summary-block">I was communicated that the users found it difficult
+                                                to navigate
+                                                around and significant
+                                                features were masked behind buttons and accordions which made them
+                                                difficult to
+                                                discover without a prior demo.
+                                                A detailed survey led to the following points:
+                                                <br>
+                                                The map is congested with pins that don't make much sense. There is no
+                                                way to determine
+                                                which pin represents
+                                                corresponding location.
+                                                <br>
+                                                Congested UI; Too many operations filled in one place
+                                                <br>
+                                                The map size is small, therefore it is difficult to plot devices.
+                                                <br>
+                                                Many features are abstracted and are not easy to carry out without
+                                                prior knowledge
+                                        </p>
+                                </div>
+                                <!-- Zones: are special areas of interest in a site, of whose analytics are helpful to us.
+                  Locations: Where is the inventory based/ state region etc
+                  Site: Hold indoor maps of areas where the digital inventory is present. -->
+                        </div>
+                        <h2 class="margin-row">Process</h2>
+                        <h3>A) Problem Identification</h3>
+                        <img src="images/LRMDesignFlaws.png" class="full-img" />
+                        <h3 class="margin-row">B) Restructuring Inventory Hierarchy</h3>
+                        <div class="row">
+                                <div class="col-sm-7">
+                                        After understanding the user's requirements, we finalized the following types
+                                        of inventory:
+                                        <ol>
+                                                <li>Location: A point on a google map denoting the physical
+                                                        co-ordinates of the
+                                                        inventory.</li>
+                                                <li>Site: An image of a site layout containing multiple devices.</li>
+                                                <li>Device: A physical device that logs data which is required to
+                                                        compute our metrics.</li>
+                                                <li>Zone: A cut out from a site, which is a special area of interest
+                                                        for data & metric
+                                                        visualization.</li>
+                                        </ol>
+                                </div>
+                                <div class="col-sm-5">
+                                        <img src="images/Hierarchy.png" class="full-img" />
+                                </div>
+                        </div>
+                        <h3 class="margin-row">C) Problem correction</h3>
+                        <div class="row">
+                                <div class="col-sm-8">
+                                        <img src="images/LRMCorrection.png" class="full-img" />
+                                </div>
+                                <div class="col-sm-4">
+
+                                </div>
+                        </div>
+                        <h3 class="margin-row">D) Inventory Addition</h3>
+                        <h4>Adding Locations</h4>
+                        <div class="row">
+                                <div class="col-sm-8">
+                                        <video controls>
+                                                <source src="images/AddLocation.mp4" type="video/mp4">
+                                        </video>
+                                </div>
+                                <div class="col-sm-4">
+                                        <h5 class="text-align-center">Improvements made</h5>
+                                        <ul>
+                                                <li>Added location categories so as to distinguish between inventory
+                                                        types and quick
+                                                        access</li>
+                                                <li>Map area increased at the time of addition so as to have wider area
+                                                        for plotting</li>
+                                                <li>Enabled searching with address input box to speed up the location
+                                                        plot process.</li>
+                                                <li>Pins are made draggable to adjust location easily & precisely.</li>
+                                        </ul>
+                                </div>
+                        </div>
+                        <h4 class="margin-row">Adding Sites</h4>
+                        <div class="row">
+                                <div class="col-sm-8">
+                                        <video controls>
+                                                <source src="images/AddSite.mp4" type="video/mp4">
+                                        </video>
+                                </div>
+                                <div class="col-sm-4">
+                                        <h5 class="text-align-center">Improvements made</h5>
+                                        <ol>
+                                                <li>Widened site map area to precisely edit site image.</li>
+                                                <li>Added image editing tools so that site images can be edited on the
+                                                        go, one need not
+                                                        search for editors to
+                                                        crop and rotate images.</li>
+                                        </ol>
+                                </div>
+                        </div>
+                        <h4 class="margin-row">Adding Devices</h4>
+                        <div class="row">
+                                <div class="col-sm-8">
+                                        <video controls>
+                                                <source src="images/AddDevice.mp4" type="video/mp4">
+                                        </video>
+                                </div>
+                                <div class="col-sm-4">
+                                        <h5 class="text-align-center">Improvements made</h5>
+                                        <ol>
+                                                <li>Enabled zooming(bottom right corner) into images for precise
+                                                        plotting of device
+                                                        pins.</li>
+                                                <li>As users need to add multiple devices at a given time, the page
+                                                        doesn't refresh/go
+                                                        back to the display
+                                                        inventory page unless you hit "Done".</li>
+                                                <li>Implemented draggable pins to precisely adjust the pins.</li>
+                                        </ol>
+                                </div>
+                        </div>
+                        <h4 class="margin-row">Adding Zones</h4>
+                        <div class="row">
+                                <div class="col-sm-8">
+                                        <video controls>
+                                                <source src="images/AddZone.mp4" type="video/mp4">
+                                        </video>
+                                </div>
+                                <div class="col-sm-4">
+                                        <h5 class="text-align-center">Improvements made</h5>
+                                        <ol>
+                                                <li>Zoom and Crop options to easily cut out zones.</li>
+                                                <li>Zones can be cut out from a minimum of three devices and hence
+                                                        added appropriate
+                                                        error messages, refer
+                                                        below</li>
+                                        </ol>
+                                        <img src="images/Device_error.png" class="full-img" />
+                                </div>
+                        </div>
+                        <h2 class="margin-row">Feature Addition</h2>
+                        <h3 class="margin-row">Heat Maps</h3>
+                        <p><b>Task: </b>Live tracking of population in a restricted area(zone) to be able to determine
+                                trends and
+                                patterns in
+                                movement</p>
+                        <!-- <p>In order to track and present movement of people at a place</p> -->
+                        <img src="images/Heatmap.png" class="full-img" />
+                        <h3 class="margin-row">Path Visualization</h3>
+                        <p><b>Task: </b>Given a source zone, track movements between zones and visualize this data to
+                                determine the top
+                                popular and populous paths.</p>
+                        <!-- <p>In order to track and present movement of people at a place</p> -->
+                        <img src="images/PathVis.png" class="full-img" />
+                        <h3 class="margin-row">Analytics Design</h3>
+                        <p>Wireframes developed</p>
+                        <img src="images/LivereachWF1.png" class="full-img" />
+                        <p>Wireframes developed</p>
+                        <img src="images/LivereachWF2.png" class="full-img" />
+                        <p>Quick Mockup of the finalized version</p>
+                        <img src="images/Analytics.png" class="full-img" />
+                </div>
+                <script src="js/jQuery.js"></script>
+                <script src="js/bootstrap.min.js"></script>
+                <script src="js/custom.js"></script>
+        </body>
+
+</html>
