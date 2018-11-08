@@ -1,8 +1,22 @@
+html {
+    scroll-behavior: smooth;
+  }
+a:hover {
+    text-decoration: none;
+}
 .navbar {
-    box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 1px 18px 0 rgba(0, 0, 0, .12);
-    height: 70px;
+    /* box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 1px 18px 0 rgba(0, 0, 0, .12); */
+    height: 80px;
     background-color: #fff;
     z-index: 2;
+    padding: 0.5rem 5rem;
+}
+
+.navbar-brand {
+    font-size: 50px;
+}
+.navbar-collapse {
+    justify-content: flex-end;
 }
 
 .sticky {
@@ -12,12 +26,37 @@
 }
 
 .introduction {
-    margin-top: 120px;
+    padding-top: 120px;
     background-color: #fff;
-    height: 400px;
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
 }
 
-/*FadeIn*/
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+.scroll-btn {
+    position: absolute;
+    bottom: 0;
+    padding: 30px;
+    width: 100%;
+}
+.round-btn {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid #aaa;
+    color: #aaa;
+}
+.round-btn:hover {
+    border-color: #666;
+    color: #666;
+}
+
+/*Fade In*/
 
 .fadeIn {
     display: inline;
@@ -25,9 +64,9 @@
 }
 
 .fadeIn span {
-    animation: fadeEffect 25s linear infinite 0s;
-    -ms-animation: fadeEffect 25s linear infinite 0s;
-    -webkit-animation: fadeEffect 25s linear infinite 0s;
+    animation: fadeEffect 20s linear infinite 0s;
+    -ms-animation: fadeEffect 20s linear infinite 0s;
+    -webkit-animation: fadeEffect 20s linear infinite 0s;
     color: #00abe9;
     opacity: 0;
     overflow: hidden;
@@ -35,27 +74,27 @@
 }
 
 .fadeIn span:nth-child(2) {
-    animation-delay: 5s;
-    -ms-animation-delay: 5s;
-    -webkit-animation-delay: 5s;
+    animation-delay: 4s;
+    -ms-animation-delay: 4s;
+    -webkit-animation-delay: 4s;
 }
 
 .fadeIn span:nth-child(3) {
-    animation-delay: 10s;
-    -ms-animation-delay: 10s;
-    -webkit-animation-delay: 10s;
+    animation-delay: 8s;
+    -ms-animation-delay: 8s;
+    -webkit-animation-delay: 8s;
 }
 
 .fadeIn span:nth-child(4) {
-    animation-delay: 15s;
-    -ms-animation-delay: 15s;
-    -webkit-animation-delay: 15s;
+    animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    -webkit-animation-delay: 12s;
 }
 
 .fadeIn span:nth-child(5) {
-    animation-delay: 20s;
-    -ms-animation-delay: 20s;
-    -webkit-animation-delay: 20s;
+    animation-delay: 16s;
+    -ms-animation-delay: 16s;
+    -webkit-animation-delay: 16s;
 }
 
 /*FadeIn Animation*/
@@ -165,7 +204,9 @@
 }
 
 /*Projects*/
-
+.projects {
+    padding-top: 120px;
+}
 .projects .row {
     margin-bottom: 100px;
 }
