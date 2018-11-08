@@ -1,3 +1,7 @@
+@font-face {
+    font-family: logo;
+    src: url(../fonts/jmh-coronilla.regular.ttf);
+}
 html {
     scroll-behavior: smooth;
   }
@@ -14,6 +18,8 @@ a:hover {
 
 .navbar-brand {
     font-size: 50px;
+    font-family: logo;
+    transform: rotate(-5deg);
 }
 .navbar-collapse {
     justify-content: flex-end;
@@ -48,7 +54,7 @@ a:hover {
     height: 50px;
     width: 50px;
     border-radius: 50%;
-    border: 2px solid #aaa;
+    border: 2px solid #ccc;
     color: #aaa;
 }
 .round-btn:hover {
@@ -71,6 +77,7 @@ a:hover {
     opacity: 0;
     overflow: hidden;
     position: absolute;
+    font-weight: bold;
 }
 
 .fadeIn span:nth-child(2) {
@@ -211,6 +218,11 @@ a:hover {
     margin-bottom: 100px;
 }
 
+.projects-header {
+    text-align: center;
+    padding: 25px;
+}
+
 .text-container {
     color: #7f8c8d;
     font-family: Roboto;
@@ -248,6 +260,34 @@ a:hover {
 .lrm {
     margin: 10%;
     width: 80%;
+}
+
+.process {
+    display: flex;
+    flex-direction: row;
+}
+.process-box {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background-color: #EAEEEF;
+    color: #345;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.process-box:nth-of-type(even) {
+    width: 25px;
+    background-color: transparent;
+}
+.process-box:nth-of-type(even) i {
+    font-size: 20px;
+}
+.process-box i {
+    font-size: 30px;
+    padding: 8px 0;
 }
 
 .sketchy {
@@ -317,4 +357,16 @@ h1, h2, h3 {
 }
 video {
     max-width: 100%;
+}
+.footer {
+    background-color: #555;
+}
+
+.navbar-back {
+    font-size: 30px;
+    color: #345;
+}
+.navbar-back:hover {
+    transform: scale(1.2);
+    color: #345;
 }
