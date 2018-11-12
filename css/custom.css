@@ -494,6 +494,7 @@ video {
     margin: 0 0 .5em 0;
     text-transform: uppercase;
     white-space: nowrap;
+    color: #333;
   }
   
   /*----- TIMELINE MARKER -----*/
@@ -541,12 +542,13 @@ video {
       font-size: 20px;
       text-transform: uppercase;
       letter-spacing: 6px;
-      color: rgba(253, 183, 23, 0.8);
+      color: rgba(253, 183, 23, 1);
   }
   .timeline-content {
     padding-bottom: 40px;
     font-size: 13px;
     letter-spacing: 2px;
+    color: #999;
   }
   .timeline-content p:last-child {
     margin-bottom: 0;
@@ -707,4 +709,9 @@ video {
     letter-spacing: 1.5px;
     margin: 0 0 .5em 0;
     text-transform: uppercase;
+    color: #666
+  }
+
+  .timeline-content ol {
+      text-align: left!important;
   }
