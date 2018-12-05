@@ -12,6 +12,34 @@ $(document).ready(function () {
         }
 });
 
+$(document).ready(function(){
+	$('input').focus(function(){
+		$(this).parents('.group').addClass('focused');
+		console.log("Here");
+	});
+	$('input').blur(function(){
+		var inputValue = $(this).val();
+		if ( inputValue == "" ) {
+			$(this).removeClass('filled');
+			$(this).parents('.group').removeClass('focused');  
+		} else {
+			$(this).addClass('filled');
+		}
+	});
+	$('textarea').focus(function(){
+		$(this).parents('.group').addClass('focused');
+	});
+	$('textarea').blur(function(){
+		var inputValue = $(this).val();
+		if ( inputValue == "" ) {
+			$(this).removeClass('filled');
+			$(this).parents('.group').removeClass('focused');  
+		} else {
+			$(this).addClass('filled');
+		}
+	});
+});
+
 /* Check the location of each element */
 $('.content').each(function (i) {
 

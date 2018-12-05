@@ -15,7 +15,7 @@ a:hover {
 
 .navbar {
     /* box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 1px 18px 0 rgba(0, 0, 0, .12); */
-    /* height: 80px; */
+    height: 80px;
     background-color: #fff;
     z-index: 2;
     padding: 0 5rem;
@@ -423,7 +423,7 @@ a:hover {
 }
 
 h1, h2, h3 {
-    /* text-align: center; */
+    text-align: center;
     color: #7f8c8d;
 }
 
@@ -835,5 +835,47 @@ video {
 
 
 /** Black Knights CSS **/
+.signup-img {
+    display: flex;
+    justify-content: center;
+}
+.signup-img img {
+    /* width: 400px; */
+}
 
+.subtopic {
+    margin: 50px 0;
+}
 /** Black Knights CSS **/
+
+/** Contact Me **/
+.contact {
+    text-align: center;
+}
+.personal-details {
+    display: inline-block;
+    padding: 40px 0;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+.personal-details i {
+    color: #7f8c8d;
+    font-size: 18px;
+}
+.soc {
+	text-align: center;
+	font-size: 35px;
+	margin-top: 20px;
+    height: 100px;
+}
+.soc a {
+    margin-right: 30px;
+    color: #7f8c8d;
+	transition: all 0.5s;
+}
+.soc a:hover {
+	color: rgba(253, 183, 23, 1);
+	font-size: 45px;
+}
+/** Contact Me **/
