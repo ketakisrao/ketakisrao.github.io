@@ -6,7 +6,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 html {
     scroll-behavior: smooth;
-    font-family: Roboto;
+    font-family: "Helvetica";
 }
 
 a:hover {
@@ -467,10 +467,12 @@ video {
 }
 
 /*About Page*/
-
+.about-extended {
+    padding: 40px 300px;
+}
 .skills {
     height: 900px;
-    padding-top: 30px;
+    padding-top: 40px;
     background-color: #282E34;
     text-align: center;
     color: #ffffff;
@@ -793,6 +795,7 @@ video {
 }
 
 .example-centered {
+    margin-top: 40px;
     display: flex;
     justify-content: center;
 }
