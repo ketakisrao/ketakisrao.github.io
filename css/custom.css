@@ -15,7 +15,7 @@ a:hover {
 
 .navbar {
     /* box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 1px 18px 0 rgba(0, 0, 0, .12); */
-    height: 80px;
+    height: 70px;
     background-color: #fff;
     z-index: 2;
     padding: 0 5rem;
@@ -29,8 +29,12 @@ a:hover {
     padding: 0;
 }
 
+.nav-item {
+    padding: 0 3rem;
+}
+
 .navbar-collapse {
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .sticky {
