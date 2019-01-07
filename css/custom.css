@@ -427,8 +427,12 @@ a:hover {
 }
 
 h1, h2, h3 {
+    /* font-family: Roboto; */
+    letter-spacing: 0.4rem;
+    font-weight: light;
+    text-transform: uppercase;
     text-align: center;
-    color: #7f8c8d;
+    color: rgb(253, 183, 23);/*#7f8c8d;*/
 }
 
 .summary {
@@ -437,6 +441,7 @@ h1, h2, h3 {
 }
 
 .summary-head {
+    color: #345;
     flex: 0.8 1 0;
     font-weight: bold;
     text-transform: uppercase;
@@ -444,6 +449,7 @@ h1, h2, h3 {
 }
 
 .summary-block {
+    color: #5B6976;
     flex: 2 1 0;
     text-align: justify;
 }
@@ -493,6 +499,10 @@ video {
     /* background-color: #ffffe0; */
     width: 600px;
     border-radius: 50%;
+}
+.margin-row {
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 /* a {
