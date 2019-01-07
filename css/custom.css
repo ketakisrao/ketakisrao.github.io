@@ -426,15 +426,20 @@ a:hover {
     width: 100%;
 }
 
-h1, h2, h3 {
-    /* font-family: Roboto; */
+h1, h2, h3, h4 {
+    font-family: Roboto;
     letter-spacing: 0.4rem;
     font-weight: light;
     text-transform: uppercase;
     text-align: center;
     color: rgb(253, 183, 23);/*#7f8c8d;*/
 }
-
+h4 {
+    padding-bottom: 20px;
+}
+.box {
+    padding: 30px 0;
+}
 .summary {
     margin: 0 100px;
     display: flex;
@@ -449,6 +454,7 @@ h1, h2, h3 {
 }
 
 .summary-block {
+    font-size: 0.93rem;
     color: #5B6976;
     flex: 2 1 0;
     text-align: justify;
@@ -896,3 +902,6 @@ video {
 	font-size: 45px;
 }
 /** Contact Me **/
+b {
+    color: #345;
+}
