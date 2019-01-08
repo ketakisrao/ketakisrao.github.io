@@ -106,11 +106,12 @@ a:hover {
           transform: rotate(-45deg) translate(0px) rotate(-315deg);
   background: rgba(253, 183, 23, 0.5);
   width: 25rem;
-  letter-spacing: 1rem;
+  letter-spacing: 0.8rem;
   line-height: 25rem;
   height: 25rem;
   margin-top: -12.5rem;
   margin-left: -12.5rem;
+  font-size: 1.4rem;
   transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1), letter-spacing 1.5s ease-out;
 }
 .badge .text {
@@ -124,7 +125,7 @@ a:hover {
   top: 50%;
   margin-top: -10rem;
   margin-left: -5rem;
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: Raleway, sans-serif;
   text-align: center;
   color: #fff;
