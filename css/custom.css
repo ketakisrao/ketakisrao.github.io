@@ -470,16 +470,23 @@ video {
 }
 
 .navbar-back {
-    font-size: 30px;
-    color: #345;
+    font-size: 14px;
+    color: #ccc;
+    height: 40px;
+    width: 40px;
+    border: 1.5px solid #ccc;
+    border-radius: 50%;
 }
 
 .navbar-back:hover {
-    transform: scale(1.2);
-    color: #345;
+    border-color: #666;
+    color: #666;
 }
 
 /*About Page*/
+.about-div {
+    margin-top: 30px;
+}
 .about-extended {
     padding: 40px 300px;
 }
