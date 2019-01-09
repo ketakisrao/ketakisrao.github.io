@@ -118,47 +118,64 @@
                                         <h2>Problem Identification</h2>
                                         <div class="box">
                                                 <h4>User feedback</h4>
-                                                <p class="summary-block">
-                                                        <p>I was communicated that the users found it difficult to
-                                                                navigate around and
-                                                                significant features were masked behind buttons and
-                                                                accordions which
-                                                                made them
-                                                                difficult to discover without a prior demo.
-                                                                A detailed survey led to the following points:
-                                                                <ol>
-                                                                        <li>The map is congested with pins that don't
-                                                                                make much sense.
-                                                                                There is
-                                                                                no way to determine which pin
-                                                                                represents corresponding
-                                                                                location.</li>
-                                                                        <li>Congested UI; Too many operations filled in
-                                                                                one place.</li>
-                                                                        <li>The map size is small, therefore it is
-                                                                                difficult to plot
-                                                                                devices.</li>
-                                                                        <li>Many features are abstracted and are not
-                                                                                easy to carry out
-                                                                                without
-                                                                                prior knowledge.</li>
-                                                                </ol>
-                                                        </p>
-
+                                                <p>I was communicated that the users found it difficult to
+                                                        navigate around and
+                                                        significant features were masked behind buttons and
+                                                        accordions which
+                                                        made them
+                                                        difficult to discover without a prior demo.
+                                                        A detailed survey led to the following points:
+                                                        <ol>
+                                                                <li>The map is congested with pins that don't
+                                                                        make much sense.
+                                                                        There is
+                                                                        no way to determine which pin
+                                                                        represents corresponding
+                                                                        location.</li>
+                                                                <li>Congested UI; too many operations filled in
+                                                                        one place.</li>
+                                                                <li>The map size is small, therefore it is
+                                                                        difficult to plot
+                                                                        devices.</li>
+                                                                <li>Many features are abstracted and are not
+                                                                        easy to carry out
+                                                                        without
+                                                                        prior knowledge.</li>
+                                                        </ol>
                                                 </p>
                                         </div>
                                         <div class="box">
                                                 <h4>UI Evaluation</h4>
-                                                <img src="images/LRMDesignFlaws.png" class="full-img" />
-                                        </div>
-                                        <!-- <div class="box">
-                                                <div class="summary">
-                                                        <p class="summary-head">Problem:</p>
-                                                        <p class="summary-block">The add inventory operation was
-                                                                complex, involved too may clicks and was difficult to find.
-                                                        </p>
+                                                <div class="row">
+                                                        <div class="col-sm-8">
+                                                                <img src="images/LRMDesignFlaws.png" class="full-img" />
+                                                        </div>
+                                                        <div class="col-sm-4">
+                                                                <ol>
+                                                                        <li>Map pins are crowded and aren't indicative
+                                                                                of the type of inventory they contain.</li>
+                                                                        <li>Duplicate actions such as "Search
+                                                                                Inventory" are ambiguous and confusing.</li>
+                                                                        <li>Full name of the inventory is visible on
+                                                                                hover in a a tooltip.</li>
+                                                                        <li>Add inventory operations are revealed on
+                                                                                clicking this button which are inturn
+                                                                                buttons to reveal forms. This nesting
+                                                                                is confusing and users lose track of
+                                                                                what they want to do.</li>
+                                                                        <li>Long list of inventory is visible as you
+                                                                                scroll and not at a glance. The padding
+                                                                                for each inventory makes the list even
+                                                                                longer.</li>
+                                                                        <li>Significant inventory operations like edit
+                                                                                & delete and inventory details are
+                                                                                masked behind these which is again
+                                                                                confusing since the elemnts do not look
+                                                                                clickable.</li>
+                                                                </ol>
+                                                        </div>
                                                 </div>
-                                        </div> -->
+                                        </div>
                                 </div>
                                 <div class="box">
                                         <h2>Solution</h2>
@@ -171,17 +188,19 @@
                                                         <div class="col-sm-4">
                                                                 <h5 class="text-align-center">Improvements</h5>
                                                                 <ol>
-                                                                        <li>Long list of Inventory is paginated for a
-                                                                                cleaner look.</li>
-                                                                        <li>Map pins have more meaningful icons.</li>
+                                                                        <li>Map pins have more meaningful icons. Also
+                                                                                map is zoomed coorectly so the pins do
+                                                                                not look overcrowded</li>
+                                                                        <li>Duplicate search box has been removed and a suitable graphic is added to prevent ambiguity.</li>
                                                                         <li>Inventory names are fully visible.</li>
-                                                                        <li>Edit and delete operations are visible and
-                                                                                don't added
-                                                                                clicks.</li>
-                                                                        <li>Duplicate search box has been removed.</li>
                                                                         <li>Add inventory changed to dropdwon to
                                                                                 prevent masking of
                                                                                 features.</li>
+                                                                        <li>Long list of Inventory is paginated for a
+                                                                                cleaner look. Extra padding of elements
+                                                                                is eliminated.</li>
+                                                                        <li>Edit and delete operations are visible and
+                                                                                don't require added clicks.</li>
                                                                 </ol>
                                                         </div>
                                                 </div>
