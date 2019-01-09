@@ -8,6 +8,9 @@ html {
     scroll-behavior: smooth;
     font-family: "Helvetica";
 }
+.text-align-center {
+    text-align: center;
+}
 
 a:hover {
     text-decoration: none;
@@ -293,7 +296,8 @@ a:hover {
 
 .projects-header {
     text-align: center;
-    padding: 25px;
+    padding-top: 15px;
+    padding-bottom: 25px;
 }
 
 .text-container {
@@ -338,7 +342,8 @@ a:hover {
 .process {
     display: flex;
     flex-direction: row;
-    height: 250px;
+    height: 200px;
+    /* box-shadow: 0 0 40px rgba(0,0,0,.05); */
 }
 
 .process-box {
@@ -484,11 +489,15 @@ video {
 }
 
 /*About Page*/
-.about-div {
-    margin-top: 30px;
-}
 .about-extended {
-    padding: 40px 300px;
+    padding: 40px 0;
+}
+.custom-container {
+    padding: 0 150px;
+}
+.inner-container {
+    padding: 0 50px;
+    box-shadow: 0 0 40px rgba(0,0,0,.05);
 }
 .skills {
     height: 900px;
