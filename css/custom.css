@@ -440,6 +440,9 @@ h1, h2, h3, h4 {
     text-align: center;
     color: rgb(253, 183, 23);/*#7f8c8d;*/
 }
+h5, h6 {
+    letter-spacing: 0.1rem;
+}
 h4 {
     padding-bottom: 20px;
 }
@@ -918,4 +921,15 @@ video {
 /** Contact Me **/
 b {
     color: #345;
+}
+.points {
+    font-size: 13px;
+    letter-spacing: 0.05rem;
+}
+.points li {
+    padding: 5px;
+}
+
+.wmole {
+    height: 40%;
 }
