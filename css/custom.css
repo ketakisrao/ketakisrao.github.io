@@ -890,6 +890,7 @@ video {
 
 /** Contact Me **/
 .contact {
+    padding-top: 80px;
     text-align: center;
 }
 .personal-details {
@@ -923,13 +924,17 @@ b {
     color: #345;
 }
 .points {
-    font-size: 13px;
+    font-size: 0.93rem;
     letter-spacing: 0.05rem;
 }
 .points li {
     padding: 5px;
+    font-size: 13px;
 }
 
 .wmole {
-    height: 40%;
+    height: 65%;
+}
+.cheese {
+    width: 100%;
 }

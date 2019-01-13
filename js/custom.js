@@ -8,7 +8,7 @@ $(document).ready(function () {
                 pinchZoom: false,
                 noSelect: true
         })) {
-                console.log("Tag Cloud not initialised");
+                console.log("Tag Cloud not initialized");
         }
 });
 
