@@ -119,30 +119,31 @@
                                         <h2>Problem Identification</h2>
                                         <div class="box">
                                                 <h4>User feedback</h4>
-                                                <p class="points">I was communicated that the users found it difficult to
+                                                <p class="points">I was communicated that the users found it difficult
+                                                        to
                                                         navigate around and
                                                         significant features were masked behind buttons and
                                                         accordions which
                                                         made them
                                                         difficult to discover without a prior demo.
                                                         A detailed survey led to the following points:</p>
-                                                        <ol class="points">
-                                                                <li>The map is congested with pins that don't
-                                                                        make much sense.
-                                                                        There is
-                                                                        no way to determine which pin
-                                                                        represents corresponding
-                                                                        location.</li>
-                                                                <li>Congested UI; too many operations filled in
-                                                                        one place.</li>
-                                                                <li>The map size is small, therefore it is
-                                                                        difficult to plot
-                                                                        devices.</li>
-                                                                <li>Many features are abstracted and are not
-                                                                        easy to carry out
-                                                                        without
-                                                                        prior knowledge.</li>
-                                                        </ol>
+                                                <ol class="points">
+                                                        <li>The map is congested with pins that don't
+                                                                make much sense.
+                                                                There is
+                                                                no way to determine which pin
+                                                                represents corresponding
+                                                                location.</li>
+                                                        <li>Congested UI; too many operations filled in
+                                                                one place.</li>
+                                                        <li>The map size is small, therefore it is
+                                                                difficult to plot
+                                                                devices.</li>
+                                                        <li>Many features are abstracted and are not
+                                                                easy to carry out
+                                                                without
+                                                                prior knowledge.</li>
+                                                </ol>
                                         </div>
                                         <div class="box">
                                                 <h4>UI Evaluation</h4>
@@ -217,10 +218,11 @@
                                                 <h4>Restructuring Inventory Hierarchy</h4>
                                                 <div class="row">
                                                         <div class="col-sm-7">
-                                                                <p  class="points">After understanding the user's requirements, we
-                                                                finalized the following
-                                                                types
-                                                                of inventory:</p>
+                                                                <p class="points">After understanding the user's
+                                                                        requirements, we
+                                                                        finalized the following
+                                                                        types
+                                                                        of inventory:</p>
                                                                 <ol class="points">
                                                                         <li>Location: A point on a google map denoting
                                                                                 the physical
@@ -362,7 +364,137 @@
                                                 </div>
                                                 <div class="summary">
                                                         <p class="summary-head">Input:</p>
-                                                        <p class="summary-block">Inventory Name, Date & Time &
+                                                        <p class="summary-block">Inventory Name, Date, Time &
+                                                                Duration.</p>
+                                                </div>
+                                                <div class="summary">
+                                                        <p class="summary-head">Output:</p>
+                                                        <p class="summary-block">A heatmap to show the concentration of
+                                                                people over a site image along with the timestamp.</p>
+                                                </div>
+                                                <div class="summary">
+                                                        <p class="summary-head">Specs:</p>
+                                                        <p class="summary-block">HTML5 Canvas</p>
+                                                </div>
+                                                <p class="points"> The image below shows
+                                                        the
+                                                        population
+                                                        distribution in a
+                                                        supermarket.</p>
+                                                <!-- <p>In order to track and present movement of people at a place</p> -->
+                                                <img src="images/Heatmap.png" class="full-img" />
+                                        </div>
+                                        <div class="box">
+                                                <h4>Path Visualization</h4>
+                                                <div class="summary">
+                                                        <p class="summary-head">Task:</p>
+                                                        <p class="summary-block">Track movements between zones and
+                                                                visualize this
+                                                                data to
+                                                                determine the top
+                                                                popular and populous paths.</p>
+                                                </div>
+                                                <div class="summary">
+                                                        <p class="summary-head">Requirement & Background:</p>
+                                                        <p class="summary-block">Our users are mainly advertisers who
+                                                                seek to gain maximum reach for their ads which are
+                                                                displayed on several screens in large areas like malls,
+                                                                parks, airports, etc. Keeping this requirement in mind,
+                                                                I've developed a tool to visualise the most commonly
+                                                                taken
+                                                                paths via an interactive variant of the sunburst chart
+                                                                using d3js. A quick glance at this tool helped our
+                                                                clients gain maximum viewers (by playing the ads along
+                                                                the paths shown) and in turn, has helped their
+                                                                business.</p>
+                                                </div>
+                                                <div class="summary">
+                                                        <p class="summary-head">Input:</p>
+                                                        <p class="summary-block">Source Zone</p>
+                                                </div>
+                                                <div class="summary">
+                                                        <p class="summary-head">Output:</p>
+                                                        <p class="summary-block">A sunburst chart to show most popular
+                                                                paths taken across a site.</p>
+                                                </div>
+                                                <div class="summary">
+                                                        <p class="summary-head">Specs:</p>
+                                                        <p class="summary-block">SVG & D3js</p>
+                                                </div>
+                                                <img src="images/PathVis.png" class="full-img" />
+                                        </div>
+                                        <div class="box">
+                                                <h4>Analytics Design</h4>
+                                                <div class="summary">
+                                                        <p class="summary-head">Task:</p>
+                                                        <p class="summary-block">Design a dashboard page to showcase
+                                                                LiveReach's computed metrics and live data.</p>
+                                                </div>
+                                                <div class="summary">
+                                                        <p class="summary-head">Input:</p>
+                                                        <p class="summary-block">Inventory Name</p>
+                                                </div>
+                                                <div class="summary">
+                                                        <p class="summary-head">Design tool:</p>
+                                                        <p class="summary-block">AdobeXD.</p>
+                                                </div>
+                                                <div class="summary">
+                                                        <p class="summary-head">Specs:</p>
+                                                        <p class="summary-block">SVG, Nvd3 & AngularJS</p>
+                                                </div>
+                                                <h5 class="text-align-center">Early Exploration Wireframe</h5>
+                                                <div class="row">
+                                                        <div class="col-sm-9"><img src="images/LivereachWF1.png" class="full-img" /></div>
+                                                        <div class="col-sm-3">
+                                                                <h5>Pros</h5>
+                                                                <ol class="points">
+                                                                        <li>Simple dashboard</li>
+                                                                        <li>Easy navigation</li>
+                                                                        <li>All metrics shown in a single frame (No
+                                                                                need to scroll)</li>
+                                                                </ol>
+                                                                <h5>Cons</h5>
+                                                                <ol class="points">
+                                                                        <li>Live Data missing</li>
+                                                                        <li>Location not required</li>
+                                                                        <li>Scales (day hour min) and date range not
+                                                                                taken into
+                                                                                consideration</li>
+                                                                </ol>
+                                                        </div>
+                                                </div>
+                                                <h5 class="text-align-center">Final wireframe design</h5>
+                                                <div class="row">
+                                                        <div class="col-sm-9"><img src="images/LivereachWF2.png" class="full-img" /></div>
+                                                        <div class="col-sm-3">
+                                                                <h5>Pros</h5>
+                                                                <ol class="points">
+                                                                        <li>Fit to screen dashboard</li>
+                                                                        <li>Provides a quick glance at live data in the
+                                                                                right hand column</li>
+                                                                        <li>Provides scale & date range selection</li>
+                                                                </ol>
+                                                        </div>
+                                                </div>
+                                                <h5 class="text-align-center">Quick Prototype of the finalized version</h5>
+                                                <img src="images/Analytics.png" class="full-img" />
+                                        </div>
+                                </div>
+                                <div class="box">
+                                        <h2>Feature Design & Development</h2>
+                                        <div class="box">
+                                                <h4>Heat Maps</h4>
+                                                <div class="summary">
+                                                        <p class="summary-head">Task:</p>
+                                                        <p class="summary-block">Live tracking of population in a
+                                                                restricted area(zone)
+                                                                to be able to
+                                                                determine
+                                                                trends and patterns in movement.</p>
+                                                </div>
+                                                <div class="summary">
+                                                        <p class="summary-head">Input:</p>
+                                                        <p class="summary-block">Inventory Name, Date, Time &
                                                                 Duration.</p>
                                                 </div>
                                                 <div class="summary">
@@ -462,6 +594,37 @@
                                                 </div>
                                                 <h5 class="text-align-center">Quick Prototype of the finalized version</h5>
                                                 <img src="images/Analytics.png" class="full-img" />
+                                        </div>
+                                </div>
+                                <div class="box">
+                                        <h2>Future Works</h2>
+                                        <div class="box" style="margin: 0 6rem;">
+                                                <h5 class="text-align-center">What I was able to achieve?</h5>
+                                                <p class="points"></p>
+                                                <ol class="points">
+                                                        <li>I learned how importance it is to act on user-feedback and
+                                                                ways of obtaining it.</li>
+                                                        <li>I learned how to brainstorm for ideas and turn them into
+                                                                quick sketches for.</li>
+                                                        <li>I could deliver wireframes and prototypes with the help of
+                                                                design tools such as AdobeXD.</li>
+                                                        <li>I learned how to prioritize actions by understanding the
+                                                                business.</li>
+                                                        <li>I understood the importance and applications of a
+                                                                minimalistic design.</li>
+                                                </ol>
+                                                <h5 class="text-align-center">Ways in which I could further improve the product?</h5>
+                                                <p class="points"></p>
+                                                <ol class="points">
+                                                        <li>I wanted to improve the flow of the UI. There are still
+                                                                some
+                                                                disconnects in the UI, for example after one adds a
+                                                                site, the site needs to be searched and clicked on to
+                                                                view it.</li>
+                                                        <li>Enable backend integrated search so that only the required
+                                                                amount of inventory can be loaded at one time.</li>
+                                                        <!-- <li></li> -->
+                                                </ol>
                                         </div>
                                 </div>
                         </div>
