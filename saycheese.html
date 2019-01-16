@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ketaki's Portfolio</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <style>
+        .full-img {
+            /* border-radius: 5px; */
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .full-img:hover {
+            opacity: 0.7;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 4x;
+            /* Sit on top */
+            padding-top: 100px;
+            /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+        }
+
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 100%;
+            max-width: 1000px;
+        }
+
+        /* Caption of Modal Image */
+        /* #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        } */
+
+        /* Add Animation */
+        .modal-content,
+        #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+
+            to {
+                transform: scale(1)
+            }
+        }
+
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+        .unit .row {
+            padding: 30px 0;
+        }
+    </style>
+</head>
+
+<body style="color: #5B6976;">
+    <nav class="navbar sticky" style="background-color: transparent; padding: 0.5rem 2rem;">
+        <a class="navbar-back flex-center" href="index.html#projects">
+            <i class="fas fa-chevron-left"></i>
+        </a>
+    </nav>
+    <div class="custom-container">
+        <div class="inner-container">
+            <div class="container">
+                <h1 class="projects-header">Say Cheese!</h1>
+                <!-- <div class="summary">
+                    <p class="summary-head">Topic:</p>
+                    <p class="summary-block">Cheeses</p>
+                </div>
+                <div class="summary">
+                    <p class="summary-head">Genre:</p>
+                    <p class="summary-block">Arcade</p>
+                </div>
+                <div class="summary">
+                    <p class="summary-head">Design:</p>
+                    <p class="summary-block">Responsive Design</p>
+                </div>
+                <div class="summary">
+                    <p class="summary-head">Platform:</p>
+                    <p class="summary-block">Compatible with desktops, tablets and mobiles.</p>
+                </div> -->
+                <div class="box">
+                    <h3>Ideation</h3>
+                    <p class="points">
+                        Cheese's have been the love of my life since I've started tasting food! Also, I wanted to
+                        experiment with SAP's new visualisation tool called Lumira. So I made this storyboard full of
+                        cheeses. (Well according to Google, there are more than 4,500 varieties of cheeses, wasn't possible to get 'em all!)
+                        <br>
+                        Here is the <a href="images/Cheeses.xlsx">dataset</a> I made by extracting information on each of the popular cheeses from Google using Scrapy (Python).
+                    </p>
+                </div>
+                <div class="box">
+                    <h3>Visualisations</h3>
+                    <div class="box unit">
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <img class="full-img" src="images/popularity.png" />
+                            </div>
+                            <div class="col-sm-4"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <img class="full-img" src="images/Agingmax.png" />
+                            </div>
+                            <div class="col-sm-4"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <img class="full-img" src="images/popularityvscost1.png" />
+                            </div>
+                            <div class="col-sm-4"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <img class="full-img" src="images/Cholestrol.png" />
+                            </div>
+                            <div class="col-sm-4"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <img class="full-img" src="images/Mineral.png" />
+                            </div>
+                            <div class="col-sm-4"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <img class="full-img" src="images/production.png" />
+                            </div>
+                            <div class="col-sm-4"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-8">
+                                <img class="full-img" src="images/FatvsProtein.png" />
+                            </div>
+                            <div class="col-sm-4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script src="js/jQuery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src='js/jquery-ui.min.js'></script>
+    <script src="js/popper.js"></script>
+    <script>
+
+        var modal = document.getElementById('myModal');
+
+        document.onkeydown = function (evt) {
+            evt = evt || window.event;
+            if (evt.keyCode == 27) {
+                modal.style.display = "none";
+            }
+        };
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementsByClassName('full-img');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        // console.log(img);
+
+        [].forEach.call(img, function (ele) {
+            ele.onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            }
+        });
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+    </script>
+</body>
+
+</html>
