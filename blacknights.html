@@ -26,8 +26,8 @@
                                         <div class="summary">
                                                 <p class="summary-head">About the Project:</p>
                                                 <p class="summary-block">A freelance project that I did for Black
-                                                        Knights - a
-                                                        platform to collaborate Nigerian start-ups and investors.</p>
+                                                        Knights - a platform to collaborate Nigerian start-ups and
+                                                        investors.</p>
                                         </div>
                                         <div class="summary">
                                                 <p class="summary-head">Users:</p>
@@ -61,16 +61,21 @@
                                         <div class="box">
                                                 <h4>Registration page</h4>
                                                 <p class="points">Firstly, I had to design a simple HTML form to
-                                                        onboard
-                                                        the users of the application. This had to be a responsive
-                                                        design that works well for all types of devices (mobiles,
-                                                        laptops, tablets) since the users received an email link to
-                                                        register themselves which could be opened on any device by the
-                                                        client.</p>
+                                                        onboard the users of the application. This had to be a
+                                                        responsive design that works well for all types of devices
+                                                        (mobiles, laptops, tablets) since the users received an email
+                                                        link to register themselves which could be opened on any device
+                                                        by the client. Below are the pros of this design:</p>
+                                                <ol class="points">
+                                                        <li>Clean and minimalistic UI</li>
+                                                        <li>Per field javascript validation so that the user doesn't
+                                                                have to wait till he clicks submit.</li>
+                                                        <li>Responsive design to work on laptops, mobiles and tablets.</li>
+                                                </ol>
                                                 <div class="signup-img"><img src="images/Registration.png" /></div>
                                         </div>
                                         <div class="box">
-                                                <h4>Search page for the users</h4>
+                                                <h4>Search page</h4>
                                                 <p class="points">
                                                         My next task was to design a search bar to look up various
                                                         investors
@@ -81,18 +86,53 @@
                                                         could filter and limit their search to either of the two.
                                                 </p>
                                                 <img src="images/searchbar.png" class="full-img" />
-                                                <p class="points">
-                                                        The results obtained were to be displayed on a clean UI
+                                                <p class="points text-align-center">
                                                 </p>
-                                                <img src="images/SearchResult.png" class="full-img" />
+                                                <div class="flex-center">
+                                                        <img src="images/SearchResult.png" width=500 />
+                                                </div>
                                         </div>
                                         <div class="box">
-                                                <h4>Profile page for Startups</h4>
-                                                <img src="images/CompanyProfileMain.png" class="full-img" />
-                                        </div>
-                                        <div class="box">
-                                                <h4>Profile page for Investors</h4>
-                                                <img src="images/InvestorProfile.png" class="full-img" />
+                                                <h4>Profile page</h4>
+                                                <div class="row box">
+                                                        <div class="col-sm-6">
+                                                                <img src="images/CompanyProfileMain.png" class="full-img" />
+                                                        </div>
+                                                        <div class="col-sm-6">
+                                                                <img src="images/InvestorProfile.png" class="full-img" />
+                                                        </div>
+                                                </div>
+                                                <p class="points">I had to design a compact profile page for the
+                                                        startups and investors which portrayed all their details and
+                                                        made it look
+                                                        attractive to the opposite party.</p>
+                                                <ol class="points">
+                                                        <li><b>The right panel</b> of the profile page is in the form
+                                                                of tabs to abstract the unnecessary/less important
+                                                                details. Since most users are interested in viewing the
+                                                                profile's overview, I've kept that as the active tab so
+                                                                that users can first look at the overview and if
+                                                                interested could know more by going through the other
+                                                                tabs.</li>
+                                                        <li><b>The left panel</b> is static and is a quick access to
+                                                                the
+                                                                useful summary information about the profile. This is
+                                                                kept static so that the user can have access to concise
+                                                                details, readily available to compare, even if he
+                                                                navigates to another tab on the right panel.</li>
+                                                        <li><b>The categories</b> in the right panel divided the
+                                                                overview information and made use of text as well as
+                                                                graphic icons and a few images to make the UI more
+                                                                visually appealing to the users. It was done so that it
+                                                                can gauge the user's interest and not turn them away
+                                                                by showing huge amounts of text information.</li>
+                                                        <li>I did put in a few <b>progress bars</b> in the left panel
+                                                                of the
+                                                                startups profile to show how much funding they've
+                                                                received and how much more they needed. This showed the
+                                                                investors whether funding the startup was in their
+                                                                capacity or not.</li>
+                                                </ol>
                                         </div>
                                 </div>
                                 <div class="box">
@@ -130,7 +170,8 @@
                                                                 name and title description. Each card could contain
                                                                 some more information, for example, How much funding is
                                                                 available through each investor? or How much funding is
-                                                                required by each startup? etc. This would make it easier
+                                                                required by each startup? etc. This would make it
+                                                                easier
                                                                 for the users to just glance through the search results
                                                                 and view only the ones that could provide the required
                                                                 funding.
@@ -141,9 +182,49 @@
                         </div>
                 </div>
         </div>
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <div id="caption"></div>
+        </div>
         <script src="js/jQuery.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/custom.js"></script>
+        <script>
+
+                var modal = document.getElementById('myModal');
+
+                document.onkeydown = function (evt) {
+                        evt = evt || window.event;
+                        if (evt.keyCode == 27) {
+                                modal.style.display = "none";
+                        }
+                };
+
+                // Get the image and insert it inside the modal - use its "alt" text as a caption
+                var img = document.getElementsByClassName('full-img');
+                var modalImg = document.getElementById("img01");
+                var captionText = document.getElementById("caption");
+                // console.log(img);
+
+                [].forEach.call(img, function (ele) {
+                        ele.onclick = function () {
+                                modal.style.display = "block";
+                                modalImg.src = this.src;
+                                captionText.innerHTML = this.alt;
+                        }
+                });
+
+                // Get the <span> element that closes the modal
+                var span = document.getElementsByClassName("close")[0];
+
+                // When the user clicks on <span> (x), close the modal
+                span.onclick = function () {
+                        modal.style.display = "none";
+                }
+
+        </script>
 </body>
 
 </html>
