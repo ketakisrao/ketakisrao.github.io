@@ -15,6 +15,7 @@
             /* border-radius: 5px; */
             cursor: pointer;
             transition: 0.3s;
+            cursor: zoom-in;
         }
 
         .full-img:hover {
@@ -118,8 +119,39 @@
                 width: 100%;
             }
         }
+
         .unit .row {
             padding: 30px 0;
+        }
+
+        .videoWrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 */
+            padding-top: 25px;
+            height: 0;
+        }
+
+        .videoWrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .text {
+            padding-top: 30px;
+            font-size: 14px;
+        }
+
+        .text p {
+            margin-bottom: 5px;
+        }
+
+        .text b {
+            color: #666;
+            letter-spacing: 0.2 rem;
         }
     </style>
 </head>
@@ -134,30 +166,16 @@
         <div class="inner-container">
             <div class="container">
                 <h1 class="projects-header">Say Cheese!</h1>
-                <!-- <div class="summary">
-                    <p class="summary-head">Topic:</p>
-                    <p class="summary-block">Cheeses</p>
-                </div>
-                <div class="summary">
-                    <p class="summary-head">Genre:</p>
-                    <p class="summary-block">Arcade</p>
-                </div>
-                <div class="summary">
-                    <p class="summary-head">Design:</p>
-                    <p class="summary-block">Responsive Design</p>
-                </div>
-                <div class="summary">
-                    <p class="summary-head">Platform:</p>
-                    <p class="summary-block">Compatible with desktops, tablets and mobiles.</p>
-                </div> -->
                 <div class="box">
                     <h3>Ideation</h3>
                     <p class="points">
                         Cheese's have been the love of my life since I've started tasting food! Also, I wanted to
                         experiment with SAP's new visualisation tool called Lumira. So I made this storyboard full of
-                        cheeses. (Well according to Google, there are more than 4,500 varieties of cheeses, wasn't possible to get 'em all!)
+                        cheeses. (Well according to Google, there are more than 4,500 varieties of cheeses, wasn't
+                        possible to get 'em all!)
                         <br>
-                        Here is the <a href="images/Cheeses.xlsx">dataset</a> I made by extracting information on each of the popular cheeses from Google using Scrapy (Python).
+                        Here is the <a href="images/Cheeses.xlsx">dataset</a> I made by extracting information on each
+                        of the popular cheeses from Google using Scrapy (Python).
                     </p>
                 </div>
                 <div class="box">
@@ -167,43 +185,99 @@
                             <div class="col-sm-8">
                                 <img class="full-img" src="images/popularity.png" />
                             </div>
-                            <div class="col-sm-4"></div>
+                            <div class="col-sm-4 text">
+                                <p><b>Type:</b> Word Cloud</p>
+                                <p><b>What it represents?</b> It shows the popularity of each cheese.</p>
+                                <p><b>Why I chose this?</b> A word cloud was the best representation to show the name
+                                    of the cheese based on how popular it is. The more popular a cheese, the more it's
+                                    name stands out. In this case, Mozzarella is the most popularly used cheese and
+                                    hence is the biggest amongst all.</p>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-8">
                                 <img class="full-img" src="images/Agingmax.png" />
                             </div>
-                            <div class="col-sm-4"></div>
+                            <div class="col-sm-4 text">
+                                <p><b>Type:</b> Area Chart</p>
+                                <p><b>What it represents?</b> Some cheeses are left for a certain duration under
+                                    microbial action to let the cheese and age. The chart shows the aging time for each
+                                    cheese.</p>
+                                <p><b>Why I chose this?</b> The fresh cheeses do not need anytime to age and therefore
+                                    the valleys in an area chart would show the fresh cheeses and the spikes would show
+                                    the ones that need time to age. Using the varied colours made it look truly
+                                    scintillating!</p>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-8">
                                 <img class="full-img" src="images/popularityvscost1.png" />
                             </div>
-                            <div class="col-sm-4"></div>
+                            <div class="col-sm-4 text">
+                                <p><b>Type:</b> Bubble Chart</p>
+                                <p><b>What it represents?</b> Showcases popular vs cost of each cheese.</p>
+                                <p><b>Why I chose this?</b> I needed a chart that could represent both these dimensions
+                                    and a bubble chart was best suited. The more above a cheese from the baseline, the
+                                    more popular it is. To make it more interesting, I've represented the cost by the
+                                    size of the bubble. It is much easier to figure out how costly a cheese is by the
+                                    size of it's corresponding bubble.</p>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-8">
                                 <img class="full-img" src="images/Cholestrol.png" />
                             </div>
-                            <div class="col-sm-4"></div>
+                            <div class="col-sm-4 text">
+                                <p><b>Type:</b> Radar Chart</p>
+                                <p><b>What it represents?</b> Shows the cholesterol level of each cheese.</p>
+                                <p><b>Why I chose this?</b> Although a radar chart represents multivariate data, I made
+                                    this one show the different cholesterol levels in each cheese to make the story
+                                    more interesting.</p>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-8">
                                 <img class="full-img" src="images/Mineral.png" />
                             </div>
-                            <div class="col-sm-4"></div>
+                            <div class="col-sm-4 text">
+                                <p><b>Type:</b> 3D Bar Chart</p>
+                                <p><b>What it represents?</b> The mineral content of different minerals in each cheese.</p>
+                                <p><b>Why I chose this?</b> It was the perfect chart to represent the mineral vs cheese
+                                    matrix.</p>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-8">
                                 <img class="full-img" src="images/production.png" />
                             </div>
-                            <div class="col-sm-4"></div>
+                            <div class="col-sm-4 text">
+                                <p><b>Type:</b> Geo-pie Chart</p>
+                                <p><b>What it represents?</b> The chart shows the biggest producers of cheese in the
+                                    world.</p>
+                                <p><b>Why I chose this?</b> A geo-pie chart was perfect to represent all the metrics.
+                                    The size of the pie chart shows the size of production of cheese in each country.
+                                    Ideally, the pie chart should have shown the popular cheeses in each country but I
+                                    couldn't get it to represent those.</p>
+                            </div>
                         </div>
                         <div class="row">
                             <div class="col-sm-8">
                                 <img class="full-img" src="images/FatvsProtein.png" />
                             </div>
-                            <div class="col-sm-4"></div>
+                            <div class="col-sm-4 text">
+                                <p><b>Type:</b> Grouped Bar Chart</p>
+                                <p><b>What it represents?</b> Fat to protein comparison of each cheese.</p>
+                                <p><b>Why I chose this?</b> A grouped bar chart would allow easy comparison between the
+                                    fat and protein content of each cheese.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-10 videoWrapper">
+                                <iframe src="https://www.youtube.com/embed/JPQtHmmuZLE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                            </div>
+                            <div class="col-sm-1"></div>
                         </div>
                     </div>
                 </div>
