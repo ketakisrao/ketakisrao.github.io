@@ -339,6 +339,10 @@ a:hover {
     width: 70%;
 }
 
+.small-title {
+    margin-bottom: 1.2rem;
+}
+
 .process {
     display: flex;
     flex-direction: row;
