@@ -6,6 +6,10 @@ body {
     color: #3a3a3a;
 }
 
+.navbar {
+    margin-bottom: 100px;
+}
+
 .nav-bg {
     font-family: 'MyRaleway';
     background-color: #8bb14e;
@@ -38,17 +42,37 @@ body {
 .my-img img {
     width: 80%;
     border-radius: 50%;
-    box-shadow: 2px 2px 50px #cccccc;
+    box-shadow: 2px 2px 20px #cccccc;
 }
 
 .about {
     display: flex;
-    padding: 0 8vw;
+    padding: 2vw 8vw;
     align-items: center;
-    height: 75vh;
 }
 
 section {
     padding: 0 8vw;
 }
 
+ @media (max-width: 768px) {
+     .navbar-nav {
+        text-align: right;
+    }
+    .navbar {
+        margin-bottom: 30px;
+    }
+
+    .navbar-brand {
+        font-size: 1.2em;
+    }
+
+    .navbar-toggler {
+        font-size: 0.75em;
+        padding: 0.10em 0.5em;
+    }
+
+    .about {
+        padding: 4vw 8vw;
+    }
+ }
