@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'MyRaleway';
+    src: url('../fonts/Raleway/Raleway.ttf') format('truetype');
+}
+body {
+    color: #3a3a3a;
+}
+
+.nav-bg {
+    font-family: 'MyRaleway';
+    background-color: #8bb14e;
+    text-transform: uppercase;
+    padding: 0 8vw;
+}
+
+.nav-bg a {
+    color: #3a3a3a;
+}
+
+.navbar-nav a {
+    font-weight: 100;
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.8em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin: 0;
+}
+
+.my-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.my-img img {
+    width: 80%;
+    border-radius: 50%;
+    box-shadow: 2px 2px 50px #cccccc;
+}
+
+.about {
+    display: flex;
+    padding: 0 8vw;
+    align-items: center;
+    height: 75vh;
+}
+
+section {
+    padding: 0 8vw;
+}
+
