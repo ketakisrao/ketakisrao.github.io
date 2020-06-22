@@ -20,6 +20,9 @@ body {
 .nav-bg a {
     color: #3a3a3a;
 }
+.dropdown-menu {
+    text-transform: none;
+}
 
 .navbar-nav a {
     font-weight: 100;
@@ -39,10 +42,60 @@ body {
     justify-content: center;
 }
 
-.my-img img {
-    width: 80%;
-    border-radius: 50%;
-    box-shadow: 2px 2px 20px #cccccc;
+
+/*Badge*/
+
+.badge {
+  display: block;
+  position: relative;
+  width: 25rem;
+  height: 25rem;
+  cursor: pointer;
+  background: url("../assets/images/KetakiCover copy.jpg") no-repeat 100% 50%;
+  background-size: 120%;
+  border-radius: 50%;
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+  box-shadow: 0px 0.5rem 1rem #ccc;
+}
+.badge:hover {
+  box-shadow: 0px 0.5rem 2rem rgba(0, 0, 0, 0.50);
+  background-position: 0% 50%;
+}
+.badge:hover .text {
+  -webkit-transform: rotate(-45deg) translate(0px) rotate(-315deg);
+          transform: rotate(-45deg) translate(0px) rotate(-315deg);
+  background: rgba(139, 177, 78, 0.25);
+  /* color: #fff; */
+  width: 25rem;
+  letter-spacing: 0.8rem;
+  line-height: 25rem;
+  height: 25rem;
+  margin-top: -12.5rem;
+  margin-left: -12.5rem;
+  font-size: 1.4rem;
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1), letter-spacing 1.5s ease-out;
+}
+.badge .text {
+  font-weight: 100;
+  display: block;
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  line-height: 8rem;
+  left: 50%;
+  top: 50%;
+  margin-top: -10rem;
+  margin-left: -3rem;
+  font-size: 1rem;
+  font-family: "MyRaleway", sans-serif;
+  text-align: center;
+  color: #3a3a3a;
+  border-radius: 50%;
+  background: #8bb14e;
+  -webkit-transform: rotate(-180deg) translate(-10rem) rotate(180deg);
+          transform: rotate(-180deg) translate(-10rem) rotate(180deg);
+  box-shadow: 0px 0.5rem 1rem #ccc;
+  transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
 }
 
 .about {
@@ -55,8 +108,8 @@ section {
     padding: 0 8vw;
 }
 
- @media (max-width: 768px) {
-     .navbar-nav {
+@media (max-width: 768px) {
+    .navbar-nav {
         text-align: right;
     }
     .navbar {
@@ -75,4 +128,8 @@ section {
     .about {
         padding: 4vw 8vw;
     }
- }
+
+    .my-img img {
+        width: 100%;
+    }
+}
