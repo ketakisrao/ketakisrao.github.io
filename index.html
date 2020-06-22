@@ -1,196 +1,23 @@
 <html>
 
 <head>
-        <title>Ketaki's Portfolio</title>
-        <link rel="stylesheet" href="css/bootstrap.css" />
-        <link rel="stylesheet" href="css/custom.css" />
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
-                crossorigin="anonymous">
+    <title>
+        Ketaki's Portfolio
+    </title>
+    <link rel="stylesheet" href="files/bootstrap.min.css" />
 </head>
 
 <body>
-        <nav class="navbar navbar-expand-lg navbar-light sticky">
-                <!-- <a class="navbar-brand" href="#">K</a> -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                                <li class="nav-item">
-                                        <a class="nav-link" href="#">About</a>
-                                </li>
-                                <li class="nav-item">
-                                        <a class="nav-link" href="#projects">Projects</a>
-                                </li>
-                                <li class="nav-item">
-                                        <a class="nav-link" href="#skills">Skills</a>
-                                </li>
-                                <li class="nav-item">
-                                        <a class="nav-link" href="#contact">Contact</a>
-                                </li>
-                        </ul>
-                </div>
-        </nav>
-        <div class="introduction container">
-                <div class="row">
-                        <div class="col-sm-1"></div>
-                        <div class="col-sm-5 description">
-                                I am <b>Ketaki Rao - </b>
-                                <div class="fadeIn">
-                                        <span>a Web Developer.</span>
-                                        <span>a Problem Solver.</span>
-                                        <span>a Team Leader.</span>
-                                        <span>a Passionate Dancer.</span>
-                                        <span>a Keen Observer.</span>
-                                </div>
-                        </div>
-                        <div class="col-sm-5 about-left">
-                                <div class='badge' onclick="location.href='about.html'">
-                                        <div class='text'>Find out more</div>
-                                </div>
-                        </div>
-                        <div class="col-sm-1"></div>
-                </div>
-
-                <div class="flex-center scroll-btn">
-                        <a href="#projects" class="round-btn flex-center"><i class="fas fa-chevron-down"></i></a>
-                </div>
-
-        </div>
-
-        <div id="projects" class="container projects">
-                <div class="row eq">
-                        <div class="col-sm-6">
-                                <div class="custom-card">
-                                        <img class="lrm" src="images/LRM.png" />
-                                </div>
-                        </div>
-                        <div class="col-sm-6">
-                                <div class="text-container">
-                                        <h4>LIVE REACH MEDIA</h4>
-                                        <p class="technologies">ANGULARJS / GMAPS / DATA VISUALIZATION / HEATMAPS</p>
-                                        <p class="info">Application to faciliate day to day proceedings of Live
-                                                Reach Media.</p>
-                                        <a href="lrmcompany.html" class="sketchy">View
-                                                Case Study</a>
-                                </div>
-                        </div>
-                </div>
-                <div class="row eq">
-                        <div class="col-sm-6">
-                                <div class="text-container">
-                                        <h4>Black Knights</h4>
-                                        <p class="technologies">ANGULAR 4 / BOOTSTRAP 3 / MINIMALISTIC DESIGN</p>
-                                        <p class="info">An app designed to collaborate Nigerian start-ups and their
-                                                investors.</p>
-                                        <a href="blacknights.html" class="sketchy">View
-                                                Case Study</a>
-                                </div>
-                        </div>
-                        <div class="col-sm-6">
-                                <div class="custom-card dark">
-                                        <img src="images/Logo_3x.png" />
-                                </div>
-                        </div>
-                </div>
-                <div class="row eq">
-                        <div class="col-sm-6">
-                                <div class="custom-card">
-                                        <img class="wmole" src="images/whackamole.png" />
-                                </div>
-                        </div>
-                        <div class="col-sm-6">
-                                <div class="text-container">
-                                        <h4>WHACKAMOLE</h4>
-                                        <p class="technologies">VANILLA JS / JQUERY / CSS-GRID / FLEXBOX</p>
-                                        <p class="info">A simple js game where in you need to whack moles
-                                                coming out of their holes, but you need to hurry since you've got only
-                                                30s!</p>
-                                        <a href="whackamoleabout.html" class="sketchy">View Case Study</a>
-                                </div>
-                        </div>
-                </div>
-                <div class="row eq">
-                        <div class="col-sm-6">
-                                <div class="text-container">
-                                        <h4>SAY CHEESE!</h4>
-                                        <p class="technologies">DATA VISUALISATION / CREATIVE / DIGITAL STORYTELLING</p>
-                                        <p class="info">A Data Visualisation for cheeses that I made for the SAP Data
-                                                Viz Challenge, 2014.</p>
-                                        <a href="saycheese.html" class="sketchy">View
-                                                Case Study</a>
-                                </div>
-                        </div>
-                        <div class="col-sm-6">
-                                <div class="custom-card">
-                                        <img class="cheese" src="images/saycheese.png" />
-                                </div>
-                        </div>
-                </div>
-        </div>
-        <div id="skills" class="projects">
-                <h3>My World Of Technology</h3>
-                <div class="skill-mid">
-                        <div id="canvasContainer" class="skill-cloud">
-                                <canvas width="600" height="500" id="skillsCanvas">
-                                        <ul>
-                                                <li><a href="javascript:;"><img src="images/php.png" /></a></li>
-                                                <li><a href="javascript:;"><img src="images/d3.png" /></a></li>
-                                                <li><a href="javascript:;"><img src="images/HTML5.png" /></a></li>
-                                                <li><a href="javascript:;"><img src="images/js.png" /></a></li>
-                                                <li><a href="javascript:;"><img src="images/CSS3.png" /></a></li>
-                                                <li><a href="javascript:;"><img src="images/aws.png" /></a></li>
-                                                <li><a href="javascript:;"><img src="images/JQuery.png" /></a></li>
-                                                <li><a href="javascript:;"><img src="images/AngularJS_logo.svg.png" /></a></li>
-                                                <li><a href="javascript:;"><img src="images/mysql.png" /></a></li>
-                                                <li><a href="javascript:;"><img src="images/bootstrap.png" /></a></li>
-                                                <li><a href="javascript:;">THREE.JS</a></li>
-                                                <li><a href="javascript:;"><img src="images/nodejs.png" /></a></li>
-                                                <li><a href="javascript:;"><img src="images/underscore.png" /></a></li>
-                                                <li><a href="javascript:;"><img src="images/rest.png" /></a></li>
-                                                <li><a href="javascript:;"><img src="images/ajax.png" /></a></li>
-                                                <li><a href="javascript:;"><img src="images/JSON.png" /></a></li>
-                                                <li><a href="javascript:;"><img src="images/xml.png" /></a></li>
-                                                <li><a href="javascript:;"><img src="images/xml.png" /></a></li>
-                                                <li><a href="javascript:;"><img src="images/flask.png" /></a></li>
-                                                <li><a href="javascript:;"><img src="images/python.png" /></a></li>
-                                                <li><a href="javascript:;"><img src="images/django.png" /></a></li>
-                                                <li><a href="javascript:;"><img src="images/photoshop.png" /></a></li>
-                                                <li><a href="javascript:;"><img src="images/illustrator.png" /></a></li>
-                                                <li><a href="javascript:;"><img src="images/blenderico.png" /></a></li>
-                                        </ul>
-                                </canvas>
-                        </div>
-                </div>
-        </div>
-
-        <div id="contact" class="contact">
-                <h3>Contact</h3>
-                <div class="personal-details">
-                        I am currently studying Masters of HCI at Carnegie Mellon University..<br>
-                        <b><i class="fas fa-envelope"></i></b> <span>ketakisrao at outlook.com</span><br>
-                        <b><i class="fas fa-mobile"></i></b> <span>+1 412-626-2548</span>
-                </div>
-                <div class="soc">
-                        <a href="https://www.linkedin.com/in/ketakisrao/"><i data-toggle="tooltip" data-placement="top"
-                                        title="LinkedIn" class="fab fa-linkedin"></i></a>
-                        <a href="https://www.facebook.com/ketakisrao/"><i data-toggle="tooltip" data-placement="top"
-                                        title="Facebook" class="fab fa-facebook"></i></a>
-                        <a href="https://www.twitter.com/ketakisrao/"><i data-toggle="tooltip" data-placement="top"
-                                        title="Twitter" class="fab fa-twitter"></i></a>
-                        <a href="https://www.instagram.com/ketakisrao/"><i data-toggle="tooltip" data-placement="top"
-                                        title="Instagram" class="fab fa-instagram"></i></a>
-                        <a href="https://www.github.com/ketakisrao/"><i data-toggle="tooltip" data-placement="top"
-                                        title="Github" class="fab fa-github"></i></a>
-                        <a href="images/Ketaki-Resume.pdf"><i data-toggle="tooltip" data-placement="top" title="Resume"
-                                        class="far fa-address-card"></i></a>
-                </div>
-        </div>
-        <script src="js/jQuery.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/tag-cloud.js"></script>
-        <script src="js/custom.js"></script>
+    <div>
+        Hi there, I am Ketaki Rao a current student at the Master's of Human Computer Interaction Program @ School of
+        Computer Science, Carnegie Mellon University. This site is currently under construction but I am so glad that
+        you're interested in my work. Please reach out to me at <a
+            href="mailto:ketakisrao@outlook.com">ketakisrao@outlook.com</a> to learn more about me and my work.
+        <br>
+        Meanwhile, here is a link to <a href="KetakiRao_Resume.pdf">my resume.</a>
+    </div>
 </body>
+
+<script src="files/bootstrap.min.js"></script>
 
 </html>
