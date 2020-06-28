@@ -130,8 +130,7 @@ section {
 
 }
 
-.work-block .overlay img {
-    padding: 1.25rem;
+.work-block img {
     width: 100%;
 }
 
@@ -220,6 +219,11 @@ section {
 
 .design-decisions video {
     width: 90%;
+    border-radius: 6px;
+}
+
+.design-decisions img {
+    width: 100%;
     border-radius: 6px;
 }
 
