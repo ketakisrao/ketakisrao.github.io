@@ -127,10 +127,12 @@ section {
     background-color: #fff;
     box-shadow: 0px 0.5rem 1rem #ccc;
     border-radius: 0.5rem;
+    padding: 1.25rem;
 
 }
 
 .work-block img {
+    /* padding: 1.25rem; */
     width: 100%;
 }
 
