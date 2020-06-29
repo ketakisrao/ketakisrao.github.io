@@ -2,12 +2,32 @@
     font-family: 'MyRaleway';
     src: url('../fonts/Raleway/Raleway.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'Raleway-Black';
+    src: url('../fonts/Raleway/static/Raleway-Black.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Raleway-Heavy';
+    src: url('../fonts/Raleway/static/Raleway-ExtraBold.ttf') format('truetype');
+}
+
 body {
     color: #3a3a3a;
 }
 
-h1 {
-    text-transform: uppercase;;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway-Heavy';
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.navbar {
+    position: fixed;
+    top:0;
+    width: 100%;
+    z-index: 10;
+
 }
 
 .nav-bg {
@@ -29,11 +49,13 @@ h1 {
 }
 
 .navbar-brand {
-    font-weight: 800;
-    font-size: 1.8em;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
+    /* font-weight: 800; */
+    font-size: 1.9rem;
+    /* padding-left: 0.5em; */
+    /* padding-right: 0.5em; */
     margin: 0;
+    font-family: 'Raleway-Black';
+    color: #3a3a3a!important;
 }
 
 .my-img {
@@ -157,6 +179,8 @@ section {
     font-size: 0.8rem;
     font-weight: bold;
     color: #8bb14e;
+    font-family: 'Raleway-Heavy';
+    letter-spacing: 0.05rem;
 }
 
 .work-info .tags {
@@ -183,6 +207,12 @@ section {
 
 .card img {
     width: 100%;
+}
+
+.card h6 {
+    text-align:center;
+    margin-bottom: 0;
+    padding: 0.25rem 0;
 }
 
 
