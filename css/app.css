@@ -105,9 +105,12 @@ h1 {
 }
 
 section {
-    padding: 6rem 0;
+    padding: 4rem 0;
 }
 
+.introduction {
+    padding-top: 8rem;
+}
 .work-block div:first-child {
     padding: 0;
 }
@@ -164,6 +167,39 @@ section {
     text-decoration: none;
     color: #3a3a3a;
 }
+
+.fun {
+    padding-left: 8vw;
+    padding-right: 8vw;
+}
+.fun h1 {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+.fun .card {
+    margin: 0 auto;
+    height: 100%;
+}
+
+.card img {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .hero {
     padding: 0;
@@ -257,4 +293,13 @@ section {
     .tldr .title {
         padding: 0 0.75rem;
     }
+
+    section {
+        padding: 2rem 0;
+    }
+
+    .introduction {
+        padding-top: 4rem;
+    }
+
 }
