@@ -763,6 +763,14 @@ section {
         padding-top: 4rem;
     }
 
+    .hero > div {
+        padding-top: 3rem;
+    }
+
+    .hero p {
+        display: none;
+    }
+
     .card .card-text {
         font-size: 0.8rem;
     }
