@@ -689,8 +689,15 @@ section {
         font-size: 1rem;
         padding-bottom: 0;
     }
-    .introduction {
+    .introduction .my-img {
         display: none;
+    }
+    .introduction .about {
+        padding: 0;
+    }
+    .introduction .about > div {
+        margin-left: -9rem;
+        font-size: 4.2vw;
     }
     .my-info {
         display: block;
@@ -749,7 +756,7 @@ section {
     }
 
     .extra {
-        padding-top: 6rem;
+        padding-top: 8rem;
     }
 
     .hero {
@@ -758,6 +765,9 @@ section {
 
     .card .card-text {
         font-size: 0.8rem;
+    }
+    .hideme-small {
+        opacity: 1!important;
     }
     
 }
