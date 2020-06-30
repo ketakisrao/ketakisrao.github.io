@@ -22,13 +22,17 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 0.05rem;
 }
 
-.navbar {
+img {
+    width: 100%;
+}
+
+/* .navbar {
     position: fixed;
     top:0;
     width: 100%;
     z-index: 10;
 
-}
+} */
 
 .nav-bg {
     font-family: 'MyRaleway';
@@ -303,13 +307,39 @@ section {
     border-radius: 6px;
 }
 
+
+
+/* About */
+.my-info {
+    padding: 2vw 8vw;
+    display: flex;
+}
+
+.my-info .image {
+    padding: 0 5vw;
+}
+
+.my-info .info {
+    /* padding: 0 3vw; */
+    padding-right: 5vw;
+}
+
+
+.my-info .image img {
+    border-radius: 8px;
+}
+
+.my-info {
+    padding-top: 4rem;
+}
+
 @media (max-width: 768px) {
     .navbar-nav {
         text-align: right;
     }
 
     .navbar-brand {
-        font-size: 1.2em;
+        font-size: 1.4em;
     }
 
     .navbar-toggler {
@@ -345,6 +375,14 @@ section {
 
     .fun .col-sm {
         margin: 3vw 0;
+    }
+    
+    .my-info {
+        display: block;
+    }
+
+    .my-info .info {
+        padding: 8vw 5vw;
     }
 
 }
