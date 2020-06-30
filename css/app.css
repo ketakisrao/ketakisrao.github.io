@@ -23,6 +23,10 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 1rem;
 }
 
+p {
+    font-size: 0.9rem;
+}
+
 /* img {
     width: 100%;
 } */
@@ -75,6 +79,17 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     font-family: 'Raleway-Black';
     color: #3a3a3a!important;
+}
+
+.btn-primary, .btn-primary:focus {
+    background-color: #3a3a3a;
+    border-color: #3a3a3a;
+}
+
+.btn-primary:active, .btn-primary:hover {
+    background-color: #1c4670!important;
+    border-color: #1c4670!important;
+    
 }
 
 .my-img {
@@ -449,9 +464,6 @@ section {
     height: 10rem;
 }
 
-.tldr p {
-    font-size: 0.9rem;
-}
 
 .design-decisions {
     padding: 0 8vw;
@@ -479,18 +491,20 @@ section {
 
 /* About */
 .my-info {
-    padding: 2vw 8vw;
+    padding: 2vw 0;
     display: flex;
+    padding-top: 4rem;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .my-info .image {
     display: block;
-    padding: 0 5vw;
+    padding-right: 5vw;
 }
 
 .my-info .info {
-    /* padding: 0 3vw; */
-    padding-right: 5vw;
+    /* padding-right: 5vw; */
 }
 
 
@@ -499,8 +513,8 @@ section {
     height: 70vh;
 }
 
-.my-info {
-    padding-top: 4rem;
+.my-info .info p:first-of-type {
+    font-size: 1.4rem;
 }
 
 .box h5 {
@@ -526,6 +540,20 @@ section {
     opacity: 0.8;
 }
 
+.full-img {
+    width: 100%;
+}
+
+.projects-header {
+    text-align: center;
+}
+
+.box {
+    padding: 2vw 0;
+}
+
+
+
 
 
 @media (max-width: 768px) {
@@ -542,9 +570,7 @@ section {
         padding: 0 0.5rem;
     }
 
-    .about {
-        padding: 4vw 8vw 4vw 0;
-    }
+    
 
     
     .tldr .row {
@@ -568,6 +594,7 @@ section {
     }
 
     .my-info {
+        /* display: block; */
         font-size: 0.8rem;
     }
     
@@ -597,11 +624,7 @@ section {
         margin-top: -9rem;
         line-height: 8rem;
     }
-
-    .about > div {
-        font-size: 18px;
-        margin-left: -4rem;
-    }
+    
 
     .work-info .title {
         font-size: 0.5rem;
@@ -630,19 +653,29 @@ section {
         font-size: 0.6rem;
     }
 
+    .about {
+        padding: 4vw 8vw 4vw 0;
+    }
 
+    .about > div {
+        font-size: 18px;
+        margin-left: -4rem;
+    }
+
+}
+
+@media (max-width: 1030px) {
     /* About */
-
+    
     .my-info .image img {
         border-radius: 8px;
         height: auto;
         width: 100%;
     }
 
-    .my-info .info {
-        font-size: 0.6rem;
+    .my-info .info p {
+        font-size: 0.8rem;
     }
-
 }
 
 @media (max-width: 480px) {
@@ -658,7 +691,11 @@ section {
     }
 
     .my-info .info {
-        padding: 4vw 5vw;
+        padding: 4vw 0;
+    }
+
+    .my-info .image {
+        padding: 0;
     }
 
     .work-block .overlay div {
@@ -718,16 +755,3 @@ section {
     }
     
 }
-
-.full-img {
-    width: 100%;
-}
-
-.projects-header {
-    text-align: center;
-}
-
-.box {
-    padding: 2vw 0;
-}
-
