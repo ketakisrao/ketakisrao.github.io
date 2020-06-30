@@ -92,6 +92,12 @@ p {
     
 }
 
+
+.hideme
+{
+    opacity:0;
+}
+
 .my-img {
     display: flex;
     align-items: center;
