@@ -477,6 +477,7 @@ section {
 
 .design-decisions .row {
     padding: 2rem 0;
+    font-size: 0.9rem;
 }
 
 .design-decisions h1, .design-decisions h3 {
@@ -502,7 +503,6 @@ section {
     width: 50%;
     box-shadow: -5px 0 15px #aaa;
 }
-
 
 /* About */
 .my-info {
