@@ -454,7 +454,11 @@ section {
 }
 
 .info-band {
-    padding: 0;
+    padding: 0 8vw;
+}
+
+.info-band .col-sm {
+    padding: 2vw;
 }
 
 .tldr {
@@ -503,6 +507,8 @@ section {
     width: 50%;
     box-shadow: -5px 0 15px #aaa;
 }
+
+
 
 /* About */
 .my-info {
