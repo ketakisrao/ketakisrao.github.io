@@ -474,6 +474,11 @@ section {
     height: 10rem;
 }
 
+.note {
+    padding: 2vw 16vw;
+    text-align: center;
+}
+
 
 .design-decisions {
     padding: 0 8vw;
