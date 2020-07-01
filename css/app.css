@@ -500,7 +500,6 @@ section {
 
 .design-decisions .sol img {
     width: 50%;
-    justify-self: center;
     box-shadow: -5px 0 15px #aaa;
 }
 
