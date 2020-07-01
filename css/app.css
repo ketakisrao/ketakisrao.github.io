@@ -489,8 +489,12 @@ section {
     font-size: 0.9rem;
 }
 
-.design-decisions h1, .design-decisions h3 {
+.design-decisions h1, .design-decisions h3, .design-decisions h5 {
     text-align: center;
+}
+
+.design-decisions h5 {
+    padding-top: 2rem;
 }
 
 .design-decisions video {
