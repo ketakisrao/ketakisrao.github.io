@@ -200,9 +200,9 @@ section {
 }
 
 .fadeIn span {
-    animation: fadeEffect 20s linear infinite 0s;
-    -ms-animation: fadeEffect 20s linear infinite 0s;
-    -webkit-animation: fadeEffect 20s linear infinite 0s;
+    animation: fadeEffect 15s linear infinite 0s;
+    -ms-animation: fadeEffect 15s linear infinite 0s;
+    -webkit-animation: fadeEffect 15s linear infinite 0s;
     color: #8bb14e;
     opacity: 0;
     overflow: hidden;
@@ -211,27 +211,27 @@ section {
 }
 
 .fadeIn span:nth-child(2) {
-    animation-delay: 4s;
-    -ms-animation-delay: 4s;
-    -webkit-animation-delay: 4s;
+    animation-delay: 3s;
+    -ms-animation-delay: 3s;
+    -webkit-animation-delay: 3s;
 }
 
 .fadeIn span:nth-child(3) {
-    animation-delay: 8s;
-    -ms-animation-delay: 8s;
-    -webkit-animation-delay: 8s;
+    animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    -webkit-animation-delay: 6s;
 }
 
 .fadeIn span:nth-child(4) {
-    animation-delay: 12s;
-    -ms-animation-delay: 12s;
-    -webkit-animation-delay: 12s;
+    animation-delay: 9s;
+    -ms-animation-delay: 9s;
+    -webkit-animation-delay: 9s;
 }
 
 .fadeIn span:nth-child(5) {
-    animation-delay: 16s;
-    -ms-animation-delay: 16s;
-    -webkit-animation-delay: 16s;
+    animation-delay: 12s;
+    -ms-animation-delay: 12s;
+    -webkit-animation-delay: 12s;
 }
 
 /*FadeIn Animation*/
