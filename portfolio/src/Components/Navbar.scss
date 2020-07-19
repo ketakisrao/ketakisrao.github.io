@@ -1,0 +1,76 @@
+@import '../definitions';
+
+
+
+.nav-wrapper {
+    position: relative;
+    color: $secondary-color;
+    position: fixed;
+    width: 100%;
+}
+
+.navbar {
+    padding: $navbar-padding;
+    height: $navbar-height;
+    background-color: $primary-color;
+    color: $secondary-color;
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: $secondary-color;
+    border-radius: 2px;
+}
+
+.navbar-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: $navbar-height;
+    width: 100%;
+    display: flex;
+    justify-content: center;;
+}
+
+.brand {
+    position: absolute;
+    top:0; left:0;
+    height: $navbar-height;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 10px;
+    background-color: $primary-color;
+    font-size: 1.4rem;
+    margin-top: -0.15rem;
+}
+
+.navbar-overlay a{
+    text-decoration: none;
+    color: $secondary-color;
+}
+
+.navbar-nav {
+    justify-content: center;
+    ul {
+        background-color: $primary-color;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        list-style: none;
+        height: 100%;
+        li {
+            height: 100%;
+            a {
+                height: 100%;
+                display: flex;
+                align-items: center;
+                padding: 0 2rem;
+                
+            }
+        }
+    }
+}
