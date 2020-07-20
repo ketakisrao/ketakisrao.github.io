@@ -22,11 +22,11 @@ const summary = {
     duration: 'Jan, 2020 - Present (7 months)',
     problem: (
         <h2>
-            How might we leverage <span>sensing technologies</span> to better aid professors with insights 
-            backed by data from their own classes and what is the best way to <span>represent</span> such information 
+            How might we leverage <span>sensing technologies</span> to better aid professors with insights
+            backed by data from their own classes and what is the best way to <span>represent</span> such information
             to <span>motivate</span> them become better teachers?
         </h2>
-        )
+    )
 
 };
 
@@ -36,7 +36,12 @@ function EDU() {
             <Hero info={hero_info}></Hero>
             <TLDR info={summary}></TLDR>
             <div className="content-container">
-
+                <section>
+                    <h3>Solution</h3>
+                    <p>EduSense – a comprehensive sensing system to produce theoretically motivated class insights
+                        correlated with effective step-by-step instructions to motivate professors to improve student engagement
+                        and their efficacy.</p>
+                </section>
             </div>
         </div>
     );
