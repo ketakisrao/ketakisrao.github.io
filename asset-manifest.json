@@ -1,19 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.4d676405.chunk.css",
-    "main.js": "/static/js/main.62981fe5.chunk.js",
-    "main.js.map": "/static/js/main.62981fe5.chunk.js.map",
+    "main.css": "/static/css/main.66a69b27.chunk.css",
+    "main.js": "/static/js/main.20b6fb7d.chunk.js",
+    "main.js.map": "/static/js/main.20b6fb7d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.19ccc7f6.js.map",
-    "static/js/2.33ea3303.chunk.js": "/static/js/2.33ea3303.chunk.js",
-    "static/js/2.33ea3303.chunk.js.map": "/static/js/2.33ea3303.chunk.js.map",
+    "static/js/2.a00dbbc4.chunk.js": "/static/js/2.a00dbbc4.chunk.js",
+    "static/js/2.a00dbbc4.chunk.js.map": "/static/js/2.a00dbbc4.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.4a400e8069359326c44f1f73c55b2413.js": "/precache-manifest.4a400e8069359326c44f1f73c55b2413.js",
+    "precache-manifest.5a5a3f9ebfc24c82378db5fa917d689a.js": "/precache-manifest.5a5a3f9ebfc24c82378db5fa917d689a.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.4d676405.chunk.css.map": "/static/css/main.4d676405.chunk.css.map",
-    "static/js/2.33ea3303.chunk.js.LICENSE.txt": "/static/js/2.33ea3303.chunk.js.LICENSE.txt",
+    "static/css/main.66a69b27.chunk.css.map": "/static/css/main.66a69b27.chunk.css.map",
+    "static/js/2.a00dbbc4.chunk.js.LICENSE.txt": "/static/js/2.a00dbbc4.chunk.js.LICENSE.txt",
+    "static/media/BadMovement.png": "/static/media/BadMovement.19291dab.png",
     "static/media/EDU.png": "/static/media/EDU.9b0ffe94.png",
     "static/media/EDU_logo.svg": "/static/media/EDU_logo.06435e2b.svg",
+    "static/media/Gaze.png": "/static/media/Gaze.4484981a.png",
+    "static/media/GoodMovement.png": "/static/media/GoodMovement.33e5e442.png",
+    "static/media/HandRaiseNotif.mov": "/static/media/HandRaiseNotif.d02ae728.mov",
     "static/media/Hero.svg": "/static/media/Hero.70a4cc21.svg",
     "static/media/Hero.png": "/static/media/Hero.c97a0163.png",
     "static/media/KetakiRao_Resume.pdf": "/static/media/KetakiRao_Resume.cf19e208.pdf",
@@ -37,8 +41,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.33ea3303.chunk.js",
-    "static/css/main.4d676405.chunk.css",
-    "static/js/main.62981fe5.chunk.js"
+    "static/js/2.a00dbbc4.chunk.js",
+    "static/css/main.66a69b27.chunk.css",
+    "static/js/main.20b6fb7d.chunk.js"
   ]
 }

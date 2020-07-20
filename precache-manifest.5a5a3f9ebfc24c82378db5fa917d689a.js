@@ -1,27 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "65e29b0308a999aa79d6f725fb04dc06",
+    "revision": "38dc0cb80b1c1a16cbf76c7d029f4f0b",
     "url": "/index.html"
   },
   {
-    "revision": "69812d4dee0cab6a191c",
-    "url": "/static/css/main.4d676405.chunk.css"
+    "revision": "5d27a8c10162ce0c1875",
+    "url": "/static/css/main.66a69b27.chunk.css"
   },
   {
-    "revision": "5bb289b486cba8327c5e",
-    "url": "/static/js/2.33ea3303.chunk.js"
+    "revision": "a33209d4a9a44afb2d22",
+    "url": "/static/js/2.a00dbbc4.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/static/js/2.33ea3303.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.a00dbbc4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "69812d4dee0cab6a191c",
-    "url": "/static/js/main.62981fe5.chunk.js"
+    "revision": "5d27a8c10162ce0c1875",
+    "url": "/static/js/main.20b6fb7d.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
     "url": "/static/js/runtime-main.19ccc7f6.js"
+  },
+  {
+    "revision": "19291dabe0899441eadc1bfc328d28e1",
+    "url": "/static/media/BadMovement.19291dab.png"
   },
   {
     "revision": "9b0ffe94aa306c2ddcd02248e1364822",
@@ -30,6 +34,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "06435e2b6bec63645aa536264febac54",
     "url": "/static/media/EDU_logo.06435e2b.svg"
+  },
+  {
+    "revision": "4484981a69346d5cbefada9582ef090e",
+    "url": "/static/media/Gaze.4484981a.png"
+  },
+  {
+    "revision": "33e5e442341fdf203bc0822e966ced8b",
+    "url": "/static/media/GoodMovement.33e5e442.png"
+  },
+  {
+    "revision": "d02ae7283c0d48a0222b83df24762ee9",
+    "url": "/static/media/HandRaiseNotif.d02ae728.mov"
   },
   {
     "revision": "70a4cc211665a969393f6b4309c91e27",
