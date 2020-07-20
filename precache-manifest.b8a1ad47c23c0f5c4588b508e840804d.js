@@ -1,27 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "38dc0cb80b1c1a16cbf76c7d029f4f0b",
+    "revision": "a86f76b16d4e08c68f5863af686fbac7",
     "url": "/index.html"
   },
   {
-    "revision": "5d27a8c10162ce0c1875",
-    "url": "/static/css/main.66a69b27.chunk.css"
+    "revision": "fe48df6fabd4ce13f36f",
+    "url": "/static/css/main.211a2e14.chunk.css"
   },
   {
-    "revision": "a33209d4a9a44afb2d22",
-    "url": "/static/js/2.a00dbbc4.chunk.js"
+    "revision": "f2d6983da3b1591ee300",
+    "url": "/static/js/2.7a76567d.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/static/js/2.a00dbbc4.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.7a76567d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5d27a8c10162ce0c1875",
-    "url": "/static/js/main.20b6fb7d.chunk.js"
+    "revision": "fe48df6fabd4ce13f36f",
+    "url": "/static/js/main.4a129f22.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
     "url": "/static/js/runtime-main.19ccc7f6.js"
+  },
+  {
+    "revision": "fc3a3478e469e43d002a783396f89b58",
+    "url": "/static/media/AddGMapSearch.fc3a3478.mp4"
+  },
+  {
+    "revision": "54c9c1e8f18498005335e6d99201e4ea",
+    "url": "/static/media/AddingMultipleDevices.54c9c1e8.mp4"
+  },
+  {
+    "revision": "b902327cbbc9c37a012551d80f47e5f1",
+    "url": "/static/media/Analytics.b902327c.png"
   },
   {
     "revision": "19291dabe0899441eadc1bfc328d28e1",
@@ -48,6 +60,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/HandRaiseNotif.d02ae728.mov"
   },
   {
+    "revision": "bcbcafb58e5c4eb8f4bb97e7fd19d5c4",
+    "url": "/static/media/Heatmap.bcbcafb5.png"
+  },
+  {
     "revision": "70a4cc211665a969393f6b4309c91e27",
     "url": "/static/media/Hero.70a4cc21.svg"
   },
@@ -62,6 +78,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c97a0163168902b53116b9671528d6e4",
     "url": "/static/media/Hero.c97a0163.png"
+  },
+  {
+    "revision": "ecc8917f9f0c37e680dd3a21b6f16827",
+    "url": "/static/media/ImageEditTools.ecc8917f.mp4"
   },
   {
     "revision": "cf19e208cca99b49afa8e3c2006b3510",
@@ -82,6 +102,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "f4b789b9ea9a5569bd591b276597f50d",
     "url": "/static/media/PIT_logo.f4b789b9.png"
+  },
+  {
+    "revision": "263e1901408f998a9eb5bd3e427a2ba4",
+    "url": "/static/media/PathVis.263e1901.png"
   },
   {
     "revision": "193e57870228cf0ab08dee77ef0a9730",
