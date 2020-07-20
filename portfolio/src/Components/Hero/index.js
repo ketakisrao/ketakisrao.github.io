@@ -2,19 +2,26 @@ import React from 'react';
 import './index.scss';
 
 function Hero(props) {
-    return (
-        <div className="hero">
-            <img src={props.img} />
+    const info = props.info;
+    let banner;
+    if(info.isBanner){
+        banner = (
             <div className='hero-abs'>
                 <div className="hero-banner">
                     <h1>
-                        Pittsburgh International Airport
+                        {info.title}
                     </h1>
                     <p className='hide-on-small'>
-                        Reducing traveler anxiety and frustration to improve overall customer experience
+                        {info.desc}
                     </p>
                 </div>
             </div>
+        );
+    }
+    return (
+        <div className="hero">
+            <img src={info.img} />
+            {banner}
         </div>
     );
 }

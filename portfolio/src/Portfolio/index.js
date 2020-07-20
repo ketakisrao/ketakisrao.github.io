@@ -48,10 +48,14 @@ const info = {
     }
 }
 
+const hero_info = {
+    img: HeroImg
+};
+
 function Portfolio() {
     return (
         <div>
-            <Hero img={HeroImg}></Hero>
+            <Hero info={hero_info}></Hero>
             <div className="content-container">
                 <h1>Projects</h1>
                 <Project info={info.PIT}></Project>
