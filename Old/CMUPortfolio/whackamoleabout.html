@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ketaki's Portfolio</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="css/jquery-ui.css" />
+    <link rel="stylesheet" href="css/whackamole.css" />
+</head>
+
+<body style="color: #5B6976;">
+    <nav class="navbar sticky" style="background-color: transparent; padding: 0.5rem 2rem;">
+        <a class="navbar-back flex-center" href="index.html#projects">
+            <i class="fas fa-chevron-left"></i>
+        </a>
+    </nav>
+    <div class="custom-container">
+        <div class="inner-container">
+            <div class="container">
+                <h1 class="projects-header">Whack-a-mole!</h1>
+                <div class="summary">
+                    <p class="summary-head">What:</p>
+                    <p class="summary-block">A game that I've recreated from the memories of my childhood.</p>
+                </div>
+                <div class="summary">
+                    <p class="summary-head">Genre:</p>
+                    <p class="summary-block">Arcade</p>
+                </div>
+                <!-- <div class="summary">
+                    <p class="summary-head">Link:</p>
+                    <p class="summary-block"><a href="whackamole.html">Whackamole</a></p>
+                </div> -->
+                <div class="summary">
+                    <p class="summary-head">Design:</p>
+                    <p class="summary-block">Responsive Design</p>
+                </div>
+                <div class="summary">
+                    <p class="summary-head">Platform:</p>
+                    <p class="summary-block">Compatible with desktops, tablets and mobiles.</p>
+                </div>
+                <div class="box">
+                    <h3>Ideation</h3>
+                    <p class="points">I used to love playing arcade games as a child and would go once every month to
+                        the nearby mall to play them. My favorite game was <b>whack-a-mole</b>. Now, I've made one for
+                        mobiles and desktops so that I could sit at home and play (without having to bear the
+                        embarrassment of being an overgrown kid! <b>:D</b>)
+                    </p>
+                    <div class="flex-center">
+                        <img height=300 src="images/whackamole_maink.jpg" />
+                    </div>
+                    <p class="flex-center points">Image credits: Google</p>
+                </div>
+                <div class="box">
+                    <h3>Game design</h3>
+                    <p class="points text-align-center">Decided to divide the game screen in the form of a 6X6 grid.
+                        Added control buttons for the game.</p>
+                    <div class="flex-center">
+                        <img height=300 src="images/WhackamoleBackground.png" />
+                    </div>
+                </div>
+                <div class="box">
+                    <h3>Asset design</h3>
+                    <p class="points box">The character had be <b>A Mole</b> coming out of each grid. I was new to
+                        adobe illustrator and made a
+                        basic design of a brown coloured mole from the memories of my childhood and of course, the
+                        internet!</p>
+                    <div class="flex-center">
+                        <img height=150 src="images/mole.png" />
+                    </div>
+                    <p class="points box">The game looked pretty plain when I used a mouse pointer to pop the moles, so
+                        I made another asset, <b>The Hammer!</b> (Although it isn't as powerful as Thor's!)</p>
+                    <div class="flex-center">
+                        <img height=150 src="images/HammerHitBig.png" />
+                    </div>
+                </div>
+                <div class="box">
+                    <h3>Logic</h3>
+                    <p class="points">
+                        Below is a pseudo code for the first prototype.
+                    </p>
+                    <ol class="points">
+                        <li>Game starts once you hit "Start".</li>
+                        <li>Every new second, 4 moles appear in 4 random boxes which could be hit by the player.</li>
+                        <li>Every second, the last batch of 4 moles disappeared.</li>
+                        <li>Game ends once you click "Stop".</li>
+                    </ol>
+                </div>
+                <div class="box">
+                    <h3>Flaws</h3>
+                    <p class="points">
+                        After I made the first prototype, I realized that there were a few flaws that made the game
+                        boring and
+                        monotonous. These were:
+                    </p>
+                    <ol class="points">
+                        <li>At one time there were only 4 moles on the screen. This was a predictable number and
+                            was easily achievable.</li>
+                        <li>The time for which the moles stayed was just one sec, there was no variation in the
+                            time for which they remained on screen.</li>
+                        <li>
+                            No time limit, which made the game never-ending and boring.
+                        </li>
+                        <li>The game was very slow for mobiles since tapping the moles is much easier and quicker
+                            than clicking them with a computer mouse or a laptop track pad.</li>
+                    </ol>
+                </div>
+                <div class="box">
+                    <h3>Final Prototype</h3>
+                    <p class="points">
+                        I made quite a few improvements after the first prototype which were:
+                        <ol class="points">
+                            <li>Adding an optimal time limit of 30s, long enough to keep the players interested in
+                                the
+                                game and keep it challenging.</li>
+                            <li>Varied number of moles (instead of just 4) came into the grid making it more
+                                challenging to track and whack the moles.</li>
+                            <li>Randomized the time each mole spent on the screen. Each mole disappeared at different
+                                times instead of the initial 1s.</li>
+                            <li>Increased the speed at which moles appeared and disappeared when played on a
+                                mobile.
+                                This made the game a challenge to play on mobiles too.</li>
+                        </ol>
+                    </p>
+                </div>
+                <div class="box">
+                    <h3>Try it yourself!</h3>
+                    <audio id="whackSound">
+                        <source src="images/whack.mp3" />
+                    </audio>
+                    <div class="container top">
+                        <div class="row">
+                            <div class="col-md-5 center">
+                                <div id="whackGrid"></div>
+                                <div id="counterHolder">&nbsp;</div>
+                                <button class="btn btn-warning start-btn" id="start" onClick="startGame()">Start</button>
+                                <button class="btn btn-warning start-btn" id="sound" onClick="soundToggle()"><i class="fa fa-volume-up"></i></button>
+                                <div id="myModal" class="game-over">
+                                    <div class="game-over-modal">
+                                        <div class="modal-top">
+                                            <div class="icon-container">
+                                                <img src="images/mole.png" />
+                                            </div>
+                                        </div>
+                                        <div class="score">
+                                            <p id="score"></p>
+                                            <button class="btn" onCLick="hideScore()">Back</button>
+                                            <button class="btn btn-warning" onCLick="hideScore(true)">Play Again?</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5 center">
+                                <p class="instruction">Whack(click) the moles to get the highest score. Hurry, you have
+                                    only 30 seconds!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <h3></h3>
+                    <p class="points">
+                        I made quite a few improvements after the first prototype which were:
+                        <ol class="points">
+                            <li>Adding an optimal time limit of 30s, long enough to keep the players interested in
+                                the
+                                game and keep it challenging.</li>
+                            <li>Varied number of moles (instead of just 4) came into the grid making it more
+                                challenging to track and whack the moles.</li>
+                            <li>Randomized the time each mole spent on the screen. Each mole disappeared at different
+                                times instead of the initial 1s.</li>
+                            <li>Increased the speed at which moles appeared and disappeared when played on a
+                                mobile.
+                                This made the game a challenge to play on mobiles too.</li>
+                        </ol>
+                    </p>
+                </div>
+                <div class="box">
+                    <h2>Future works</h2>
+                    <p class="points">I was very satisfied with the game since this was my first attempt at game
+                        design. I would like to include a few more things in the next iteration:</p>
+                    <ol class="points">
+                        <li>Make the grid look better and more real, which in this case would be more like a ground
+                            with grass and mole holes around.</li>
+                        <li>Add more levels to make the game tougher as it goes on. Each of the subsequent levels could
+                            have a shorter time limit which would make the game much more interesting.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jQuery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src='js/jquery-ui.min.js'></script>
+    <script src="js/popper.js"></script>
+    <script type="text/javascript">
+        var counter = 0;
+        var maxTime = 2000;
+        var minTime = 700;
+        var counterHolder, inter, timeout, interval;
+        var whack = document.getElementById("whackSound");
+        var play = document.getElementById("play");
+        // audio.play();
+        $(document).ready(function () {
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                interval = 1000;
+                minTime = 600;
+                maxTime = 1500;
+            }
+            else {
+                interval = 1400;
+            }
+            var grid = document.getElementById('whackGrid');
+            var p = "";
+            var gridTemp = "";
+            var height = Math.trunc(grid.clientWidth / 6);
+            for (i = 0; i < 6; i++) {
+                gridTemp += height + "px ";
+            }
+            $(grid).css('grid-template-columns', gridTemp);
+            for (i = 0; i < 6; i++) {
+                p += '<div class="row">';
+                for (j = 0; j < 6; j++) {
+                    p += '<div class="col-2 col-sm-2" style="height: ' + height + 'px;" id="box_' + (i * 6 + j + 1) + '" onClick="moleHit(this.id)"><img draggable="false" src="images/mole.png" style="display:none; max-width: 100%;"/></div>';
+                }
+                p += '</div>';
+            }
+            grid.innerHTML = p;
+            counterHolder = document.getElementById("counterHolder");
+        });
+        function getRandom(min, max) {
+            if (min)
+                return Math.random() * (max - min) + min;
+            else
+                return Math.trunc((Math.random() * 10) % 6);
+        }
+        function clearMoles() {
+            for (i = 1; i <= 36; i++) {
+                $("#box_" + i + " img").hide();
+            }
+        }
+        function generateMoles() {
+            var row = getRandom();
+            var col = getRandom();
+            var boxNo = row * 6 + col + 1;
+            if (boxNo <= 36) {
+                $("#box_" + boxNo + " img").show('slide', { direction: 'down' }, 500);
+                (function (b) {
+                    setTimeout(function () {
+                        $("#box_" + boxNo + " img").hide('slide', { direction: 'down' }, 500);
+                    }, getRandom(minTime, maxTime));
+                })(boxNo);
+            }
+        }
+        function stopAllTimeouts() {
+            var id = window.setTimeout(null, 0);
+            while (id--) {
+                window.clearTimeout(id);
+            }
+        }
+        function gameOver(inter, timeout) {
+            var button = document.getElementById("start");
+            button.innerHTML = "Start";
+            clearInterval(inter);
+            if (timeout) {
+                clearTimeout(timeout);
+            }
+            $("#score").text("Your score is " + counter);
+            // $("#myModal").modal({keyboard: false, backdrop: false});
+            $("#myModal").show('slide', { direction: 'up' }, 500);
+            setTimeout(function () {
+                counterHolder.innerHTML = '&nbsp;';
+                stopAllTimeouts();
+                clearMoles();
+            }, 2000);
+        }
+        function startGame() {
+            var button = document.getElementById("start");
+            if (button.innerHTML == 'Start') {
+                counter = 0;
+                inter = setInterval(function () {
+                    var times = getRandom();
+                    for (i = 0; i < times; i++) {
+                        generateMoles();
+                        console.log("Here");
+                    }
+                }, interval);
+                counterHolder.innerHTML = '0';
+                button.innerHTML = "Stop";
+                timeout = setTimeout(function () {
+                    gameOver(inter);
+                }, 30000);
+            }
+            else {
+                gameOver(inter, timeout);
+            }
+        }
+        function moleHit(boxNo) {
+            if ($("#" + boxNo + " img").css('display') != 'none') {
+                counter++;
+                $("#" + boxNo + " img").hide('puff', 150);
+                whack.play();
+                counterHolder.innerHTML = counter;
+            }
+        }
+        function hideScore(replay) {
+            $("#myModal").hide('slide', { direction: 'up' }, 500);
+            if (replay)
+                startGame();
+        }
+        function soundToggle() {
+            var btn = $("#sound i");
+            if (btn.hasClass('fa-volume-up')) {
+                whack.muted = true;
+                btn.removeClass('fa-volume-up');
+                btn.addClass('fa-volume-off');
+            }
+            else {
+                whack.muted = false;
+                btn.removeClass('fa-volume-off');
+                btn.addClass('fa-volume-up');
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+RewriteEngine on
+# Rewrite everything else to index.html to allow html5 state links
+# Don't rewrite files or directories
+#RewriteBase /
+RewriteCond %{REQUEST_URI} ^/UIComponents [NC]
+RewriteCond %{REQUEST_FILENAME} !-f
+# redirect other to index.html
+RewriteRule . UIComponents/index.html [L]

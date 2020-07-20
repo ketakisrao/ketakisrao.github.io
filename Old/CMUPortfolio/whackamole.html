@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Whack-a-mole</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<link rel="stylesheet" href="css/jquery-ui.css"/>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<link rel="stylesheet" href="css/whackamole.css"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+                crossorigin="anonymous">
+</head>
+<body>
+	<audio id="whackSound">
+		<source src="images/whack.mp3"/>
+	</audio>
+	<div class="container top">
+		<div class="row">
+			<div class="col-md-5 center">
+				<div id="whackGrid"></div>
+				<div id="counterHolder">&nbsp;</div>
+				<button class="btn btn-warning start-btn" id="start" onClick="startGame()">Start</button>
+				<button class="btn btn-warning start-btn" id="sound" onClick="soundToggle()"><i class="fa fa-volume-up"></i></button>
+				<div id="myModal" class="game-over">
+					<div class="game-over-modal">
+						<div class="modal-top">
+							<div class="icon-container">
+								<img src="images/mole.png"/>
+							</div>
+						</div>
+						<div class="score">
+							<p id="score"></p>
+							<button class="btn" onCLick="hideScore()">Back</button>
+							<button class="btn btn-warning" onCLick="hideScore(true)">Play Again?</button>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-5 center">
+				<p class="instruction">Whack(click) the moles to get the highest score. Hurry, you have only 30 seconds!</p>
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.js"></script>
+	<script src='js/jquery-ui.min.js'></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.js"></script>
+	<script type="text/javascript">
+		var counter = 0;
+		var maxTime = 2000;
+		var minTime = 700;
+		var counterHolder, inter, timeout, interval;
+		var whack = document.getElementById("whackSound");
+		var play = document.getElementById("play");
+		// audio.play();
+		$(document).ready(function(){
+			if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+				interval = 1000;
+				minTime = 600;
+				maxTime = 1500;
+			}
+			else{
+				interval = 1400;
+			}
+			var grid = document.getElementById('whackGrid');
+			var p = "";
+			var gridTemp = "";
+			var height = Math.trunc(grid.clientWidth/6);
+			for(i=0; i<6; i++){
+				gridTemp += height + "px ";
+			}
+			$(grid).css('grid-template-columns', gridTemp);
+			for(i=0; i<6; i++){
+				p += '<div class="row">';
+				for(j=0; j<6; j++){
+					p += '<div class="col-2 col-sm-2" style="height: ' + height + 'px;" id="box_' + (i * 6 + j + 1) + '" onClick="moleHit(this.id)"><img draggable="false" src="images/mole.png" style="display:none; max-width: 100%;"/></div>';
+				}
+				p += '</div>';
+			}
+			grid.innerHTML = p;
+			counterHolder = document.getElementById("counterHolder");
+		});
+		function getRandom(min, max){
+			if(min)
+				return Math.random() * (max - min) + min;
+			else
+				return Math.trunc((Math.random() * 10) % 6);
+		}
+		function clearMoles(){
+			for(i=1; i<=36; i++){
+				$("#box_" + i + " img").hide();
+			}
+		}
+		function generateMoles(){
+			var row = getRandom();
+			var col = getRandom();
+			var boxNo = row * 6 + col + 1;
+			if(boxNo <= 36)
+			{
+				$("#box_" + boxNo + " img").show('slide', {direction: 'down'}, 500);
+				(function(b){
+					setTimeout(function(){
+						$("#box_" + boxNo + " img").hide('slide', {direction: 'down'}, 500);
+					}, getRandom(minTime, maxTime));
+				})(boxNo);
+			}
+		}
+		function stopAllTimeouts()
+		{
+			var id = window.setTimeout(null,0);
+			while (id--) 
+			{
+				window.clearTimeout(id);
+			}
+		}
+		function gameOver(inter, timeout){
+			var button = document.getElementById("start");
+			button.innerHTML = "Start";
+			clearInterval(inter);
+			if(timeout){
+				clearTimeout(timeout);
+			}
+			$("#score").text("Your score is " + counter);
+			// $("#myModal").modal({keyboard: false, backdrop: false});
+			$("#myModal").show('slide', {direction: 'up'}, 500);
+			setTimeout(function(){
+				counterHolder.innerHTML = '&nbsp;';
+				stopAllTimeouts();
+				clearMoles();
+			}, 2000);
+		}
+		function startGame(){
+			var button = document.getElementById("start");
+			if(button.innerHTML == 'Start'){
+				counter = 0;
+				inter = setInterval(function(){
+					var times = getRandom();
+					for(i=0; i<times; i++){
+						generateMoles();
+						console.log("Here");
+					}
+				}, interval);
+				counterHolder.innerHTML = '0';
+				button.innerHTML = "Stop";
+				timeout = setTimeout(function(){
+					gameOver(inter);
+				}, 30000);	
+			}
+			else{
+				gameOver(inter, timeout);
+			}
+		}
+		function moleHit(boxNo){
+			if($("#" + boxNo + " img").css('display') != 'none'){
+				counter ++;
+				$("#" + boxNo + " img").hide('puff', 150);
+				whack.play();
+				counterHolder.innerHTML = counter;
+			}
+		}
+		function hideScore(replay){
+			$("#myModal").hide('slide', {direction: 'up'}, 500);
+			if(replay)
+				startGame();
+		}
+		function soundToggle() {
+			var btn = $("#sound i");
+			if(btn.hasClass('fa-volume-up')){
+				whack.muted = true;
+				btn.removeClass('fa-volume-up');
+				btn.addClass('fa-volume-off');
+			}
+			else{
+				whack.muted = false;
+				btn.removeClass('fa-volume-off');
+				btn.addClass('fa-volume-up');
+			}
+		}
+	</script>
+</body>
+</html>
+<!-- <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> -->

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<link rel="stylesheet" href="css/puzzle.css"/>
+</head>
+<body>
+	<div class="container-fluid">
+		<p class="instruction">Drag pictures from the right side grid to the left side grid to complete the puzzle</p>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="grid-container" id="puzzleSol">
+					<div class="grid-item" ondrop="drop(event)" id="box_1" ondragover="dragOver(event)"></div>
+					<div class="grid-item" ondrop="drop(event)" id="box_2" ondragover="dragOver(event)"></div>
+					<div class="grid-item" ondrop="drop(event)" id="box_3" ondragover="dragOver(event)"></div>
+					<div class="grid-item" ondrop="drop(event)" id="box_4" ondragover="dragOver(event)"></div>
+					<div class="grid-item" ondrop="drop(event)" id="box_5" ondragover="dragOver(event)"></div>
+					<div class="grid-item" ondrop="drop(event)" id="box_6" ondragover="dragOver(event)"></div>
+					<div class="grid-item" ondrop="drop(event)" id="box_7" ondragover="dragOver(event)"></div>
+					<div class="grid-item" ondrop="drop(event)" id="box_8" ondragover="dragOver(event)"></div>
+					<div class="grid-item" ondrop="drop(event)" id="box_9" ondragover="dragOver(event)"></div>
+				</div>
+			</div>
+			<div class="col-md-6 puzzle-container">
+				<div class="grid-container" id="puzzleContainer">
+					<div class="grid-item" id="pbox1">
+						<img src="puzzleImages/01/01.jpg">
+					</div>
+					<div class="grid-item" id="pbox2">
+						<img src="puzzleImages/01/02.jpg">
+					</div>
+					<div class="grid-item" id="pbox3">
+						<img src="puzzleImages/01/03.jpg">
+					</div>
+					<div class="grid-item" id="pbox4">
+						<img src="puzzleImages/01/04.jpg">
+					</div>
+					<div class="grid-item" id="pbox5">
+						<img src="puzzleImages/01/05.jpg">
+					</div>
+					<div class="grid-item" id="pbox6">
+						<img src="puzzleImages/01/06.jpg">
+					</div>
+					<div class="grid-item" id="pbox7">
+						<img src="puzzleImages/01/07.jpg">
+					</div>
+					<div class="grid-item" id="pbox8">
+						<img src="puzzleImages/01/08.jpg">
+					</div>
+					<div class="grid-item" id="pbox9">
+						<img src="puzzleImages/01/09.jpg">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function shuffle(array) {
+			var currentIndex = array.length, temporaryValue, randomIndex;
+			while (0 !== currentIndex) {
+				randomIndex = Math.floor(Math.random() * currentIndex);
+				currentIndex -= 1;
+				temporaryValue = array[currentIndex];
+				array[currentIndex] = array[randomIndex];
+				array[randomIndex] = temporaryValue;
+			}
+			return array;
+		}
+		window.onload = function(){
+			var puzzleContainer = document.getElementById("puzzleContainer");
+			var indexArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+			indexArr = shuffle(indexArr);
+			var p = "";
+			for(i=1; i<10; i++){
+				p += '<div class="grid-item" id="pbox'+ i + '"><img style="width: 200px;"src="puzzleImages/01/0' + indexArr[i - 1] + '.jpg" id="drag_' + indexArr[i - 1] + '" draggable="true" ondragstart="drag(event)"></div>';
+			}
+			puzzleContainer.innerHTML = p;
+			var pic = document.getElementById("drag_1");
+			var grids = document.getElementsByClassName("grid-item");
+			for(i=0; i<grids.length; i++){
+				grids[i].style.height = pic.clientHeight + 'px';
+			}
+		};
+		function dragOver(e){
+			e.preventDefault();
+		}
+		function drop(e){
+			e.preventDefault();
+			var parent2 = e.target.parentNode;
+			if(e.target.nodeName == "IMG"){
+				var child = e.target;
+				e.currentTarget.removeChild(child);
+				var parent = document.getElementById(e.dataTransfer.getData("parent"));
+				parent.appendChild(child);
+				parent2.appendChild(document.getElementById(e.dataTransfer.getData("text")));
+			}
+			else{
+				var data = e.dataTransfer.getData("text");
+				var ele = document.getElementById(data);
+				e.target.appendChild(ele);
+			}
+
+			var puzzleSol = document.getElementById("puzzleSol").children;
+			counter = 0;
+			for(i=0; i<9; i++){
+				if(puzzleSol[i].children[0]){
+					if(puzzleSol[i].id.split("_")[1] == puzzleSol[i].children[0].id.split("_")[1])
+						counter++;
+				}
+			}
+			if(counter == 9){
+				setTimeout(function(){
+					var r = confirm("You won!!! Play Again?");
+					if(r){
+						location.reload();
+					}
+				}, 1000);
+			}
+		}
+		function drag(e){
+			e.dataTransfer.setData("text", e.target.id);
+			e.dataTransfer.setData("parent", e.target.parentNode.id);
+		}
+	</script>
+</body>
+</html>

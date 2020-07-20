@@ -1,0 +1,49 @@
+@import '../../definitions';
+
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+}
+
+.hero-abs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-banner {
+    width: 80%;
+    background-color: $primary-color;
+    padding: 2rem;
+    opacity: 0.8;
+    border-radius: $default-border-radius;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(45, 45, 45, 0.8);
+}
+
+.hero-banner h1 {
+    color: #fff;
+    opacity: 1;
+    margin: 0.5rem 0;
+}
+
+.hero-banner p {
+    color: $secondary-color;
+    opacity: 1;
+    font-weight: 600;
+}
+
+/* s and xs devices*/
+@media only screen and (max-width: 600px) {
+    .hero-banner {
+        padding: 1rem;
+    }
+}
