@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.83c9cbd0.chunk.css",
-    "main.js": "/static/js/main.c473a0c3.chunk.js",
-    "main.js.map": "/static/js/main.c473a0c3.chunk.js.map",
+    "main.js": "/static/js/main.8fdecf0f.chunk.js",
+    "main.js.map": "/static/js/main.8fdecf0f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.19ccc7f6.js.map",
-    "static/js/2.29affd82.chunk.js": "/static/js/2.29affd82.chunk.js",
-    "static/js/2.29affd82.chunk.js.map": "/static/js/2.29affd82.chunk.js.map",
+    "static/js/2.f7da94bd.chunk.js": "/static/js/2.f7da94bd.chunk.js",
+    "static/js/2.f7da94bd.chunk.js.map": "/static/js/2.f7da94bd.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.6f94f858343fd089b6b256e3c5149a3f.js": "/precache-manifest.6f94f858343fd089b6b256e3c5149a3f.js",
+    "precache-manifest.16697454fdb4fbaa0d333a5819a65867.js": "/precache-manifest.16697454fdb4fbaa0d333a5819a65867.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.83c9cbd0.chunk.css.map": "/static/css/main.83c9cbd0.chunk.css.map",
-    "static/js/2.29affd82.chunk.js.LICENSE.txt": "/static/js/2.29affd82.chunk.js.LICENSE.txt",
+    "static/js/2.f7da94bd.chunk.js.LICENSE.txt": "/static/js/2.f7da94bd.chunk.js.LICENSE.txt",
     "static/media/AddGMapSearch.mp4": "/static/media/AddGMapSearch.fc3a3478.mp4",
     "static/media/AddingMultipleDevices.mp4": "/static/media/AddingMultipleDevices.54c9c1e8.mp4",
     "static/media/Analytics.png": "/static/media/Analytics.b902327c.png",
@@ -35,6 +35,7 @@
     "static/media/PIT_logo.png": "/static/media/PIT_logo.f4b789b9.png",
     "static/media/PathVis.png": "/static/media/PathVis.263e1901.png",
     "static/media/Slanguage.png": "/static/media/Slanguage.9d42bf5b.png",
+    "static/media/StudentGaze.png": "/static/media/StudentGaze.865a6276.png",
     "static/media/Vui.png": "/static/media/Vui.337d3982.png",
     "static/media/chatbot.png": "/static/media/chatbot.193e5787.png",
     "static/media/clientGoals.png": "/static/media/clientGoals.7e9b46a5.png",
@@ -52,8 +53,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.19ccc7f6.js",
-    "static/js/2.29affd82.chunk.js",
+    "static/js/2.f7da94bd.chunk.js",
     "static/css/main.83c9cbd0.chunk.css",
-    "static/js/main.c473a0c3.chunk.js"
+    "static/js/main.8fdecf0f.chunk.js"
   ]
 }
