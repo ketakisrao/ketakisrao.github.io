@@ -32,7 +32,7 @@ h1 {
     text-align: center;
 }
 
-.body {
+body {
     color: $primary-color;
 }
 
@@ -45,6 +45,27 @@ p {
     margin: 0.5rem 0;
 }
 
+h3, h4, h5, h6 {
+    text-transform: uppercase;
+}
+
+section {
+    padding: 2rem 0;
+}
+iframe {
+    width: 100%;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.centered-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
 
 
 /* s and xs devices*/

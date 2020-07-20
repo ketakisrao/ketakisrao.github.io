@@ -1,2 +1,26 @@
 
 @import '../definitions';
+
+
+.mock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+.mock img {
+    height: 65vh;
+    border-radius: $default-border-radius;
+}
+
+.design-dec-img {
+    width: 70%;
+}
+
+/* s and xs devices*/
+@media only screen and (max-width: 600px) {
+    .design-dec-img {
+        width: 100%;
+    }
+}

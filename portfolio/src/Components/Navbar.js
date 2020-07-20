@@ -6,7 +6,6 @@ import {
 import Resume from '../assets/images/KetakiRao_Resume.pdf';
 
 export default function ButtonAppBar() {
-    // const classes = useStyles();
 
     return (
         <div className="nav-wrapper">
