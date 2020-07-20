@@ -14,7 +14,7 @@ export default function ButtonAppBar() {
                 <div className="line"></div>
             </div>
             <div className="navbar-overlay">
-                <div className="brand">
+                <div className="brand hide-on-small">
                     <Link to="/">Ketaki Rao</Link>
                 </div>
                 <div className="navbar-nav">

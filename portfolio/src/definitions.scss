@@ -20,10 +20,12 @@ $secondary-color: #CF9F3B;
 /*Navbar*/
 $navbar-height: 60px;
 $navbar-padding: 0 50px;
+$navbar-padding-small: 0 25px;
 
 
 /*Body*/
 $container-padding: 4rem 12vw;
+$default-border-radius: 5px;
 
 /*Headers*/
 h1 {
@@ -41,4 +43,16 @@ a {
 
 p {
     margin: 0.5rem 0;
+}
+
+
+
+/* s and xs devices*/
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+    .hide-on-small {
+        display: none;
+    }
 }

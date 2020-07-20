@@ -31,10 +31,6 @@ function App() {
                         </Route>
                     </Switch>
                 </div>
-
-                {/* <div className="content-container">
-
-                </div> */}
             </Router>
         </div>
     );
