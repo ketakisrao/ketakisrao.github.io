@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.024ed7bb.chunk.css",
+    "main.css": "/static/css/main.83c9cbd0.chunk.css",
     "main.js": "/static/js/main.c473a0c3.chunk.js",
     "main.js.map": "/static/js/main.c473a0c3.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.19ccc7f6.js",
@@ -8,9 +8,9 @@
     "static/js/2.29affd82.chunk.js": "/static/js/2.29affd82.chunk.js",
     "static/js/2.29affd82.chunk.js.map": "/static/js/2.29affd82.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.80d842fcbccfb1b562cb9019c7bcc12f.js": "/precache-manifest.80d842fcbccfb1b562cb9019c7bcc12f.js",
+    "precache-manifest.6f94f858343fd089b6b256e3c5149a3f.js": "/precache-manifest.6f94f858343fd089b6b256e3c5149a3f.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.024ed7bb.chunk.css.map": "/static/css/main.024ed7bb.chunk.css.map",
+    "static/css/main.83c9cbd0.chunk.css.map": "/static/css/main.83c9cbd0.chunk.css.map",
     "static/js/2.29affd82.chunk.js.LICENSE.txt": "/static/js/2.29affd82.chunk.js.LICENSE.txt",
     "static/media/AddGMapSearch.mp4": "/static/media/AddGMapSearch.fc3a3478.mp4",
     "static/media/AddingMultipleDevices.mp4": "/static/media/AddingMultipleDevices.54c9c1e8.mp4",
@@ -53,7 +53,7 @@
   "entrypoints": [
     "static/js/runtime-main.19ccc7f6.js",
     "static/js/2.29affd82.chunk.js",
-    "static/css/main.024ed7bb.chunk.css",
+    "static/css/main.83c9cbd0.chunk.css",
     "static/js/main.c473a0c3.chunk.js"
   ]
 }
