@@ -1,2 +1,14 @@
 
 @import '../definitions';
+
+.design-dec-img {
+    width: 70%;
+}
+
+
+/* s and xs devices*/
+@media only screen and (max-width: 600px) {
+    .design-dec-img {
+        width: 100%;
+    }
+}

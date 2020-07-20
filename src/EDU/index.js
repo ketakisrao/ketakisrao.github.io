@@ -39,9 +39,6 @@ const summary = {
 const useStyles = makeStyles({
     root: {
         padding: '2rem 0',
-    },
-    designDecs: {
-        padding: '6rem 0'
     }
 });
 
@@ -121,7 +118,7 @@ function EDU() {
                     <h4>Hand Raises</h4>
                     <Grid container spacing={6} className={classes.root}>
                         <Grid item xs={12} sm={12} md={6} lg={6} xl={6} className={classes.root}>
-                            <video muted autoPlay loop >
+                            <video muted autoPlay loop className="watch" >
                                 <source src={handraise} type="video/mp4" />
                             </video>
                         </Grid>

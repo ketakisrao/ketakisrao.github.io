@@ -1,2 +1,15 @@
 
 @import '../definitions';
+
+.about img {
+    max-height: 70vh;
+    max-width: 100%;
+}
+
+.about p {
+    padding: 1rem 0;
+}
+
+.about p:last-child {
+    margin-bottom: 1rem 0;
+}
