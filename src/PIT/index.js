@@ -15,6 +15,10 @@ import ttlIcon from '../assets/images/PIT/ttl.svg';
 import updatesIcon from '../assets/images/PIT/updates.svg';
 import walkIcon from '../assets/images/PIT/walk.svg';
 import itiIcon from '../assets/images/PIT/iti.svg';
+import ttlImg from '../assets/images/PIT/ttlImg.png';
+import updatesImg from '../assets/images/PIT/updatesImg.png';
+import walkImg from '../assets/images/PIT/walkImg.png';
+import itiImg from '../assets/images/PIT/itiImg.png';
 import sol from '../assets/images/PIT/mock.gif';
 
 import chatbot from '../assets/images/PIT/chatbot.png';
@@ -35,7 +39,22 @@ const hero_info = {
 };
 
 const summary = {
-    overview: "The Pittsburgh International Airport is undertaking a massive transformation and is coming up with a new terminal set to go live in 2023. The airport anticipates the number of travellers to increase significantly in the coming years and is therefore looking into how to reduce wait times in queues such as the TSA, boarding, etc.s",
+    overview: (
+        <p>
+            The Pittsburgh International Airport is undertaking a <b>massive transformation</b>
+             and is coming up with a new terminal set to go live in 2023. The airport anticipates
+            the <b>number of travellers to increase significantly</b> in the coming years and is therefore
+            looking at improving the waiting in security line experience. Not only will this result in
+            better Customer Experience but will also increase the number of international travelers<sup>*</sup>
+            as well as add to PIT's non-aeronautical revenue.
+            <br></br>
+            <br></br>
+            <span className="small">
+                *international travelers in Pennsylvania currently choose to fly from either PIT or another
+                major international airport in Pennsylvania.
+            </span>
+        </p>
+    ),
     role: 'UX Engineer | Product Manager',
     tools: 'Dialogflow, HTML5, CSS3, Figma',
     duration: 'Jan, 2020 - Present (7 months)',
@@ -51,22 +70,26 @@ const features = [
     {
         title: 'Time To Leave Home',
         img: ttlIcon,
-        desc: 'Accounting for security wait time, parking, traffic, etc, to decide when to leave for the airport is a mentally taxing process. The bot does this for you as well as tracks if you’re on schedule or not.'
+        desc: 'Accounting for security wait time, parking, traffic, etc, to decide when to leave for the airport is a mentally taxing process. The bot does this for you as well as tracks if you’re on schedule or not.',
+        featureImg: ttlImg
     },
     {
         title: 'Live Flight Updates',
         img: updatesIcon,
-        desc: 'Last minute changes in gate or flight schedules can lead to missed flights or anxious users crowding at the info board. Once subscribed to a flight, the bot will send you all it’s updates.'
+        desc: 'Last minute changes in gate or flight schedules can lead to missed flights or anxious users crowding at the info board. Once subscribed to a flight, the bot will send you all it’s updates.',
+        featureImg: updatesImg
     },
     {
         title: 'Estimated Walk Times',
         img: walkIcon,
-        desc: 'Each airport is different and it is difficult to know how much to walk and what to expect. The bot breaks down each step of your airport journey and gives you the the time it takes to get past them.'
+        desc: 'Each airport is different and it is difficult to know how much to walk and what to expect. The bot breaks down each step of your airport journey and gives you the the time it takes to get past them.',
+        featureImg: walkImg
     },
     {
         title: 'Itinerary & Past Trips',
         img: itiIcon,
-        desc: 'The  bot allows you to build a custom itinerary that suits your needs and include items such as: a visit to the washroom, grabbing coffee from Dunkin or spending time at the kids area, etc.'
+        desc: 'The  bot allows you to build a custom itinerary that suits your needs and include items such as: a visit to the washroom, grabbing coffee from Dunkin or spending time at the kids area, etc.',
+        featureImg: itiImg
     }
 
 ];
@@ -87,7 +110,7 @@ function PIT() {
     let featureArray = [];
     let i = 0;
     for (i = 0; i < features.length; i++) {
-        featureArray.push(<Feature info={features[i]}></Feature>);
+        featureArray.push(<Feature info={features[i]} index={i}></Feature>);
     }
     return (
         <div>
@@ -95,23 +118,25 @@ function PIT() {
             <TLDR info={summary}></TLDR>
             <div className="content-container">
                 <section>
-                    <h3>Solution</h3>
-                    <p>An application to provide users transparency into the airport process
-                    &amp; security line wait times so that they can better plan their airport journey.</p>
-                </section>
-                <section>
-                    <h3>Features</h3>
-                    <Grid container spacing={1}>
-                        <Grid item xs={12} sm={12} md={8} lg={8} xl={8}>
-                            <Grid container spacing={5}>
-                                {featureArray}
-                            </Grid>
+                    <Grid container spacing={2}>
+                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} className={classes.root}>
+                            <h3>Solution</h3>
+                            <p>Introducing <b>Arch</b> – A unique messenger based card system to provide users transparency
+                            into the airport process &amp; security line wait times so that they can better plan their
+                            airport journey. It currently utilises rich text messaging features but can easily be scaled
+                            down to an only SMS bot.</p>
                         </Grid>
-                        <Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} className={classes.root}>
                             <div className="mock">
                                 <img src={sol} />
                             </div>
                         </Grid>
+                    </Grid>
+                </section>
+                <section>
+                    <h3>Features</h3>
+                    <Grid container spacing={1}>
+                        {featureArray}
                     </Grid>
                 </section>
                 <section>
@@ -193,12 +218,12 @@ function PIT() {
                 <section>
                     <h3>User Needs uncovered from Research</h3>
                     <p>We gathered mounds of qualitative user data from all of the research and upon synthesis, found that these were the top three needs of an average air traveler.</p>
-                    <img className="full-width" src={userNeeds}/>
+                    <img className="full-width" src={userNeeds} />
 
-                    
+
                     <h3>How the Bot meets user needs</h3>
                     <div className="centered-item">
-                        <img src={clientGoalsMap} className="design-dec-img" />
+                        <img src={userNeedsMap} className="design-dec-img" />
                     </div>
                 </section>
                 <section>

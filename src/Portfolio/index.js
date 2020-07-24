@@ -3,11 +3,22 @@ import './index.scss';
 import {
     Link
 } from "react-router-dom";
+import { Grid } from "@material-ui/core";
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+
 
 
 /* Components */
 import Hero from '../Components/Hero';
 import Project from '../Components/Project';
+import Sides from "../Components/Sides";
 
 /* Assets */
 import HeroImg from '../assets/images/OverviewAssets/Hero.svg';
@@ -19,6 +30,11 @@ import EDULogo from '../assets/images/OverviewAssets/EDU_logo.svg';
 
 import LRMImg from '../assets/images/OverviewAssets/LRM.png';
 import LRMLogo from '../assets/images/OverviewAssets/LRM_logo.png';
+
+import Met from '../assets/images/OverviewAssets/Met.png';
+import VUI from '../assets/images/OverviewAssets/Vui.png';
+import Slanguage from '../assets/images/OverviewAssets/Slanguage.png';
+import Cheese from '../assets/images/OverviewAssets/Cheese.png';
 
 
 const info = {
@@ -52,7 +68,49 @@ const hero_info = {
     img: HeroImg
 };
 
+const sides_info = [
+    {
+        img: Met,
+        title: 'The Met Visualizations',
+        desc: 'A series of visualizations displaying the distribution of the Metropolitan Museum of Art\'s collection by location, time, medium and artist. Extracted data using python scripts to ping the Met\'s API.',
+        link: "https://ketakisrao.github.io/Met/"
+
+    },
+    {
+        img: Slanguage,
+        title: 'Slanguage',
+        desc: 'Slanguage is a chrome extension that saves you from the embarassment of not knowing the meaning of a slang word or phrase in a group setting by sending a push notification privately to your phone.',
+        link: "http://www.youtube.com/watch_popup?v=ZNG0qsx961s"
+
+    },
+    {
+        img: VUI,
+        title: 'Voice input for Data Viz',
+        desc: 'Voice based inputs are not particularly intuitive but are an important way of communication for all humans. This is why I’ve made an application that uses voice commands to interact with a data visualisation.',
+        link: "https://ketakisrao.github.io/VUI_DataViz/"
+
+    },
+    {
+        img: Cheese,
+        title: 'Say Cheese!',
+        desc: 'I made this dataset of cheeses myself using ScraPy to crawl the web and extract information about them and used it to make these stunning vizs. Awarded first place in a national level data viz design challenge.',
+        link: "https://www.youtube.com/watch_popup?v=JPQtHmmuZLE"
+
+    }
+];
+
+const useStyles = makeStyles({
+    root: {
+        padding: '2rem 0',
+    }
+});
+
 function Portfolio() {
+    let sidesArray = [], i = 0;
+    for(i=0; i<sides_info.length; i++){
+        sidesArray.push(<Sides info={sides_info[i]}></Sides>);
+    }
+    const classes = useStyles();
     return (
         <div>
             <Hero info={hero_info}></Hero>
@@ -61,6 +119,13 @@ function Portfolio() {
                 <Project info={info.PIT}></Project>
                 <Project info={info.EDU}></Project>
                 <Project info={info.LRM}></Project>
+
+                <h1>Sides</h1>
+                <section id="cards">
+                    <Grid container spacing={2}>
+                        {sidesArray}
+                    </Grid>
+                </section>
             </div>
         </div>
     );

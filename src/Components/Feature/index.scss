@@ -2,8 +2,27 @@
 
 
 .feature {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.feature > div {
+    width: 75%;
     text-align: center;
 }
 .feature p {
     text-align: left;
+}
+
+.feature-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.feature-img img {
+    width: 50%;
+    filter: drop-shadow(4px 4px 10px rgba(91, 91, 91, 0.40));
 }

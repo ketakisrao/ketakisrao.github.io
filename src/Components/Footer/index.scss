@@ -1,0 +1,26 @@
+
+@import '../../definitions';
+
+.footer {
+    background-color: $primary-color;
+    color: #fff;
+    padding: 1rem 12vw;
+    text-align: center;
+}
+
+.footer span {
+    color: $secondary-color;
+}
+
+.footer p {
+    font-size: 1.2rem;
+}
+
+.footer .credit {
+    color: #fff;
+    font-size: 0.7rem;
+}
+
+.footer .credit a {
+    color: #fff;
+}

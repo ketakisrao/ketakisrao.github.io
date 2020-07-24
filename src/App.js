@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.scss';
 import ButtonAppBar from './Components/Navbar';
+import Footer from "./Components/Footer";
+import ScrollToTop from './Components/ScrollToTop';
 import {
     BrowserRouter as Router,
     Switch,
     Route
 } from "react-router-dom";
-import ScrollToTop from './Components/ScrollToTop';
+
 import About from './About/';
 import Portfolio from './Portfolio/';
 import EDU from './EDU/';
@@ -16,7 +18,7 @@ import LRM from './LRM/';
 function App() {
     return (
         <div className="App">
-            <Router>
+            <Router basename="">
                 <ScrollToTop />
                     <ButtonAppBar></ButtonAppBar>
                     <div className="content">
@@ -33,6 +35,7 @@ function App() {
                             </Route>
                         </Switch>
                     </div>
+                    <Footer></Footer>
             </Router>
         </div>
     );

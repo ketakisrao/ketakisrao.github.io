@@ -57,6 +57,14 @@ iframe {
     width: 100%;
 }
 
+img {
+    border-radius: $default-border-radius;
+}
+
+video {
+    border-radius: $default-border-radius;
+}
+
 .full-width {
     width: 100%;
 }

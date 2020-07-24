@@ -10,6 +10,7 @@ import TLDR from '../Components/TLDR';
 /* Assets */
 import HeroImg from '../assets/images/EDU/Hero.png';
 import insGaze from '../assets/images/EDU/Gaze.png';
+import stuGaze from '../assets/images/EDU/StudentGaze.png';
 import movementGood from '../assets/images/EDU/GoodMovement.png';
 import movementBad from '../assets/images/EDU/BadMovement.png';
 import handraise from "../assets/images/EDU/HandRaiseNotif.mov";
@@ -63,8 +64,7 @@ function EDU() {
                     </div>
                     <Grid container spacing={2} className={classes.root}>
                         <Grid item xs={12} sm={12} md={6} lg={6} xl={6} className={classes.root}>
-                            <div className="infogram-embed" data-id="0e40f389-e60b-4751-8afa-c6594117ae5e" data-type="interactive"
-                                data-title="Student Gaze"></div>
+                            <img src={stuGaze} className="design-dec-img" />
                         </Grid>
                         <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                             <div className="centered-item">
@@ -80,6 +80,7 @@ function EDU() {
                     <Grid container spacing={2} className={classes.root}>
                         <Grid item xs={12} sm={12} md={6} lg={6} xl={6} className={classes.root}>
                             <img src={insGaze} className="design-dec-img" />
+                            <figcaption>Left side of the class receives more attention than the right side.</figcaption>
                         </Grid>
                         <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                             <div className="centered-item">
@@ -95,7 +96,7 @@ function EDU() {
                 <section>
                     <h4>Instructor Movement</h4>
                     <p>Movement of an instructor is directly associated with the students attentions and
-                    engagement in class. Teachers standin/spending time behind the podium are perceived as
+                    engagement in class. Teachers standing/spending time behind the podium are perceived as
                     not welcoming by the students whereas teachers that walk in and around class or come in
                         close proximity to students are perceived as waremer and friendly.</p>
                     <Grid container spacing={6} className={classes.root}>

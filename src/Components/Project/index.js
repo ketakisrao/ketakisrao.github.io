@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import {
     Link
 } from "react-router-dom";
+import CardActionArea from '@material-ui/core/CardActionArea';
 
 const useStyles = makeStyles({
     root: {
@@ -21,30 +22,32 @@ function Project(props) {
     const classes = useStyles();
     return (
         <div className="project-container">
-            <Link to={info.link}>
-                <Grid spacing={0} container className={classes.root}>
-                    <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-                        <img src={info.img} className="project-img" />
-                    </Grid>
-                    <Grid item xs={12} sm={12} md={6} lg={6} xl={6} className={classes.gridRight}>
-                        <div className="project-info">
-                            <div>
-                                <img src={info.logo} className="project-logo" />
-                                <p className="title">
-                                    {info.title}
-                                </p>
-                                <p className="tags">
-                                    {info.tags}
-                                </p>
-                                <p className="description">
-                                    {info.desc}
-                                </p>
+            <CardActionArea>
+                <Link to={info.link}>
+                    <Grid spacing={0} container className={classes.root}>
+                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
+                            <img src={info.img} className="project-img" />
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} className={classes.gridRight}>
+                            <div className="project-info">
+                                <div>
+                                    <img src={info.logo} className="project-logo" />
+                                    <p className="title">
+                                        {info.title}
+                                    </p>
+                                    <p className="tags">
+                                        {info.tags}
+                                    </p>
+                                    <p className="description">
+                                        {info.desc}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
+                        </Grid>
                     </Grid>
-                </Grid>
-            </Link>
-        </div>
+                </Link>
+            </CardActionArea>
+            </div>
     );
 }
 

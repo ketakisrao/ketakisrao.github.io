@@ -2,6 +2,10 @@
 @import '../definitions';
 
 
+.small {
+    font-size: 0.7rem;
+}
+
 .mock {
     display: flex;
     justify-content: center;
@@ -10,7 +14,7 @@
 }
 
 .mock img {
-    height: 65vh;
+    height: 50vh;
     border-radius: $default-border-radius;
 }
 
@@ -24,3 +28,4 @@
         width: 100%;
     }
 }
+
