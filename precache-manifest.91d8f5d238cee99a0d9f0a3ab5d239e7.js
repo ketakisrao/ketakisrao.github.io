@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8ab57406e8fabd986d7e8c35cd8df4da",
+    "revision": "8f26480b939ac9d85f7c8882feebc5b2",
     "url": "/index.html"
   },
   {
-    "revision": "bdb21570b191a8e2d8b7",
-    "url": "/static/css/main.37b30910.chunk.css"
+    "revision": "5c0344b3d0cc1f9ca94b",
+    "url": "/static/css/main.e8adedef.chunk.css"
   },
   {
-    "revision": "26a89daf2d3b3072d94f",
-    "url": "/static/js/2.178c96ef.chunk.js"
+    "revision": "5d81f4dcfa633510a9da",
+    "url": "/static/js/2.c7b473e9.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/static/js/2.178c96ef.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.c7b473e9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "bdb21570b191a8e2d8b7",
-    "url": "/static/js/main.a4fec541.chunk.js"
+    "revision": "5c0344b3d0cc1f9ca94b",
+    "url": "/static/js/main.032300bf.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
@@ -156,6 +156,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/iti.5491e249.svg"
   },
   {
+    "revision": "649fdc807c6a60175e450fb6f9859e64",
+    "url": "/static/media/itiImg.649fdc80.png"
+  },
+  {
     "revision": "5b1c2d805da4bd23d807c0fda93e9131",
     "url": "/static/media/mock.5b1c2d80.gif"
   },
@@ -168,8 +172,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/ttl.df9a87be.svg"
   },
   {
+    "revision": "7ecf9f95632f68c61337e6444ef19d08",
+    "url": "/static/media/ttlImg.7ecf9f95.png"
+  },
+  {
     "revision": "44e0452294bdcf05d48f21e952543b68",
     "url": "/static/media/updates.44e04522.svg"
+  },
+  {
+    "revision": "cd7edd6f69c999c546cb53cc9adbb8c7",
+    "url": "/static/media/updatesImg.cd7edd6f.png"
   },
   {
     "revision": "decc060d35d065e4ddada35e47439c4e",
@@ -182,5 +194,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "cce9362753e860765a36b3402f0f3adc",
     "url": "/static/media/walk.cce93627.svg"
+  },
+  {
+    "revision": "8bb45eb62d3d0d229ab6dd6588438482",
+    "url": "/static/media/walkImg.8bb45eb6.png"
   }
 ]);
