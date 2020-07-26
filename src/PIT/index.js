@@ -112,6 +112,7 @@ function PIT() {
     for (i = 0; i < features.length; i++) {
         featureArray.push(<Feature info={features[i]} index={i}></Feature>);
     }
+    console.log(featureArray);
     return (
         <div>
             <Hero info={hero_info}></Hero>
@@ -208,7 +209,7 @@ function PIT() {
                         <Grid item xs={12} sm={12} md={6} lg={6} xl={6} className={classes.root}>
                             <div className="centered-item">
                                 <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/okGAJCU3UB4"
-                                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" AllowFullScreen>
 
                                 </iframe>
                             </div>
