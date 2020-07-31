@@ -24,12 +24,12 @@ function About() {
                                 As a UX Engineer and I am extremely passionate about using the latest front-end technology to
                                 build usable &amp; useful interfaces. I have almost 5 years of experience working with
                                 designers, developers and the business and know how to effectively communicate with all three.
-                                Being at such an interesting intersection in the Tech industry has taught me how to maintain the
-                                perfect balance between user’s needs, business requirements and current constraints imposed by
+                                Being at such an interesting intersection in the tech industry has taught me how to maintain the
+                                perfect balance between user needs, business requirements and current constraints imposed by
                                 today's technology.
-                        </p>
-                            <p>Currently at <b>School of Computer Science, Carnegie Mellon.</b> Open to full-time opportunities from
-                                <b>Aug, 2020.</b>
+                            </p>
+                            <p>Currently pursuing my master's at <b>School of Computer Science, Carnegie Mellon.</b>&nbsp;Open 
+                            to full-time opportunities from <b>Aug, 2020.</b>
                             </p>
 
                             <Button variant="contained" target="_blank"

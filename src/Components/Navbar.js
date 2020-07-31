@@ -19,7 +19,7 @@ export default function ButtonAppBar() {
                 <div className="navbar-nav">
                     <ul>
                         <li>
-                            <Link to="/">Porfolio</Link>
+                            <Link to="/">Portfolio</Link>
                         </li>
                         <li>
                             <Link to="/about">About Me</Link>

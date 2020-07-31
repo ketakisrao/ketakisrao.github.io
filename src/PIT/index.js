@@ -41,12 +41,12 @@ const hero_info = {
 const summary = {
     overview: (
         <p>
-            The Pittsburgh International Airport is undertaking a <b>massive transformation</b>
-             and is coming up with a new terminal set to go live in 2023. The airport anticipates
-            the <b>number of travellers to increase significantly</b> in the coming years and is therefore
+            The Pittsburgh International Airport is undertaking a <b>massive transformation</b>&nbsp;and 
+            is coming up with a new terminal set to go live in 2023. The airport anticipates
+            the <b>number of travellers to increase significantly</b>&nbsp;in the coming years and is therefore
             looking at improving the waiting in security line experience. Not only will this result in
-            better Customer Experience but will also increase the number of international travelers<sup>*</sup>
-            as well as add to PIT's non-aeronautical revenue.
+            better Customer Experience but will also increase the number of international travelers<sup>*</sup>&nbsp;as 
+            well as add to PIT's non-aeronautical revenue.
             <br></br>
             <br></br>
             <span className="small">
