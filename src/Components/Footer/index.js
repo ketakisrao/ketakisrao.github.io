@@ -10,7 +10,7 @@ function Footer() {
     return (
         <div className="footer">
             <p>© <span>Ketaki Rao</span> 2020</p>
-            <p className="credit">Icons and illustrations from <a href="https://undraw.co/illustrations">Undraw</a> &amp; <a href="https://www.freepik.com/">Freepik</a></p>
+            <p className="credit">Designed &amp; code by me!</p>
         </div>
     );
 }

@@ -31,7 +31,8 @@ function Project(props) {
                         <Grid item xs={12} sm={12} md={6} lg={6} xl={6} className={classes.gridRight}>
                             <div className="project-info">
                                 <div>
-                                    <img src={info.logo} className="project-logo" />
+                                    {/* <img src={info.logo} className="project-logo" /> */}
+                                    <h1>{info.projectName}</h1>
                                     <p className="title">
                                         {info.title}
                                     </p>
@@ -47,7 +48,7 @@ function Project(props) {
                     </Grid>
                 </Link>
             </CardActionArea>
-            </div>
+        </div>
     );
 }
 

@@ -26,6 +26,11 @@ function TLDR(props) {
                 </Grid>
             </Grid>
             <Grid container className={classes.short}>
+                <Grid item xs={12} sm={12} lg={12} xl={12}>
+                    {info.problem}
+                </Grid>
+            </Grid>
+            <Grid container className={classes.short}>
                 <Grid item xs={12} sm={4} lg={4} xl={4}>
                     <b>Role</b>
                     <p>{info.role}</p>
@@ -37,11 +42,6 @@ function TLDR(props) {
                 <Grid item xs={12} sm={4} lg={4} xl={4}>
                     <b>Duration</b>
                     <p>{info.duration}</p>
-                </Grid>
-            </Grid>
-            <Grid container className={classes.short}>
-                <Grid item xs={12} sm={12} lg={12} xl={12}>
-                    {info.problem}
                 </Grid>
             </Grid>
         </div>

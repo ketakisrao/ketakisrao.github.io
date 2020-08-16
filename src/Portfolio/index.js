@@ -4,13 +4,6 @@ import {
     Link
 } from "react-router-dom";
 import { Grid } from "@material-ui/core";
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 
 
@@ -21,7 +14,7 @@ import Project from '../Components/Project';
 import Sides from "../Components/Sides";
 
 /* Assets */
-import HeroImg from '../assets/images/OverviewAssets/Hero.svg';
+import HeroImg from '../assets/images/OverviewAssets/Hero.png';
 import PITImg from '../assets/images/OverviewAssets/PIT.png';
 import PITLogo from '../assets/images/OverviewAssets/PIT_logo.png';
 
@@ -39,22 +32,25 @@ import Cheese from '../assets/images/OverviewAssets/Cheese.png';
 
 const info = {
     PIT: {
+        projectName: "Pittsburgh International Airport",
         img: PITImg,
         logo: PITLogo,
-        title: "UX ENGINEER • PRODUCT MANAGER",
+        title: "Product Designer • PRODUCT MANAGER",
         tags: "Qualitative Interviews | Data Analysis | Product Design",
         desc: "See how we are helping the Pittsburgh International Airport with their Terminal Modernization Plan scheduled to go live in 2023.",
         link: '/PIT'
     },
     EDU: {
+        projectName: "Edusense",
         img: EDUImg,
         logo: EDULogo,
-        title: "UX ENGINEER • UX DESIGNER",
+        title: "Product Designer • UX DESIGNER",
         tags: "Data Analysis | Data Visualization | UI Development",
         desc: "Leveraging sensing technologies to motivate teachers to develop professionally by showing them insights backed by data from their own classes.",
         link: '/EDU'
     },
     LRM: {
+        projectName: "LiveReach Media",
         img: LRMImg,
         logo: LRMLogo,
         title: "SENIOR SOFTWARE DEVELOPER",

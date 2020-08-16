@@ -10,9 +10,7 @@ function About() {
         <div className="content-container about">
             <Grid container spacing={2}>
                 <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
-                    {/* <div className=" centered-item"> */}
-                        <img src={aboutImg} />
-                    {/* </div> */}
+                    <img src={aboutImg} />
                 </Grid>
                 <Grid item xs={12} sm={12} md={6} lg={6} xl={6}>
                     <div className=" centered-item">

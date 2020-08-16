@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.scss';
-import { Grid } from '@material-ui/core';
+import { Grid, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 
 
@@ -55,7 +55,7 @@ const summary = {
             </span>
         </p>
     ),
-    role: 'UX Engineer | Product Manager',
+    role: 'Product Designer | Product Manager',
     tools: 'Dialogflow, HTML5, CSS3, Figma',
     duration: 'Jan, 2020 - Present (7 months)',
     problem: (
@@ -124,12 +124,19 @@ function PIT() {
                             <h3>Solution</h3>
                             <p>Introducing <b>Arch</b> – A unique messenger based card system to provide users transparency
                             into the airport process &amp; security line wait times so that they can better plan their
-                            airport journey. It currently utilises rich text messaging features but can easily be scaled
-                            down to an only SMS bot.</p>
+                            airport journey. It currently utilizes rich text messaging features but can easily be scaled
+                            down to an only SMS/MMS bot.</p>
+                            <br></br>
+                            <br></br>
+                            <Button variant="contained" target="_blank" color="primary"
+                                href="https://m.me/100974845013806">
+                                Try it!
+                            </Button>
+                            {/* <a className="btn" href="">Try it!</a> */}
                         </Grid>
                         <Grid item xs={12} sm={12} md={6} lg={6} xl={6} className={classes.root}>
                             <div className="mock">
-                                <img src={sol} />
+                                <img src={sol} draggable="false" />
                             </div>
                         </Grid>
                     </Grid>
@@ -139,6 +146,48 @@ function PIT() {
                     <Grid container spacing={1}>
                         {featureArray}
                     </Grid>
+                </section>
+                <section>
+                    <h3>Research Process</h3>
+                    <p>We modified the double diamond design process slightly to follow the research through design approach. In this approach we built artifacts/prototypes
+                        and gathered qualitative data while we observed the users while they interacted with them. Here is a short video showcasing the highlights of our end-to-end UX Research process.</p>
+                    <Grid container spacing={5} className={classes.root}>
+                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} className={classes.root}>
+                            <div className="centered-item">
+                                <img src={research} className="full-wdith" />
+                            </div>
+                        </Grid>
+                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} className={classes.root}>
+                            <div className="centered-item">
+                                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/okGAJCU3UB4"
+                                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" AllowFullScreen>
+
+                                </iframe>
+                            </div>
+                        </Grid>
+                    </Grid>
+                </section>
+                <section>
+                    <h3>User Needs uncovered from Research</h3>
+                    <p>We gathered mounds of qualitative user data from all of the research and upon synthesis, found that these were the top three needs of an average air traveler.</p>
+                    <img className="full-width" src={userNeeds} />
+
+
+                    <h3>Goals set by the client</h3>
+                    <p>We gathered mounds of qualitative user data from all of the research and upon synthesis, found that these were the top three needs of an average air traveler.</p>
+                    <img className="full-width" src={clientGoals} />
+                </section>
+                <section>
+                    
+                    <h3>How the Bot meets user needs</h3>
+                    <div className="centered-item">
+                        <img src={userNeedsMap} className="design-dec-img" />
+                    </div>
+
+                    <h3>How the solution Achieves client goals</h3>
+                    <div className="centered-item">
+                        <img src={clientGoalsMap} className="design-dec-img" />
+                    </div>
                 </section>
                 <section>
                     <h3>Design Decisions</h3>
@@ -195,48 +244,6 @@ function PIT() {
                             </div>
                         </Grid>
                     </Grid>
-                </section>
-                <section>
-                    <h3>Research Process</h3>
-                    <p>We modified the double diamond design process slightly to follow the research through design approach. In this approach we build artifacts/prototypes
-                        and gather qualitative data while we observe the user interact with it. Here is a short video showcasing the highlights of our end-to-end UX Research process.</p>
-                    <Grid container spacing={5} className={classes.root}>
-                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} className={classes.root}>
-                            <div className="centered-item">
-                                <img src={research} className="full-wdith" />
-                            </div>
-                        </Grid>
-                        <Grid item xs={12} sm={12} md={6} lg={6} xl={6} className={classes.root}>
-                            <div className="centered-item">
-                                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/okGAJCU3UB4"
-                                    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" AllowFullScreen>
-
-                                </iframe>
-                            </div>
-                        </Grid>
-                    </Grid>
-                </section>
-                <section>
-                    <h3>User Needs uncovered from Research</h3>
-                    <p>We gathered mounds of qualitative user data from all of the research and upon synthesis, found that these were the top three needs of an average air traveler.</p>
-                    <img className="full-width" src={userNeeds} />
-
-
-                    <h3>How the Bot meets user needs</h3>
-                    <div className="centered-item">
-                        <img src={userNeedsMap} className="design-dec-img" />
-                    </div>
-                </section>
-                <section>
-                    <h3>Goals set by the client</h3>
-                    <p>We gathered mounds of qualitative user data from all of the research and upon synthesis, found that these were the top three needs of an average air traveler.</p>
-                    <img className="full-width" src={clientGoals} />
-
-
-                    <h3>How the solution Achieves client goals</h3>
-                    <div className="centered-item">
-                        <img src={clientGoalsMap} className="design-dec-img" />
-                    </div>
                 </section>
             </div>
         </div>
