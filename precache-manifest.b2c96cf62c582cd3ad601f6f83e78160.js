@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e3727145e3a9566f180ec9e6ea75079b",
+    "revision": "101a02176ae3afba927f56a0585d4615",
     "url": "/index.html"
   },
   {
-    "revision": "14ab90e50cda1457388d",
+    "revision": "5d441697948d0154ff1b",
     "url": "/static/css/main.b8ceb88a.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.6356d0fd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "14ab90e50cda1457388d",
-    "url": "/static/js/main.4cd53da9.chunk.js"
+    "revision": "5d441697948d0154ff1b",
+    "url": "/static/js/main.58661d08.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
@@ -96,8 +96,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/KetakiRao_Resume.39320e29.pdf"
   },
   {
-    "revision": "82c4bc00723775d0fef8c608fae6bb05",
-    "url": "/static/media/LRM.82c4bc00.png"
+    "revision": "164e781c07dcc2931263d99dcfc7ff73",
+    "url": "/static/media/LRM.164e781c.png"
   },
   {
     "revision": "f9e973ea0dd9014789b4d902586c4a9a",
