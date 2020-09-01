@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7fcd652ecec77fea66ee7824805fad01",
+    "revision": "dde79001ac59f3e9aef727ce53f1a703",
     "url": "/index.html"
   },
   {
-    "revision": "e8c8096f8f1a88af7791",
-    "url": "/static/css/main.c3befbdd.chunk.css"
+    "revision": "5814a712184a953b1c7d",
+    "url": "/static/css/main.0f9b190f.chunk.css"
   },
   {
     "revision": "4e41485f941fb96f861b",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.e88ff257.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e8c8096f8f1a88af7791",
-    "url": "/static/js/main.8389f287.chunk.js"
+    "revision": "5814a712184a953b1c7d",
+    "url": "/static/js/main.0db76473.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
@@ -160,8 +160,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/ananda namaste.405befce.ttf"
   },
   {
-    "revision": "2703c89145883b2433e479f6371f8cd9",
-    "url": "/static/media/arch.2703c891.png"
+    "revision": "66f45d22e16f2f112cbb9d1f3d45f4fb",
+    "url": "/static/media/arch.66f45d22.svg"
   },
   {
     "revision": "193e57870228cf0ab08dee77ef0a9730",
