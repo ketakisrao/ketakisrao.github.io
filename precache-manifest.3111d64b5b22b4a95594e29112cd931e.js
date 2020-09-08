@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e9f89f92c917d54b741df85c4d617518",
+    "revision": "9dca392d0a8b2c0e79190ba6fc44effd",
     "url": "/index.html"
   },
   {
-    "revision": "a71b4ad53ccf69171afd",
-    "url": "/static/css/main.e0bfc1b2.chunk.css"
+    "revision": "baae232c69aec18e9959",
+    "url": "/static/css/main.dbe8fefa.chunk.css"
   },
   {
-    "revision": "5c3628b8211c7297ca0a",
-    "url": "/static/js/2.0cd2625c.chunk.js"
+    "revision": "566ba568cb827be3a3ea",
+    "url": "/static/js/2.39a0f6cd.chunk.js"
   },
   {
     "revision": "0749163b59fbee32225059cb60c18af6",
-    "url": "/static/js/2.0cd2625c.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.39a0f6cd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a71b4ad53ccf69171afd",
-    "url": "/static/js/main.bc7920c4.chunk.js"
+    "revision": "baae232c69aec18e9959",
+    "url": "/static/js/main.1fb4af70.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
@@ -48,10 +48,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Avenir2.99e1abf6.ttf"
   },
   {
-    "revision": "19291dabe0899441eadc1bfc328d28e1",
-    "url": "/static/media/BadMovement.19291dab.png"
-  },
-  {
     "revision": "1a22c6bb557a636f3f8149f39554fc8d",
     "url": "/static/media/Cheese.1a22c6bb.png"
   },
@@ -62,18 +58,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "06435e2b6bec63645aa536264febac54",
     "url": "/static/media/EDU_logo.06435e2b.svg"
-  },
-  {
-    "revision": "4484981a69346d5cbefada9582ef090e",
-    "url": "/static/media/Gaze.4484981a.png"
-  },
-  {
-    "revision": "33e5e442341fdf203bc0822e966ced8b",
-    "url": "/static/media/GoodMovement.33e5e442.png"
-  },
-  {
-    "revision": "d02ae7283c0d48a0222b83df24762ee9",
-    "url": "/static/media/HandRaiseNotif.d02ae728.mov"
   },
   {
     "revision": "bcbcafb58e5c4eb8f4bb97e7fd19d5c4",
@@ -98,6 +82,26 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "14ad8922469be638f525036bd7ef6661",
     "url": "/static/media/IMG1.14ad8922.png"
+  },
+  {
+    "revision": "93b5f75711cf3391df23cd3f95c63f92",
+    "url": "/static/media/IMG2.93b5f757.png"
+  },
+  {
+    "revision": "137300105945f32c9844b63559c2856d",
+    "url": "/static/media/IMG3.13730010.png"
+  },
+  {
+    "revision": "1df4c3b1d6fa2d51d4fc8c59e66a132a",
+    "url": "/static/media/IMG4.1df4c3b1.png"
+  },
+  {
+    "revision": "4d822500be1d60bd80a28135b7e4cbfc",
+    "url": "/static/media/IMG5.4d822500.png"
+  },
+  {
+    "revision": "3ad4b443e7036159a237e1039e6b1b5b",
+    "url": "/static/media/IMG6.3ad4b443.png"
   },
   {
     "revision": "ecc8917f9f0c37e680dd3a21b6f16827",
@@ -140,10 +144,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/Slanguage.9d42bf5b.png"
   },
   {
-    "revision": "865a6276db07311150d78fd304ce2a0d",
-    "url": "/static/media/StudentGaze.865a6276.png"
-  },
-  {
     "revision": "337d39825af657161891b749d9ce16ed",
     "url": "/static/media/Vui.337d3982.png"
   },
@@ -162,6 +162,26 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "66f45d22e16f2f112cbb9d1f3d45f4fb",
     "url": "/static/media/arch.66f45d22.svg"
+  },
+  {
+    "revision": "0180bf91b612636ab86270716c97efb7",
+    "url": "/static/media/chart1.0180bf91.png"
+  },
+  {
+    "revision": "38a3680f7fdd7a809415cea65970bd24",
+    "url": "/static/media/chart2.38a3680f.png"
+  },
+  {
+    "revision": "77baf290126bfc82d9298b88423ec69a",
+    "url": "/static/media/chart3.77baf290.png"
+  },
+  {
+    "revision": "4faff0ed962227bc3e368dfba7776dc2",
+    "url": "/static/media/chart4.4faff0ed.png"
+  },
+  {
+    "revision": "072cb0efa536adcc4e7e9dfe81d90546",
+    "url": "/static/media/chart5.072cb0ef.png"
   },
   {
     "revision": "193e57870228cf0ab08dee77ef0a9730",
@@ -188,12 +208,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/fb.367f758e.png"
   },
   {
+    "revision": "b28c55cfe826296ed0fd4ebdedd58d96",
+    "url": "/static/media/insgaze.b28c55cf.png"
+  },
+  {
     "revision": "6a43ad17c8e299be3357447fb71a3964",
     "url": "/static/media/intro.6a43ad17.svg"
   },
   {
     "revision": "97dd728a2edf9583cf2dde80d0860448",
     "url": "/static/media/mock.97dd728a.gif"
+  },
+  {
+    "revision": "140e1cbf4b93eeb849a28e9e89c5882e",
+    "url": "/static/media/movementbad.140e1cbf.png"
+  },
+  {
+    "revision": "108cde7beb609ba93104abe186393b2f",
+    "url": "/static/media/movementgood.108cde7b.png"
   },
   {
     "revision": "826804018bb6a215efba29d17d91d25a",
