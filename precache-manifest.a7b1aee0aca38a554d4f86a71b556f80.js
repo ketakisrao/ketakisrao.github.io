@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5a0220ecac0622d979af905691c7c533",
+    "revision": "1c06810e96b9b4d68fb206268f8d7221",
     "url": "/index.html"
   },
   {
-    "revision": "8d2903d947f88d862347",
+    "revision": "feedfac8fac56e877763",
     "url": "/static/css/2.f4bde6ca.chunk.css"
   },
   {
-    "revision": "b885ed19b1e5e0a7ae35",
+    "revision": "4a8d4dfa561888a99893",
     "url": "/static/css/main.07fb2a67.chunk.css"
   },
   {
-    "revision": "8d2903d947f88d862347",
-    "url": "/static/js/2.db411525.chunk.js"
+    "revision": "feedfac8fac56e877763",
+    "url": "/static/js/2.130e0bea.chunk.js"
   },
   {
     "revision": "281879fe550972bffc7e495a6f8721f1",
-    "url": "/static/js/2.db411525.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.130e0bea.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b885ed19b1e5e0a7ae35",
-    "url": "/static/js/main.15dcf59b.chunk.js"
+    "revision": "4a8d4dfa561888a99893",
+    "url": "/static/js/main.9c3c3c39.chunk.js"
   },
   {
     "revision": "4f2b1704eab49d50853b",
@@ -176,16 +176,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/chart2.38a3680f.png"
   },
   {
-    "revision": "77baf290126bfc82d9298b88423ec69a",
-    "url": "/static/media/chart3.77baf290.png"
+    "revision": "50ecf6aa26a0717ac65b9b1a9dba0391",
+    "url": "/static/media/chart3.50ecf6aa.png"
   },
   {
-    "revision": "4faff0ed962227bc3e368dfba7776dc2",
-    "url": "/static/media/chart4.4faff0ed.png"
+    "revision": "8e426acc8b3db7a4e4219b8c8c55f293",
+    "url": "/static/media/chart4.8e426acc.png"
   },
   {
-    "revision": "072cb0efa536adcc4e7e9dfe81d90546",
-    "url": "/static/media/chart5.072cb0ef.png"
+    "revision": "10a2f931321f75baff8702ce3d11a1cc",
+    "url": "/static/media/chart5.10a2f931.png"
   },
   {
     "revision": "193e57870228cf0ab08dee77ef0a9730",
@@ -210,6 +210,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "367f758e3bfa26d832ffe78456739730",
     "url": "/static/media/fb.367f758e.png"
+  },
+  {
+    "revision": "5ebefd9468068ba497aa136e4cc62963",
+    "url": "/static/media/handraise.5ebefd94.png"
   },
   {
     "revision": "b28c55cfe826296ed0fd4ebdedd58d96",
