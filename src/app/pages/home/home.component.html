@@ -1,0 +1,239 @@
+<main class="home-main">
+  <!-- Parallax Floating Organic Shapes -->
+  <div class="absolute-shape shape-1 organic-shape" [style.transform]="shape1Transform()"></div>
+  <div class="absolute-shape shape-2 organic-shape" [style.transform]="shape2Transform()"></div>
+
+  <!-- Hero Section -->
+  <section class="hero-section" aria-labelledby="hero-title">
+    <div class="hero-content">
+      <div class="badge font-label-sm">
+        Staff Engineer • HCI Specialist
+      </div>
+      <h1 id="hero-title" class="font-display">
+        Building Intuitive Interfaces at the intersection of <span class="text-primary">AI</span> & <span class="text-secondary">Human Logic</span>.
+      </h1>
+      <p class="font-body-lg text-muted">
+        As a Staff Software Engineer with a Master’s in Human-Computer Interaction, I bridge the gap between complex AI systems and intuitive user experiences. I craft high-performance web architectures that feel as natural as they are powerful.
+      </p>
+      <div class="hero-actions">
+        <a routerLink="/lab" class="btn btn-primary neumorphic-outset">View Projects</a>
+        <a routerLink="/hobbies" class="btn btn-secondary neumorphic-outset">Creative Corner</a>
+      </div>
+    </div>
+
+    <!-- Image / Interactive Squircle Container -->
+    <div class="hero-image-container">
+      <div class="squircle-frame neumorphic-outset">
+        <img 
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkTgpYdL6Yq-kiAqx95ti8dsmzsu2eh-skKKxNeLDju8llzrUABjFAmDhq26HQUDDOCZt_av-OU6OEjeu8HOPluScBumKCXibkCgtCwfwQSI2n6YanLM0wVN1UHnqZ6Buq6Hy5Ct8WbTG-2caW8wCPPAzJhyAZKglULeK_fwFJWF5_KBMorwUU05XWVZWlKtTkfftsCs8Jt-zb4lg7w7Cnj-YP9VzBObEqOFAcL9usgTMC8FMGZveZB4dTqJtS5jIWKA" 
+          alt="Ketaki Rao, modern systems engineer" 
+          class="hero-portrait"
+        />
+        <!-- Floating Architecture Icon badge -->
+        <div class="floating-badge badge-top neumorphic-outset" aria-hidden="true">
+          <span class="material-symbols-outlined">architecture</span>
+        </div>
+      </div>
+      <!-- Secondary Highlight Badge -->
+      <div class="floating-badge badge-bottom neumorphic-outset" aria-hidden="true">
+        <span class="material-symbols-outlined text-secondary">token</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values / Ethics Bento Grid Section -->
+  <section class="ethics-section" aria-labelledby="ethics-title">
+    <h2 id="ethics-title" class="section-title">
+      <span class="title-line"></span>
+      Philosophy & Ethos
+    </h2>
+
+    <div class="ethics-grid">
+      <!-- Card 1: Main Philosophy -->
+      <div 
+        class="card neumorphic-outset span-2-cols" 
+        (click)="togglePhilosophyCard(0)"
+        (keydown.enter)="togglePhilosophyCard(0)"
+        (keydown.space)="togglePhilosophyCard(0); $event.preventDefault()"
+        tabindex="0"
+        role="button"
+        [attr.aria-expanded]="activePhilosophyCard() === 0"
+        aria-label="The Artisan's Code philosophy details"
+      >
+        <div class="card-header">
+          <h3 class="font-headline-md text-primary">The Artisan's Code</h3>
+          <span class="material-symbols-outlined disclosure-arrow" [class.rotated]="activePhilosophyCard() === 0">
+            expand_more
+          </span>
+        </div>
+        
+        <p class="font-body-md text-muted">
+          Most engineering today focuses on velocity. I focus on resonance. Every function, every database schema, and every UI transition is a deliberate choice made to reduce cognitive load and increase delight.
+        </p>
+
+        <!-- Progressive Disclosure content -->
+        <div class="disclosure-content" [class.expanded]="activePhilosophyCard() === 0">
+          <p class="font-body-md text-muted pt-md">
+            We aren't just shipping features; we are building environments for human thought. Coding with craft means considering physical responsiveness, spatial design layouts, accessibility for all individuals, and structural integrity.
+          </p>
+        </div>
+
+        <div class="card-footer-tags">
+          <span class="chip font-label-sm">Intentionality</span>
+          <span class="chip font-label-sm">Precision</span>
+          <span class="chip font-label-sm">Longevity</span>
+        </div>
+      </div>
+
+      <!-- Card 2: Structural Integrity -->
+      <div 
+        class="card neumorphic-outset card-center bg-accent-soft"
+        (click)="togglePhilosophyCard(1)"
+        (keydown.enter)="togglePhilosophyCard(1)"
+        (keydown.space)="togglePhilosophyCard(1); $event.preventDefault()"
+        tabindex="0"
+        role="button"
+        [attr.aria-expanded]="activePhilosophyCard() === 1"
+        aria-label="Structural integrity details"
+      >
+        <div class="icon-circle bg-secondary-soft">
+          <span class="material-symbols-outlined text-secondary">architecture</span>
+        </div>
+        <h3 class="font-headline-md">Structural Integrity</h3>
+        <p class="font-label-sm text-muted">Built to last, not just to deploy.</p>
+
+        <!-- Progressive Disclosure content -->
+        <div class="disclosure-content" [class.expanded]="activePhilosophyCard() === 1">
+          <p class="font-body-md text-muted pt-sm">
+            Ensuring pixel-perfect responsive layouts via container queries and reliable clean architecture.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section" aria-labelledby="process-title">
+    <h2 id="process-title" class="section-title">
+      <span class="title-line"></span>
+      The Process
+    </h2>
+    <div class="process-grid">
+      <!-- Step 1 -->
+      <div class="process-step">
+        <span class="step-num font-label-sm">01 / DISCOVERY</span>
+        <h4 class="font-headline-md step-name">Observational Empathy</h4>
+        <p class="font-body-md text-muted">
+          Before a single line is written, I study the friction. I look for the unspoken frustrations in existing systems to find the organic solution hiding in the complexity.
+        </p>
+      </div>
+      <!-- Step 2 -->
+      <div class="process-step">
+        <span class="step-num font-label-sm">02 / BLUEPRINT</span>
+        <h4 class="font-headline-md step-name">Geometric Rigor</h4>
+        <p class="font-body-md text-muted">
+          Drafting the invisible architecture. This is where engineering integrity is born—ensuring the foundation is scalable, secure, and inherently logical.
+        </p>
+      </div>
+      <!-- Step 3 -->
+      <div class="process-step">
+        <span class="step-num font-label-sm">03 / CRAFT</span>
+        <h4 class="font-headline-md step-name">Tactile Execution</h4>
+        <p class="font-body-md text-muted">
+          Translating blueprints into reality. Using modern stacks with an artisanal eye for detail, focusing on micro-interactions that make the digital feel physical.
+        </p>
+      </div>
+      <!-- Step 4 -->
+      <div class="process-step">
+        <span class="step-num font-label-sm">04 / REFINEMENT</span>
+        <h4 class="font-headline-md step-name">Polishing the Edge</h4>
+        <p class="font-body-md text-muted">
+          The difference between a tool and a masterpiece is in the finish. Continuous testing and iteration until the experience is seamless and invisible.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stack Grid Section -->
+  <section class="stack-section" aria-labelledby="stack-title">
+    <div class="stack-intro">
+      <h2 id="stack-title" class="font-display">
+        The <span class="text-secondary">Stack</span> Behind the <span class="text-primary">Craft</span>
+      </h2>
+      <p class="font-body-lg text-muted">
+        A multidimensional arsenal focused on high-performance scalability and human-centric intelligence.
+      </p>
+    </div>
+
+    <div class="stack-grid">
+      <!-- Card 1: Languages (Featured) -->
+      <div class="card-container span-2-cols">
+        <article class="card neumorphic-outset flex-row">
+          <div class="card-tag tag-gold font-label-sm">Battle-Tested</div>
+          <div class="card-icon-wrapper">
+            <span class="material-symbols-outlined icon-large">code</span>
+          </div>
+          <div class="card-content-wrapper">
+            <h3 class="font-headline-lg">Languages & Frameworks</h3>
+            <p class="font-body-lg text-muted pt-sm">
+              Mastering the core of the web with <strong class="text-primary">TypeScript</strong>, JavaScript, and Python. Building robust modern architectures with <strong class="text-primary">Angular</strong>, Node.js, and GraphQL.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <!-- Card 2: Performance -->
+      <div class="card-container">
+        <article class="card neumorphic-outset">
+          <div class="card-icon-circle text-secondary">
+            <span class="material-symbols-outlined">speed</span>
+          </div>
+          <h3 class="font-headline-md">Performance Engineering</h3>
+          <p class="font-body-md text-muted">
+            Optimizing <strong class="text-secondary">Core Web Vitals</strong>, advanced caching mechanisms, and critical rendering paths for lightning-fast digital environments.
+          </p>
+        </article>
+      </div>
+
+      <!-- Card 3: UI Architecture -->
+      <div class="card-container">
+        <article class="card neumorphic-outset">
+          <div class="card-icon-circle text-primary">
+            <span class="material-symbols-outlined">architecture</span>
+          </div>
+          <h3 class="font-headline-md">UI Architecture</h3>
+          <p class="font-body-md text-muted">
+            Scaling frontends using micro-frontend patterns, custom design systems, and robust component architecture.
+          </p>
+        </article>
+      </div>
+
+      <!-- Card 4: Web AI (Featured) -->
+      <div class="card-container span-2-cols">
+        <article class="card neumorphic-outset flex-row">
+          <div class="card-tag tag-primary font-label-sm">Current Obsession</div>
+          <div class="card-icon-wrapper text-secondary">
+            <span class="material-symbols-outlined icon-large">psychology</span>
+          </div>
+          <div class="card-content-wrapper">
+            <h3 class="font-headline-lg">Web AI & ML</h3>
+            <p class="font-body-lg text-muted pt-sm">
+              Pioneering on-device intelligence using <strong class="text-secondary">Gemini Nano</strong>, TensorFlow.js, and advanced Retrieval-Augmented Generation (RAG) implementations.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section class="quote-section" aria-label="Inspirational Quote">
+    <blockquote class="ethos-blockquote">
+      <span class="material-symbols-outlined quote-mark" aria-hidden="true">format_quote</span>
+      <p class="font-display quote-text">
+        "The best systems are the ones that disappear. They don't demand attention; they facilitate it."
+      </p>
+      <cite class="quote-author font-label-sm">— The Personal Ethos</cite>
+    </blockquote>
+  </section>
+</main>
