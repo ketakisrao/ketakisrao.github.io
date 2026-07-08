@@ -1,0 +1,156 @@
+.hobbies-main {
+  min-height: 100vh;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 120px var(--space-lg) var(--space-xl) var(--space-lg);
+  background-color: var(--sys-bg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.hobbies-header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.header-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  background-color: color-mix(in srgb, var(--sys-secondary) 12%, transparent);
+  color: var(--sys-secondary);
+  font-weight: 700;
+}
+
+.text-muted {
+  color: var(--sys-outline);
+}
+
+/* Asymmetrical Grid Settings */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .hobbies-grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+
+/* Grid positions for asymmetrical balance */
+.grid-dance { grid-column: span 12; }
+.grid-pottery { grid-column: span 12; }
+.grid-origami { grid-column: span 12; }
+.grid-crochet { grid-column: span 12; }
+.grid-knitting { grid-column: span 12; }
+.grid-cooking { grid-column: span 12; }
+.grid-embroidery { grid-column: span 12; }
+.grid-sewing { grid-column: span 12; }
+
+@media (min-width: 768px) {
+  .grid-dance { grid-column: span 8; grid-row: span 2; }
+  .grid-pottery { grid-column: span 4; }
+  .grid-origami { grid-column: span 4; }
+  .grid-crochet { grid-column: span 8; }
+  .grid-knitting { grid-column: span 4; }
+  .grid-cooking { grid-column: span 6; }
+  .grid-embroidery { grid-column: span 6; }
+  .grid-sewing { grid-column: span 12; }
+}
+
+/* Hobby Card Styles */
+.hobby-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  padding: 0;
+  border-radius: var(--radius-md);
+  border: var(--border-sage);
+  animation: fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.aspect-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--sys-surface-low);
+  border-bottom: var(--border-sage);
+}
+
+.hobby-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hobby-card:hover .hobby-svg {
+  transform: scale(1.05) rotate(1deg);
+}
+
+.hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(26, 26, 26, 0.03);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hobby-card:hover .hover-overlay {
+  opacity: 1;
+}
+
+.gallery-icon {
+  font-size: 3rem;
+  color: var(--sys-primary);
+  transform: scale(0.8);
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hobby-card:hover .gallery-icon {
+  transform: scale(1);
+}
+
+.card-footer {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.hobby-cat {
+  color: var(--sys-secondary);
+  font-weight: 700;
+}
+
+.hobby-name {
+  color: var(--sys-on-bg);
+  line-height: 1.2;
+}
+
+.hobby-desc {
+  font-size: 0.95rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,39 @@
+<main class="blog-main">
+  @if (!selectedPost) {
+    <header class="blog-header animate-fade-in">
+      <h1 class="font-display">The Journal</h1>
+      <p class="font-body-lg text-muted">
+        Insights on building production AI agents, system reliability, and cloud security.
+      </p>
+    </header>
+
+    <section class="blog-grid animate-fade-in" aria-label="Blog posts list">
+      @for (post of posts; track post.title) {
+        <article class="card neumorphic-outset blog-card" (click)="selectPost(post)" tabindex="0" (keydown.enter)="selectPost(post)">
+          <div class="post-meta font-label-sm">
+            <span>{{ post.date }}</span>
+            <span class="dot">•</span>
+            <span>{{ post.readTime }}</span>
+          </div>
+          <h2 class="font-headline-md post-title">{{ post.title }}</h2>
+          <p class="font-body-md text-muted post-excerpt">
+            {{ post.excerpt }}
+          </p>
+          <div class="post-tags">
+            @for (tag of post.tags; track tag) {
+              <span class="chip font-label-sm">{{ tag }}</span>
+            }
+          </div>
+        </article>
+      }
+    </section>
+  } @else {
+    @if (selectedPost.slug === 'making-ai-agents-production-ready') {
+      <app-grounding-blog (back)="deselectPost()"></app-grounding-blog>
+    } @else if (selectedPost.slug === 'evals-not-an-afterthought') {
+      <app-evals-blog (back)="deselectPost()"></app-evals-blog>
+    } @else if (selectedPost.slug === 'securing-the-prompt-beginner-guide') {
+      <app-security-blog (back)="deselectPost()"></app-security-blog>
+    }
+  }
+</main>

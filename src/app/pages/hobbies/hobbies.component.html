@@ -1,0 +1,79 @@
+<main class="hobbies-main">
+  <header class="hobbies-header">
+    <div class="header-badge font-label-sm">Creative Corner</div>
+    <h1 class="font-display">Tactile Explorations</h1>
+    <p class="font-body-lg text-muted">
+      Where building stops and crafting begins. Visualizing the physical, meditative arts that balance the screen.
+    </p>
+  </header>
+
+  <!-- Asymmetrical Collage Grid -->
+  <section class="hobbies-grid" aria-label="Hobbies collage">
+    @for (hobby of hobbies; track hobby.name; let idx = $index) {
+      <article 
+        class="card neumorphic-outset hobby-card" 
+        [ngClass]="hobby.gridClass"
+        [style.animation-delay.ms]="idx * 100"
+      >
+        <div class="aspect-wrapper" [style.aspect-ratio]="hobby.aspectRatio">
+          <!-- Asymmetric SVG abstract vector pattern representing the hobby -->
+          <svg class="hobby-svg" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice" [style.color]="hobby.svgColor">
+            <defs>
+              <pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse">
+                <path d="M 10 0 L 0 0 0 10" fill="none" stroke="currentColor" stroke-width="0.1" stroke-opacity="0.15"/>
+              </pattern>
+              <linearGradient [id]="'grad-' + idx" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="currentColor" stop-opacity="0.2" />
+                <stop offset="100%" stop-color="var(--sys-bg)" stop-opacity="0.8" />
+              </linearGradient>
+            </defs>
+            <rect width="100" height="100" [attr.fill]="'url(#grad-' + idx + ')'" />
+            <rect width="100" height="100" fill="url(#grid)" />
+            
+            <!-- Custom SVG art based on the hobby icon -->
+            @if (hobby.name === 'Pottery') {
+              <circle cx="50" cy="50" r="25" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="1 3" />
+              <circle cx="50" cy="50" r="18" fill="none" stroke="currentColor" stroke-width="1" />
+            }
+            @if (hobby.name === 'Origami') {
+              <path d="M10,50 L50,10 L90,50 L50,90 Z M50,10 L50,90 M10,50 L90,50 M30,30 L70,70" fill="none" stroke="currentColor" stroke-width="0.8"/>
+            }
+            @if (hobby.name === 'Crochet') {
+              <path d="M20,50 C40,20 60,80 80,50 M10,30 C30,70 50,20 90,60" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+            }
+            @if (hobby.name === 'Cooking & Plating') {
+              <circle cx="50" cy="50" r="30" fill="none" stroke="currentColor" stroke-width="0.8" />
+              <path d="M40,50 Q50,30 60,50 T80,50" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            }
+            @if (hobby.name === 'Embroidery') {
+              <line x1="10" y1="90" x2="90" y2="10" stroke="currentColor" stroke-width="0.5" />
+              <path d="M30,30 C50,10 70,50 50,70" fill="none" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2"/>
+            }
+            @if (hobby.name === 'Dance') {
+              <circle cx="50" cy="50" r="35" fill="none" stroke="currentColor" stroke-width="0.5" />
+              <path d="M50,15 C60,40 30,60 50,85" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            }
+            @if (hobby.name === 'Sewing') {
+              <rect x="20" y="20" width="60" height="60" rx="10" fill="none" stroke="currentColor" stroke-width="0.7"/>
+              <path d="M30,50 L70,50 M50,30 L50,70" stroke="currentColor" stroke-width="1"/>
+            }
+            @if (hobby.name === 'Knitting') {
+              <circle cx="30" cy="50" r="10" fill="none" stroke="currentColor" stroke-width="1" />
+              <circle cx="70" cy="50" r="10" fill="none" stroke="currentColor" stroke-width="1" />
+              <path d="M40,50 Q50,40 60,50" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            }
+          </svg>
+          
+          <div class="hover-overlay">
+            <span class="material-symbols-outlined gallery-icon">{{ hobby.icon }}</span>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="font-label-sm hobby-cat">{{ hobby.category }}</span>
+          <h2 class="font-headline-md hobby-name">{{ hobby.name }}</h2>
+          <p class="font-body-md text-muted hobby-desc">{{ hobby.description }}</p>
+        </div>
+      </article>
+    }
+  </section>
+</main>
