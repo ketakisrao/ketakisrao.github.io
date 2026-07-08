@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { GroundingBlogComponent } from './grounding-blog.component';
 import { EvalsBlogComponent } from './evals-blog.component';
 import { SecurityBlogComponent } from './security-blog.component';
@@ -6,12 +7,14 @@ import { SecurityBlogComponent } from './security-blog.component';
 @Component({
   selector: 'app-blog',
   standalone: true,
-  imports: [GroundingBlogComponent, EvalsBlogComponent, SecurityBlogComponent],
+  imports: [GroundingBlogComponent, EvalsBlogComponent, SecurityBlogComponent, FormsModule],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })
 export class BlogComponent {
   selectedPost: any | null = null;
+  searchText: string = '';
+  sortOrder: 'desc' | 'asc' = 'desc';
 
   posts = [
     {
@@ -25,7 +28,7 @@ export class BlogComponent {
     {
       title: 'Evals are not an afterthought: how to test LLM agents that actually work in production',
       excerpt: 'A practical guide to building offline and online evaluation pipelines for LLM agents, ensuring reliability and security before and after shipping to production.',
-      date: 'July 8, 2026',
+      date: 'July 6, 2026',
       readTime: '5 min read',
       tags: ['AI & Security', 'Evaluation', 'Google Cloud'],
       slug: 'evals-not-an-afterthought'
@@ -33,12 +36,26 @@ export class BlogComponent {
     {
       title: 'Securing the prompt: a beginner\'s guide to LLM and agent security',
       excerpt: 'An introductory playbook on defending LLMs and autonomous agents against prompt injections, data leakage, and insecure integrations using the OWASP Top 10 for LLMs.',
-      date: 'July 8, 2026',
+      date: 'July 4, 2026',
       readTime: '4 min read',
       tags: ['AI & Security', 'InfoSec', 'OWASP'],
       slug: 'securing-the-prompt-beginner-guide'
     }
   ];
+
+  get filteredAndSortedPosts() {
+    let result = this.posts.filter(post => 
+      post.title.toLowerCase().includes(this.searchText.trim().toLowerCase())
+    );
+
+    result.sort((a, b) => {
+      const dateA = new Date(a.date).getTime();
+      const dateB = new Date(b.date).getTime();
+      return this.sortOrder === 'desc' ? dateB - dateA : dateA - dateB;
+    });
+
+    return result;
+  }
 
   selectPost(post: any): void {
     this.selectedPost = post;

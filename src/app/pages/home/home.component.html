@@ -5,150 +5,131 @@
 
   <!-- Hero Section -->
   <section class="hero-section" aria-labelledby="hero-title">
-    <div class="hero-content">
+    <div class="hero-content animate-fade-in">
       <div class="badge font-label-sm">
-        Staff Engineer • HCI Specialist
+        Staff Software Engineer • AI & Security
       </div>
-      <h1 id="hero-title" class="font-display">
-        Building Intuitive Interfaces at the intersection of <span class="text-primary">AI</span> & <span class="text-secondary">Human Logic</span>.
+      <h1 id="hero-title" class="font-display hero-title">
+        Architecting Secure, Production-Grade <span class="text-primary">LLM Agents</span> & <span class="text-secondary">AI Systems</span>.
       </h1>
-      <p class="font-body-lg text-muted">
-        As a Staff Software Engineer with a Master’s in Human-Computer Interaction, I bridge the gap between complex AI systems and intuitive user experiences. I craft high-performance web architectures that feel as natural as they are powerful.
+      <p class="font-body-lg text-muted hero-lead">
+        As a Staff Software Engineer with dual Master's degrees in HCI (Carnegie Mellon) and Data Science, I specialize in building secure, production-ready GenAI and multi-agent workflows on Google Cloud. I design robust grounding layers, continuous evaluation pipelines, and runtime guardrails to scale enterprise AI safely.
       </p>
       <div class="hero-actions">
-        <a routerLink="/lab" class="btn btn-primary neumorphic-outset">View Projects</a>
-        <a routerLink="/hobbies" class="btn btn-secondary neumorphic-outset">Creative Corner</a>
+        <a routerLink="/blog" class="btn btn-primary neumorphic-outset">Read the Journal</a>
+        <a routerLink="/lab" class="btn btn-secondary neumorphic-outset">View Projects</a>
       </div>
     </div>
 
-    <!-- Image / Interactive Squircle Container -->
-    <div class="hero-image-container">
+    <!-- Clean portrait Squircle Container -->
+    <div class="hero-image-container animate-fade-in">
       <div class="squircle-frame neumorphic-outset">
         <img 
           src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkTgpYdL6Yq-kiAqx95ti8dsmzsu2eh-skKKxNeLDju8llzrUABjFAmDhq26HQUDDOCZt_av-OU6OEjeu8HOPluScBumKCXibkCgtCwfwQSI2n6YanLM0wVN1UHnqZ6Buq6Hy5Ct8WbTG-2caW8wCPPAzJhyAZKglULeK_fwFJWF5_KBMorwUU05XWVZWlKtTkfftsCs8Jt-zb4lg7w7Cnj-YP9VzBObEqOFAcL9usgTMC8FMGZveZB4dTqJtS5jIWKA" 
-          alt="Ketaki Rao, modern systems engineer" 
+          alt="Ketaki Rao" 
           class="hero-portrait"
         />
-        <!-- Floating Architecture Icon badge -->
-        <div class="floating-badge badge-top neumorphic-outset" aria-hidden="true">
-          <span class="material-symbols-outlined">architecture</span>
-        </div>
-      </div>
-      <!-- Secondary Highlight Badge -->
-      <div class="floating-badge badge-bottom neumorphic-outset" aria-hidden="true">
-        <span class="material-symbols-outlined text-secondary">token</span>
       </div>
     </div>
   </section>
 
-  <!-- Values / Ethics Bento Grid Section -->
+  <!-- Philosophy Section -->
   <section class="ethics-section" aria-labelledby="ethics-title">
-    <h2 id="ethics-title" class="section-title">
-      <span class="title-line"></span>
-      Philosophy & Ethos
-    </h2>
+    <div class="section-header">
+      <h2 id="ethics-title" class="section-title">Philosophy & Ethos</h2>
+      <p class="font-body-lg text-muted max-width-desc">
+        Bridging high-performance execution with safety, compliance, and user trust.
+      </p>
+    </div>
 
     <div class="ethics-grid">
-      <!-- Card 1: Main Philosophy -->
-      <div 
-        class="card neumorphic-outset span-2-cols" 
-        (click)="togglePhilosophyCard(0)"
-        (keydown.enter)="togglePhilosophyCard(0)"
-        (keydown.space)="togglePhilosophyCard(0); $event.preventDefault()"
-        tabindex="0"
-        role="button"
-        [attr.aria-expanded]="activePhilosophyCard() === 0"
-        aria-label="The Artisan's Code philosophy details"
-      >
-        <div class="card-header">
-          <h3 class="font-headline-md text-primary">The Artisan's Code</h3>
-          <span class="material-symbols-outlined disclosure-arrow" [class.rotated]="activePhilosophyCard() === 0">
-            expand_more
-          </span>
+      <!-- Card 1: Grounding -->
+      <article class="card neumorphic-outset ethics-card">
+        <div class="icon-circle bg-primary-soft">
+          <span class="material-symbols-outlined text-primary">verified_user</span>
         </div>
-        
+        <h3 class="font-headline-md">Security & Grounding First</h3>
         <p class="font-body-md text-muted">
-          Most engineering today focuses on velocity. I focus on resonance. Every function, every database schema, and every UI transition is a deliberate choice made to reduce cognitive load and increase delight.
+          Most AI integrations focus on wrapping API endpoints. I focus on structural safety. In production-grade agentic workflows, a hallucinated answer or unchecked tool execution is an enterprise liability. Every grounding check, validation script, and network boundary is a deliberate security decision.
         </p>
-
-        <!-- Progressive Disclosure content -->
-        <div class="disclosure-content" [class.expanded]="activePhilosophyCard() === 0">
-          <p class="font-body-md text-muted pt-md">
-            We aren't just shipping features; we are building environments for human thought. Coding with craft means considering physical responsiveness, spatial design layouts, accessibility for all individuals, and structural integrity.
-          </p>
-        </div>
-
         <div class="card-footer-tags">
-          <span class="chip font-label-sm">Intentionality</span>
-          <span class="chip font-label-sm">Precision</span>
-          <span class="chip font-label-sm">Longevity</span>
+          <span class="chip font-label-sm">Grounding</span>
+          <span class="chip font-label-sm">InfoSec</span>
         </div>
-      </div>
+      </article>
 
-      <!-- Card 2: Structural Integrity -->
-      <div 
-        class="card neumorphic-outset card-center bg-accent-soft"
-        (click)="togglePhilosophyCard(1)"
-        (keydown.enter)="togglePhilosophyCard(1)"
-        (keydown.space)="togglePhilosophyCard(1); $event.preventDefault()"
-        tabindex="0"
-        role="button"
-        [attr.aria-expanded]="activePhilosophyCard() === 1"
-        aria-label="Structural integrity details"
-      >
+      <!-- Card 2: Evals -->
+      <article class="card neumorphic-outset ethics-card">
         <div class="icon-circle bg-secondary-soft">
-          <span class="material-symbols-outlined text-secondary">architecture</span>
+          <span class="material-symbols-outlined text-secondary">fact_check</span>
         </div>
-        <h3 class="font-headline-md">Structural Integrity</h3>
-        <p class="font-label-sm text-muted">Built to last, not just to deploy.</p>
+        <h3 class="font-headline-md">Continuous Evaluation</h3>
+        <p class="font-body-md text-muted">
+          We aren't just calling models; we are building systems for autonomous decision-making. Continuous evals using offline golden datasets and online real-time scorers ensure model accuracy, reliability, and security boundary alignment before and after shipping code.
+        </p>
+        <div class="card-footer-tags">
+          <span class="chip font-label-sm">Evals</span>
+          <span class="chip font-label-sm">Observability</span>
+        </div>
+      </article>
 
-        <!-- Progressive Disclosure content -->
-        <div class="disclosure-content" [class.expanded]="activePhilosophyCard() === 1">
-          <p class="font-body-md text-muted pt-sm">
-            Ensuring pixel-perfect responsive layouts via container queries and reliable clean architecture.
-          </p>
+      <!-- Card 3: Least Privilege -->
+      <article class="card neumorphic-outset ethics-card">
+        <div class="icon-circle bg-tertiary-soft">
+          <span class="material-symbols-outlined text-tertiary">key</span>
         </div>
-      </div>
+        <h3 class="font-headline-md">Least Privilege Access</h3>
+        <p class="font-body-md text-muted">
+          AI agents shouldn't have unrestricted database or network access. Enforcing zero-trust network access (VPC-SC) and granular IAM permissions bounds LLM capabilities. This isolates agent actions and prevents prompt-injection privilege escalations.
+        </p>
+        <div class="card-footer-tags">
+          <span class="chip font-label-sm">IAM</span>
+          <span class="chip font-label-sm">VPC-SC</span>
+        </div>
+      </article>
     </div>
   </section>
 
   <!-- Process Section -->
   <section class="process-section" aria-labelledby="process-title">
-    <h2 id="process-title" class="section-title">
-      <span class="title-line"></span>
-      The Process
-    </h2>
+    <div class="section-header">
+      <h2 id="process-title" class="section-title">The Process</h2>
+      <p class="font-body-lg text-muted max-width-desc">
+        A structured, secure lifecycle from observational analysis to hardened runtime execution.
+      </p>
+    </div>
+
     <div class="process-grid">
       <!-- Step 1 -->
-      <div class="process-step">
-        <span class="step-num font-label-sm">01 / DISCOVERY</span>
-        <h4 class="font-headline-md step-name">Observational Empathy</h4>
+      <div class="process-step card neumorphic-outset">
+        <span class="step-num font-label-sm">01 / AUDITING</span>
+        <h4 class="font-headline-md">Observability Analysis</h4>
         <p class="font-body-md text-muted">
-          Before a single line is written, I study the friction. I look for the unspoken frustrations in existing systems to find the organic solution hiding in the complexity.
+          Implementing tracing and logging boundaries to map how prompts, document contexts, and external tools interact, identifying latent failure modes.
         </p>
       </div>
       <!-- Step 2 -->
-      <div class="process-step">
+      <div class="process-step card neumorphic-outset">
         <span class="step-num font-label-sm">02 / BLUEPRINT</span>
-        <h4 class="font-headline-md step-name">Geometric Rigor</h4>
+        <h4 class="font-headline-md">Secure Flow Design</h4>
         <p class="font-body-md text-muted">
-          Drafting the invisible architecture. This is where engineering integrity is born—ensuring the foundation is scalable, secure, and inherently logical.
+          Drafting prompt structures and input schemas. Separating instructions from user data using strict JSON validation schemas to block injection risks.
         </p>
       </div>
       <!-- Step 3 -->
-      <div class="process-step">
-        <span class="step-num font-label-sm">03 / CRAFT</span>
-        <h4 class="font-headline-md step-name">Tactile Execution</h4>
+      <div class="process-step card neumorphic-outset">
+        <span class="step-num font-label-sm">03 / EXECUTION</span>
+        <h4 class="font-headline-md">Orchestration & Grounding</h4>
         <p class="font-body-md text-muted">
-          Translating blueprints into reality. Using modern stacks with an artisanal eye for detail, focusing on micro-interactions that make the digital feel physical.
+          Running multi-agent workflows. Integrating runtime grounding checks (OCR fuzzy match, log-probability analysis) to verify predictions against facts.
         </p>
       </div>
       <!-- Step 4 -->
-      <div class="process-step">
-        <span class="step-num font-label-sm">04 / REFINEMENT</span>
-        <h4 class="font-headline-md step-name">Polishing the Edge</h4>
+      <div class="process-step card neumorphic-outset">
+        <span class="step-num font-label-sm">04 / HARDENING</span>
+        <h4 class="font-headline-md">Guardrail Tuning</h4>
         <p class="font-body-md text-muted">
-          The difference between a tool and a masterpiece is in the finish. Continuous testing and iteration until the experience is seamless and invisible.
+          Testing with offline suites and tuning online guardrails. Optimizing post-processing layers to ensure formatting compliance and network security.
         </p>
       </div>
     </div>
@@ -156,84 +137,68 @@
 
   <!-- Stack Grid Section -->
   <section class="stack-section" aria-labelledby="stack-title">
-    <div class="stack-intro">
-      <h2 id="stack-title" class="font-display">
-        The <span class="text-secondary">Stack</span> Behind the <span class="text-primary">Craft</span>
-      </h2>
-      <p class="font-body-lg text-muted">
-        A multidimensional arsenal focused on high-performance scalability and human-centric intelligence.
+    <div class="stack-intro section-header">
+      <h2 id="stack-title" class="font-display">The Systems Stack</h2>
+      <p class="font-body-lg text-muted max-width-desc">
+        A multi-layered toolkit focused on secure AI execution, cloud scalability, and data privacy.
       </p>
     </div>
 
     <div class="stack-grid">
-      <!-- Card 1: Languages (Featured) -->
-      <div class="card-container span-2-cols">
-        <article class="card neumorphic-outset flex-row">
-          <div class="card-tag tag-gold font-label-sm">Battle-Tested</div>
-          <div class="card-icon-wrapper">
-            <span class="material-symbols-outlined icon-large">code</span>
-          </div>
-          <div class="card-content-wrapper">
-            <h3 class="font-headline-lg">Languages & Frameworks</h3>
-            <p class="font-body-lg text-muted pt-sm">
-              Mastering the core of the web with <strong class="text-primary">TypeScript</strong>, JavaScript, and Python. Building robust modern architectures with <strong class="text-primary">Angular</strong>, Node.js, and GraphQL.
-            </p>
-          </div>
-        </article>
-      </div>
+      <!-- Card 1: Languages -->
+      <article class="card neumorphic-outset stack-card">
+        <div class="card-icon-circle text-primary bg-primary-soft">
+          <span class="material-symbols-outlined">code</span>
+        </div>
+        <h3 class="font-headline-md">Languages & Frameworks</h3>
+        <p class="font-body-md text-muted">
+          Developing backend and frontend architectures with <strong>TypeScript</strong>, JavaScript, and Python. Designing services using Node.js, GraphQL, SQL, HTML5, and CSS3.
+        </p>
+      </article>
 
-      <!-- Card 2: Performance -->
-      <div class="card-container">
-        <article class="card neumorphic-outset">
-          <div class="card-icon-circle text-secondary">
-            <span class="material-symbols-outlined">speed</span>
-          </div>
-          <h3 class="font-headline-md">Performance Engineering</h3>
-          <p class="font-body-md text-muted">
-            Optimizing <strong class="text-secondary">Core Web Vitals</strong>, advanced caching mechanisms, and critical rendering paths for lightning-fast digital environments.
-          </p>
-        </article>
-      </div>
+      <!-- Card 2: AI Security -->
+      <article class="card neumorphic-outset stack-card">
+        <div class="card-icon-circle text-secondary bg-secondary-soft">
+          <span class="material-symbols-outlined">security</span>
+        </div>
+        <h3 class="font-headline-md">AI Security & Guardrails</h3>
+        <p class="font-body-md text-muted">
+          Implementing <strong>OWASP LLM Top 10</strong> mitigations, designing custom grounding verification layers, prompt-injection shielding, and sandboxing insecure execution spaces.
+        </p>
+      </article>
 
-      <!-- Card 3: UI Architecture -->
-      <div class="card-container">
-        <article class="card neumorphic-outset">
-          <div class="card-icon-circle text-primary">
-            <span class="material-symbols-outlined">architecture</span>
-          </div>
-          <h3 class="font-headline-md">UI Architecture</h3>
-          <p class="font-body-md text-muted">
-            Scaling frontends using micro-frontend patterns, custom design systems, and robust component architecture.
-          </p>
-        </article>
-      </div>
+      <!-- Card 3: Cloud Infrastructure -->
+      <article class="card neumorphic-outset stack-card">
+        <div class="card-icon-circle text-tertiary bg-tertiary-soft">
+          <span class="material-symbols-outlined">cloud</span>
+        </div>
+        <h3 class="font-headline-md">Cloud & Infrastructure</h3>
+        <p class="font-body-md text-muted">
+          Deploying resilient cloud architectures on <strong>Google Cloud Platform (GCP)</strong> and AWS, using Cloud Run, Docker, Firebase, BigQuery, IAM policies, and VPC-SC network controls.
+        </p>
+      </article>
 
-      <!-- Card 4: Web AI (Featured) -->
-      <div class="card-container span-2-cols">
-        <article class="card neumorphic-outset flex-row">
-          <div class="card-tag tag-primary font-label-sm">Current Obsession</div>
-          <div class="card-icon-wrapper text-secondary">
-            <span class="material-symbols-outlined icon-large">psychology</span>
-          </div>
-          <div class="card-content-wrapper">
-            <h3 class="font-headline-lg">Web AI & ML</h3>
-            <p class="font-body-lg text-muted pt-sm">
-              Pioneering on-device intelligence using <strong class="text-secondary">Gemini Nano</strong>, TensorFlow.js, and advanced Retrieval-Augmented Generation (RAG) implementations.
-            </p>
-          </div>
-        </article>
-      </div>
+      <!-- Card 4: Agentic Systems -->
+      <article class="card neumorphic-outset stack-card">
+        <div class="card-icon-circle text-primary bg-primary-soft">
+          <span class="material-symbols-outlined">psychology</span>
+        </div>
+        <h3 class="font-headline-md">Agentic Systems & Evals</h3>
+        <p class="font-body-md text-muted">
+          Architecting multi-agent and RAG systems using <strong>Vertex AI</strong>, Model Context Protocol (MCP), semantic vector search, multimodal orchestration, and continuous Evals pipelines.
+        </p>
+      </article>
     </div>
   </section>
 
   <!-- Quote Section -->
   <section class="quote-section" aria-label="Inspirational Quote">
-    <blockquote class="ethos-blockquote">
+    <blockquote class="ethos-blockquote animate-fade-in">
       <span class="material-symbols-outlined quote-mark" aria-hidden="true">format_quote</span>
       <p class="font-display quote-text">
-        "The best systems are the ones that disappear. They don't demand attention; they facilitate it."
+        "The most secure AI systems are the ones built on deterministic boundaries. They do not just generate; they verify."
       </p>
-      <cite class="quote-author font-label-sm">— The Personal Ethos</cite>
+      <cite class="quote-author font-label-sm">— The Engineering Ethos</cite>
     </blockquote>
   </section>
 </main>

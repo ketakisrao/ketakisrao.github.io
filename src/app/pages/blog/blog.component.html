@@ -7,26 +7,66 @@
       </p>
     </header>
 
-    <section class="blog-grid animate-fade-in" aria-label="Blog posts list">
-      @for (post of posts; track post.title) {
-        <article class="card neumorphic-outset blog-card" (click)="selectPost(post)" tabindex="0" (keydown.enter)="selectPost(post)">
-          <div class="post-meta font-label-sm">
-            <span>{{ post.date }}</span>
-            <span class="dot">•</span>
-            <span>{{ post.readTime }}</span>
-          </div>
-          <h2 class="font-headline-md post-title">{{ post.title }}</h2>
-          <p class="font-body-md text-muted post-excerpt">
-            {{ post.excerpt }}
-          </p>
-          <div class="post-tags">
-            @for (tag of post.tags; track tag) {
-              <span class="chip font-label-sm">{{ tag }}</span>
-            }
-          </div>
-        </article>
-      }
-    </section>
+    <div class="blog-controls-container animate-fade-in">
+      <div class="search-box neumorphic-inset">
+        <span class="material-symbols-outlined search-icon">search</span>
+        <input 
+          type="text" 
+          placeholder="Filter articles..." 
+          [(ngModel)]="searchText"
+          class="search-input"
+          aria-label="Filter blog posts by title"
+        />
+        @if (searchText) {
+          <button class="btn-clear" (click)="searchText = ''" aria-label="Clear search">
+            <span class="material-symbols-outlined">close</span>
+          </button>
+        }
+      </div>
+
+      <div class="sort-box">
+        <label for="sortOrder" class="font-label-sm sort-label">Sort by:</label>
+        <div class="select-wrapper neumorphic-outset">
+          <select id="sortOrder" [(ngModel)]="sortOrder" class="sort-select">
+            <option value="desc">Newest First</option>
+            <option value="asc">Oldest First</option>
+          </select>
+          <span class="material-symbols-outlined select-arrow">expand_more</span>
+        </div>
+      </div>
+    </div>
+
+    @if (filteredAndSortedPosts.length > 0) {
+      <section class="blog-grid animate-fade-in" aria-label="Blog posts list">
+        @for (post of filteredAndSortedPosts; track post.title) {
+          <article class="card neumorphic-outset blog-card" (click)="selectPost(post)" tabindex="0" (keydown.enter)="selectPost(post)">
+            <div class="post-meta font-label-sm">
+              <span>{{ post.date }}</span>
+              <span class="dot">•</span>
+              <span>{{ post.readTime }}</span>
+            </div>
+            <h2 class="font-headline-md post-title">{{ post.title }}</h2>
+            <p class="font-body-md text-muted post-excerpt">
+              {{ post.excerpt }}
+            </p>
+            <div class="post-tags">
+              @for (tag of post.tags; track tag) {
+                <span class="chip font-label-sm">{{ tag }}</span>
+              }
+            </div>
+          </article>
+        }
+      </section>
+    } @else {
+      <div class="no-results-card neumorphic-outset animate-fade-in">
+        <span class="material-symbols-outlined no-results-icon">search_off</span>
+        <p class="font-headline-md">No articles match your search</p>
+        <p class="font-body-md text-muted">Try adjusting your keywords or clearing the filter.</p>
+        <button class="btn btn-secondary neumorphic-outset" (click)="searchText = ''">
+          Clear Filter
+        </button>
+      </div>
+    }
   } @else {
     @if (selectedPost.slug === 'making-ai-agents-production-ready') {
       <app-grounding-blog (back)="deselectPost()"></app-grounding-blog>
