@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { GroundingBlogComponent } from './grounding-blog.component';
 import { EvalsBlogComponent } from './evals-blog.component';
 import { SecurityBlogComponent } from './security-blog.component';
@@ -11,7 +12,9 @@ import { SecurityBlogComponent } from './security-blog.component';
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })
-export class BlogComponent {
+export class BlogComponent implements OnInit {
+  private route = inject(ActivatedRoute);
+  private router = inject(Router);
   selectedPost: any | null = null;
   searchText: string = '';
   sortOrder: 'desc' | 'asc' = 'desc';
@@ -57,13 +60,30 @@ export class BlogComponent {
     return result;
   }
 
+  ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      const slug = params.get('slug');
+      if (slug) {
+        const post = this.posts.find(p => p.slug === slug);
+        if (post) {
+          this.selectedPost = post;
+        } else {
+          this.selectedPost = null;
+          this.router.navigate(['/blog']);
+        }
+      } else {
+        this.selectedPost = null;
+      }
+    });
+  }
+
   selectPost(post: any): void {
-    this.selectedPost = post;
+    this.router.navigate(['/blog', post.slug]);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   deselectPost(): void {
-    this.selectedPost = null;
+    this.router.navigate(['/blog']);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

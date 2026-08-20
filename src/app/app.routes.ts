@@ -8,6 +8,7 @@ export const routes: Routes = [
   { path: '', component: HomeComponent, title: 'Ketaki Rao | Engineering & Artistry' },
   { path: 'lab', component: LabComponent, title: 'The Laboratory | Ketaki Rao' },
   { path: 'blog', component: BlogComponent, title: 'The Journal | Ketaki Rao' },
+  { path: 'blog/:slug', component: BlogComponent, title: 'The Journal | Ketaki Rao' },
   { path: 'hobbies', component: HobbiesComponent, title: 'Tactile Explorations | Ketaki Rao' },
   { path: '**', redirectTo: '' }
 ];
