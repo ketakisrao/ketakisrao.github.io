@@ -22,7 +22,7 @@ export class BlogComponent {
       excerpt: 'A deep dive into three proven grounding techniques—tiered matching, log probabilities, and citation checks—to prevent hallucinations and secure AI agents in production.',
       date: 'July 8, 2026',
       readTime: '6 min read',
-      tags: ['AI & Security', 'Grounding', 'Google Cloud'],
+      tags: ['AI Engineering', 'Grounding', 'DX & Enablement'],
       slug: 'making-ai-agents-production-ready'
     },
     {
@@ -30,7 +30,7 @@ export class BlogComponent {
       excerpt: 'A practical guide to building offline and online evaluation pipelines for LLM agents, ensuring reliability and security before and after shipping to production.',
       date: 'July 6, 2026',
       readTime: '5 min read',
-      tags: ['AI & Security', 'Evaluation', 'Google Cloud'],
+      tags: ['AI Evals', 'Observability', 'Metrics'],
       slug: 'evals-not-an-afterthought'
     },
     {
@@ -38,7 +38,7 @@ export class BlogComponent {
       excerpt: 'An introductory playbook on defending LLMs and autonomous agents against prompt injections, data leakage, and insecure integrations using the OWASP Top 10 for LLMs.',
       date: 'July 4, 2026',
       readTime: '4 min read',
-      tags: ['AI & Security', 'InfoSec', 'OWASP'],
+      tags: ['Developer Education', 'Prompt Security', 'InfoSec'],
       slug: 'securing-the-prompt-beginner-guide'
     }
   ];
