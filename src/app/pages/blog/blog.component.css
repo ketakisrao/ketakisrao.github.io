@@ -377,8 +377,22 @@ figcaption {
   font-family: var(--font-label);
   font-size: 0.9rem;
   color: #c4d7c5; /* Muted sage-white */
-  line-height: 1.5;
+  line-height: 1.55;
 }
+
+/* Syntax Highlighting Tokens */
+.hl-kw { color: #e5c07b; font-weight: 600; } /* keywords: def, return, in, for, and, if, not */
+.hl-fn { color: #61afef; font-weight: 600; } /* function names */
+.hl-str { color: #98c379; } /* string literals */
+.hl-num { color: #d19a66; } /* numbers */
+.hl-type { color: #56b6c2; } /* type hints: list[str], dict, bool */
+.hl-cm { color: #7f8c8d; font-style: italic; } /* comments and docstrings */
+.hl-var { color: #e6edf3; } /* variables and parameters */
+.hl-op { color: #abb2bf; } /* operators: =, ==, >=, -> */
+.hl-sec { color: #e5c07b; font-weight: 700; } /* Prompt sections: [INPUTS], [RUBRIC] */
+.hl-key { color: #61afef; } /* JSON keys */
+.hl-val { color: #98c379; } /* JSON values */
+.hl-bullet { color: #526442; font-weight: 700; }
 
 .highlight-rule {
   font-size: 1.2rem;

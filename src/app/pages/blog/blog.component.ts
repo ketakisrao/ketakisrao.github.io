@@ -4,11 +4,20 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { GroundingBlogComponent } from './grounding-blog.component';
 import { EvalsBlogComponent } from './evals-blog.component';
 import { SecurityBlogComponent } from './security-blog.component';
+import { DeterministicEvalsBlogComponent } from './deterministic-evals-blog.component';
+import { NonDeterministicEvalsBlogComponent } from './nondeterministic-evals-blog.component';
 
 @Component({
   selector: 'app-blog',
   standalone: true,
-  imports: [GroundingBlogComponent, EvalsBlogComponent, SecurityBlogComponent, FormsModule],
+  imports: [
+    GroundingBlogComponent,
+    EvalsBlogComponent,
+    SecurityBlogComponent,
+    DeterministicEvalsBlogComponent,
+    NonDeterministicEvalsBlogComponent,
+    FormsModule
+  ],
   templateUrl: './blog.component.html',
   styleUrl: './blog.component.css'
 })
@@ -20,6 +29,22 @@ export class BlogComponent implements OnInit {
   sortOrder: 'desc' | 'asc' = 'desc';
 
   posts = [
+    {
+      title: 'Deterministic scorers for AI agents: the code-first evaluation playbook',
+      excerpt: 'How to build fast, zero-inference-cost deterministic scorers for AI agents. Features single-turn parameter validation and 3 production multi-turn evaluation strategies.',
+      date: 'August 28, 2026',
+      readTime: '6 min read',
+      tags: ['AI Evals', 'Deterministic Scorers', 'CI/CD Testing'],
+      slug: 'deterministic-scorers-ai-agents'
+    },
+    {
+      title: 'Non-deterministic scorers for AI agents: the LLM-as-a-judge playbook',
+      excerpt: 'A deep dive into semantic rubrics and LLM-as-a-judge scorers for AI agents. Explores hero-ingredient evaluation and 3 multi-turn reasoning, safety, and coherence judges.',
+      date: 'August 30, 2026',
+      readTime: '7 min read',
+      tags: ['AI Evals', 'LLM-as-a-Judge', 'Food Safety & Semantics'],
+      slug: 'nondeterministic-scorers-ai-agents'
+    },
     {
       title: 'How to make AI agents production-ready: a grounding playbook',
       excerpt: 'A deep dive into three proven grounding techniques—tiered matching, log probabilities, and citation checks—to prevent hallucinations and secure AI agents in production.',

@@ -68,7 +68,11 @@
       </div>
     }
   } @else {
-    @if (selectedPost.slug === 'making-ai-agents-production-ready') {
+    @if (selectedPost.slug === 'deterministic-scorers-ai-agents') {
+      <app-deterministic-evals-blog (back)="deselectPost()"></app-deterministic-evals-blog>
+    } @else if (selectedPost.slug === 'nondeterministic-scorers-ai-agents') {
+      <app-nondeterministic-evals-blog (back)="deselectPost()"></app-nondeterministic-evals-blog>
+    } @else if (selectedPost.slug === 'making-ai-agents-production-ready') {
       <app-grounding-blog (back)="deselectPost()"></app-grounding-blog>
     } @else if (selectedPost.slug === 'evals-not-an-afterthought') {
       <app-evals-blog (back)="deselectPost()"></app-evals-blog>

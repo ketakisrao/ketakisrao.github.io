@@ -1,0 +1,224 @@
+<!-- Blog Post Detail View -->
+<div class="blog-detail-container animate-slide-up">
+  <button class="btn btn-secondary neumorphic-outset btn-back" (click)="back.emit()">
+    <span class="material-symbols-outlined">arrow_back</span>
+    <span>Back to Journal</span>
+  </button>
+
+  <article class="blog-post-content">
+    <header class="post-detail-header">
+      <div class="post-detail-meta font-label-sm">
+        <span class="category-badge">AI Evals &amp; Agent Testing</span>
+        <span class="divider">/</span>
+        <span>August 28, 2026</span>
+        <span class="divider">•</span>
+        <span>6 min read</span>
+      </div>
+      <h1 class="font-display post-detail-title">
+        Deterministic Scorers for AI Agents: The Code-First Evaluation Playbook
+      </h1>
+
+      <div class="author-badge neumorphic-inset">
+        <div class="avatar">
+          <span class="material-symbols-outlined">terminal</span>
+        </div>
+        <div class="author-info">
+          <span class="author-name">Ketaki Rao</span>
+          <span class="author-role">Staff Software Engineer • HCI &amp; Data Science</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="post-body font-body-md">
+      <p class="lead-text">
+        Before you spend time and money running LLM-as-a-judge on every prompt iteration, start with code. Deterministic scorers are fast, free of inference costs, 100% reproducible, and should form the foundational bedrock of your agent CI/CD pipeline.
+      </p>
+
+      <p>
+        When evaluating autonomous AI agents—like a culinary recipe assistant that takes pantry ingredients and fetches viable recipes—the first line of defense is programmatic validation. If an agent fails to pass the correct arguments to a database tool, no amount of prompt polish will save the user experience.
+      </p>
+
+      <p>
+        Here are <strong>three progressive evaluation examples</strong>—starting from basic single-turn parameter verification, moving one step up to categorical and numerical bounds, and culminating in a multi-turn constraint persistence evaluation.
+      </p>
+
+      <hr class="post-divider" />
+
+      <!-- Example 1 -->
+      <h2>Example 1: Baseline Tool Call Parameter Match (Single-Turn)</h2>
+
+      <p>
+        In its simplest form, a deterministic scorer inspects the structured payload emitted by an LLM function/tool call. Here is the single-turn check from our talk:
+      </p>
+
+      <div class="code-block-wrapper">
+        <pre><code><span class="hl-kw">def</span> <span class="hl-fn">eval_deterministic</span>(<span class="hl-var">user_ingredients</span>: <span class="hl-type">list[str]</span>, <span class="hl-var">tool_call</span>: <span class="hl-type">dict</span>) -&gt; <span class="hl-type">bool</span>:
+    <span class="hl-cm">"""Validate that the agent correctly parameterized the recipe search tool."""</span>
+    <span class="hl-var">params</span> = <span class="hl-var">tool_call</span>.get(<span class="hl-str">"args"</span>, &#123;&#125;)
+
+    <span class="hl-var">has_ingredients</span> = <span class="hl-kw">all</span>(<span class="hl-var">ing</span>.lower() <span class="hl-kw">in</span> <span class="hl-kw">str</span>(<span class="hl-var">params</span>.get(<span class="hl-str">"query"</span>, <span class="hl-str">""</span>)).lower()
+                          <span class="hl-kw">for</span> <span class="hl-var">ing</span> <span class="hl-kw">in</span> <span class="hl-var">user_ingredients</span>)
+    <span class="hl-var">has_high_rating</span> = <span class="hl-var">params</span>.get(<span class="hl-str">"min_rating"</span>, <span class="hl-num">0.0</span>) &gt;= <span class="hl-num">4.0</span>
+
+    <span class="hl-kw">return</span> <span class="hl-var">has_ingredients</span> <span class="hl-kw">and</span> <span class="hl-var">has_high_rating</span></code></pre>
+      </div>
+
+      <p>
+        This single-turn check verifies two non-negotiable invariants:
+      </p>
+      <ul>
+        <li><strong>Ingredient Inclusion:</strong> Did the agent translate the user's raw prompt into a structured query containing all mandatory items?</li>
+        <li><strong>Constraint Compliance:</strong> Did the agent enforce the default quality filter (e.g. <code>min_rating &gt;= 4.0</code>)?</li>
+      </ul>
+
+      <p>
+        Because this runs in under 1 millisecond with zero API tokens consumed, you can run thousands of test cases per git commit in GitHub Actions.
+      </p>
+
+      <hr class="post-divider" />
+
+      <!-- Example 2 -->
+      <h2>Example 2: One Small Step Above — Dietary Filters &amp; Numerical Bounds (Single-Turn)</h2>
+
+      <p>
+        <strong>The Scenario:</strong> The user prompt becomes slightly more specific: <em>"I have eggs and tomatoes. Find me a vegetarian recipe ready in under 20 minutes."</em>
+      </p>
+
+      <p>
+        <strong>What we test:</strong> In addition to checking the raw text query, we verify that the agent mapped categorical user intents into explicit tool schema parameters (<code>dietary_preference == "vegetarian"</code>) and enforced a numerical threshold (<code>max_cook_time_mins &lt;= 20</code>).
+      </p>
+
+      <div class="code-block-wrapper">
+        <pre><code><span class="hl-kw">def</span> <span class="hl-fn">eval_recipe_filters</span>(<span class="hl-var">user_ingredients</span>: <span class="hl-type">list[str]</span>, <span class="hl-var">max_time_limit</span>: <span class="hl-type">int</span>, <span class="hl-var">tool_call</span>: <span class="hl-type">dict</span>) -&gt; <span class="hl-type">bool</span>:
+    <span class="hl-cm">"""Validate both ingredient search, dietary tags, and numerical time constraints."""</span>
+    <span class="hl-var">params</span> = <span class="hl-var">tool_call</span>.get(<span class="hl-str">"args"</span>, &#123;&#125;)
+
+    <span class="hl-cm"># 1. Check positive ingredients presence</span>
+    <span class="hl-var">query_str</span> = <span class="hl-kw">str</span>(<span class="hl-var">params</span>.get(<span class="hl-str">"query"</span>, <span class="hl-str">""</span>)).lower()
+    <span class="hl-var">has_ingredients</span> = <span class="hl-kw">all</span>(<span class="hl-var">ing</span>.lower() <span class="hl-kw">in</span> <span class="hl-var">query_str</span> <span class="hl-kw">for</span> <span class="hl-var">ing</span> <span class="hl-kw">in</span> <span class="hl-var">user_ingredients</span>)
+
+    <span class="hl-cm"># 2. Check categorical dietary parameter mapping</span>
+    <span class="hl-var">is_vegetarian</span> = <span class="hl-var">params</span>.get(<span class="hl-str">"dietary_preference"</span>) == <span class="hl-str">"vegetarian"</span>
+
+    <span class="hl-cm"># 3. Check numerical boundary validation</span>
+    <span class="hl-var">cook_time</span> = <span class="hl-var">params</span>.get(<span class="hl-str">"max_cook_time_mins"</span>, <span class="hl-num">999</span>)
+    <span class="hl-var">within_time_limit</span> = <span class="hl-num">0</span> &lt; <span class="hl-var">cook_time</span> &lt;= <span class="hl-var">max_time_limit</span>
+
+    <span class="hl-kw">return</span> <span class="hl-var">has_ingredients</span> <span class="hl-kw">and</span> <span class="hl-var">is_vegetarian</span> <span class="hl-kw">and</span> <span class="hl-var">within_time_limit</span></code></pre>
+      </div>
+
+      <div class="callout callout-info">
+        <span class="material-symbols-outlined callout-icon">tune</span>
+        <div class="callout-content">
+          <strong>Why this matters:</strong>
+          Small parameter misses (e.g., the model putting <code>"20 mins"</code> as a string inside the text query instead of setting <code>max_cook_time_mins: 20</code> as an integer) break database filtering. Programmatic checks catch these schema adherence bugs instantly.
+        </div>
+      </div>
+
+      <hr class="post-divider" />
+
+      <!-- Example 3 -->
+      <h2>Example 3: Multi-Turn Constraint Persistence &amp; Negation Tracking</h2>
+
+      <p>
+        <strong>The Scenario:</strong> Real agent interactions are conversational.
+      </p>
+      <ul>
+        <li><em>Turn 1:</em> User: <em>"I have chicken breast and broccoli."</em> &rarr; Agent calls search tool with chicken &amp; broccoli.</li>
+        <li><em>Turn 2:</em> User: <em>"Actually, make sure it's completely dairy-free and under 30 minutes to cook."</em></li>
+      </ul>
+
+      <p>
+        <strong>The Failure Mode:</strong> Agents frequently suffer from <em>recency displacement</em>—updating tool parameters for Turn 2 (adding the 30-minute limit) but inadvertently dropping the Turn 1 ingredients, or failing to add negative exclusions (e.g., excluding butter, cream, and cheese).
+      </p>
+
+      <div class="code-block-wrapper">
+        <pre><code><span class="hl-kw">def</span> <span class="hl-fn">eval_multiturn_constraint_persistence</span>(<span class="hl-var">trajectory</span>: <span class="hl-type">list[dict]</span>) -&gt; <span class="hl-type">bool</span>:
+    <span class="hl-cm">"""
+    Validate that constraints from Turn 1 are preserved in Turn 2,
+    and new negative/time filters are strictly applied across turns.
+    """</span>
+    <span class="hl-var">turn_1_tool</span> = <span class="hl-var">trajectory</span>[<span class="hl-num">0</span>].get(<span class="hl-str">"tool_call"</span>, &#123;&#125;).get(<span class="hl-str">"args"</span>, &#123;&#125;)
+    <span class="hl-var">turn_2_tool</span> = <span class="hl-var">trajectory</span>[<span class="hl-num">1</span>].get(<span class="hl-str">"tool_call"</span>, &#123;&#125;).get(<span class="hl-str">"args"</span>, &#123;&#125;)
+
+    <span class="hl-cm"># 1. Base ingredients from Turn 1 must persist in Turn 2 query</span>
+    <span class="hl-var">t2_query</span> = <span class="hl-var">turn_2_tool</span>.get(<span class="hl-str">"query"</span>, <span class="hl-str">""</span>).lower()
+    <span class="hl-var">base_persisted</span> = <span class="hl-str">"chicken"</span> <span class="hl-kw">in</span> <span class="hl-var">t2_query</span> <span class="hl-kw">and</span> <span class="hl-str">"broccoli"</span> <span class="hl-kw">in</span> <span class="hl-var">t2_query</span>
+
+    <span class="hl-cm"># 2. Turn 2 dairy exclusion filter must be explicitly populated</span>
+    <span class="hl-var">dairy_exclusions</span> = [<span class="hl-var">x</span>.lower() <span class="hl-kw">for</span> <span class="hl-var">x</span> <span class="hl-kw">in</span> <span class="hl-var">turn_2_tool</span>.get(<span class="hl-str">"exclude_ingredients"</span>, [])]
+    <span class="hl-var">dairy_excluded</span> = (
+        <span class="hl-var">turn_2_tool</span>.get(<span class="hl-str">"dietary_tag"</span>) == <span class="hl-str">"dairy_free"</span> <span class="hl-kw">or</span>
+        <span class="hl-kw">all</span>(<span class="hl-var">item</span> <span class="hl-kw">in</span> <span class="hl-var">dairy_exclusions</span> <span class="hl-kw">for</span> <span class="hl-var">item</span> <span class="hl-kw">in</span> [<span class="hl-str">"milk"</span>, <span class="hl-str">"cheese"</span>, <span class="hl-str">"cream"</span>, <span class="hl-str">"butter"</span>])
+    )
+
+    <span class="hl-cm"># 3. Maximum cook time constraint enforced</span>
+    <span class="hl-var">max_time</span> = <span class="hl-var">turn_2_tool</span>.get(<span class="hl-str">"max_cook_time_mins"</span>, <span class="hl-num">999</span>)
+    <span class="hl-var">time_enforced</span> = <span class="hl-var">max_time</span> &lt;= <span class="hl-num">30</span>
+
+    <span class="hl-kw">return</span> <span class="hl-var">base_persisted</span> <span class="hl-kw">and</span> <span class="hl-var">dairy_excluded</span> <span class="hl-kw">and</span> <span class="hl-var">time_enforced</span></code></pre>
+      </div>
+
+      <div class="callout callout-gcp">
+        <span class="material-symbols-outlined callout-icon">verified</span>
+        <div class="callout-content">
+          <strong>Deterministic Assertion Rule:</strong>
+          When testing multi-turn agents, always assert against both positive entity retention (initial user items) and negative parameter activation (exclusions, thresholds) across the conversation history.
+        </div>
+      </div>
+
+      <hr class="post-divider" />
+
+      <!-- Summary & Matrix -->
+      <h2>Deterministic Evaluation Scorecard</h2>
+
+      <div class="table-container">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Evaluation Level</th>
+              <th>What It Checks</th>
+              <th>Execution Time &amp; Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Example 1: Baseline Parameter Match</strong></td>
+              <td>Key presence, basic string containment, default ratings</td>
+              <td>&lt; 1 ms • $0.00 / run</td>
+            </tr>
+            <tr>
+              <td><strong>Example 2: Categorical &amp; Numerical Filters</strong></td>
+              <td>Dietary enums, time boundary thresholds, schema types</td>
+              <td>&lt; 1 ms • $0.00 / run</td>
+            </tr>
+            <tr>
+              <td><strong>Example 3: Multi-Turn Trajectory Persistence</strong></td>
+              <td>Context carryover, negation memory, multi-turn state diffing</td>
+              <td>&lt; 2 ms • $0.00 / run</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="callout callout-info">
+        <span class="material-symbols-outlined callout-icon">bolt</span>
+        <div class="callout-content">
+          <strong>Key Takeaway:</strong>
+          Deterministic evals are your unit tests. They guarantee structural integrity, parameter precision, and trajectory safety. Once these pass, you layer on <strong>non-deterministic scorers (LLM-as-a-judge)</strong> to evaluate culinary realism, tone, and subjective experience.
+        </div>
+      </div>
+    </section>
+
+    <footer class="post-detail-footer">
+      <div class="share-info">
+        <span class="font-label-sm text-muted">Published in AI Evals &amp; Agent Testing</span>
+        <span class="font-body-md">Series: Agent Evaluation Playbook (Part 1 of 2)</span>
+      </div>
+      <button class="btn btn-secondary neumorphic-outset" (click)="back.emit()">
+        <span class="material-symbols-outlined">arrow_back</span>
+        <span>Back to All Articles</span>
+      </button>
+    </footer>
+  </article>
+</div>
