@@ -8,14 +8,13 @@
   <article class="blog-post-content">
     <header class="post-detail-header">
       <div class="post-detail-meta font-label-sm">
-        <span class="category-badge">AI Evals & Metrics</span>
+        <span class="category-badge">{{ post.category }}</span>
         <span class="divider">/</span>
-        <span>July 8, 2026</span>
+        <span>{{ post.date }}</span>
         <span class="divider">•</span>
-        <span>5 min read</span>
+        <span>{{ post.readTime }}</span>
       </div>
-      <h1 class="font-display post-detail-title">Evals are not an afterthought: how to test LLM agents that actually
-        work in production</h1>
+      <h1 class="font-display post-detail-title">{{ post.title }}</h1>
 
       <div class="author-badge neumorphic-inset">
         <div class="avatar">

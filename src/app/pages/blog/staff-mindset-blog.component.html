@@ -8,14 +8,14 @@
   <article class="blog-post-content">
     <header class="post-detail-header">
       <div class="post-detail-meta font-label-sm">
-        <span class="category-badge">Staff Engineering & AI</span>
+        <span class="category-badge">{{ post.category }}</span>
         <span class="divider">/</span>
-        <span>September 24, 2026</span>
+        <span>{{ post.date }}</span>
         <span class="divider">•</span>
-        <span>5 min read</span>
+        <span>{{ post.readTime }}</span>
       </div>
       <h1 class="font-display post-detail-title">
-        Becoming a Staff Engineer in the Age of AI: 5 Unlearnings
+        {{ post.title }}
       </h1>
 
       <div class="author-badge neumorphic-inset">
@@ -176,10 +176,9 @@
     <!-- Post Footer -->
     <footer class="post-detail-footer">
       <div class="post-tags-detail">
-        <span class="chip font-label-sm">Staff Engineering</span>
-        <span class="chip font-label-sm">AI Mindset</span>
-        <span class="chip font-label-sm">Career Growth</span>
-        <span class="chip font-label-sm">Engineering Culture</span>
+        @for (tag of post.tags; track tag) {
+          <span class="chip font-label-sm">{{ tag }}</span>
+        }
       </div>
       <button class="btn btn-secondary neumorphic-outset" (click)="back.emit()">
         <span class="material-symbols-outlined">arrow_back</span>
