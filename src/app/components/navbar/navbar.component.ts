@@ -20,7 +20,7 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
           <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link">Home</a>
           <a routerLink="/lab" routerLinkActive="active" class="nav-link">Lab</a>
           <a routerLink="/hobbies" routerLinkActive="active" class="nav-link">Creative Corner</a>
-          <a routerLink="/blog" routerLinkActive="active" class="nav-link">Blog</a>
+          <a routerLink="/journal" routerLinkActive="active" class="nav-link">Journal</a>
         </nav>
 
         <!-- Actions -->
@@ -51,7 +51,7 @@ import { ThemeToggleComponent } from '../theme-toggle/theme-toggle.component';
           <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" class="nav-link-mobile" (click)="closeMenu()">Home</a>
           <a routerLink="/lab" routerLinkActive="active" class="nav-link-mobile" (click)="closeMenu()">Lab</a>
           <a routerLink="/hobbies" routerLinkActive="active" class="nav-link-mobile" (click)="closeMenu()">Creative Corner</a>
-          <a routerLink="/blog" routerLinkActive="active" class="nav-link-mobile" (click)="closeMenu()">Blog</a>
+          <a routerLink="/journal" routerLinkActive="active" class="nav-link-mobile" (click)="closeMenu()">Journal</a>
           <div class="theme-toggle-container-mobile">
             <span class="theme-label font-label-sm">Theme</span>
             <app-theme-toggle></app-theme-toggle>

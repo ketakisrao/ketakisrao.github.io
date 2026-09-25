@@ -93,12 +93,12 @@ export class BlogComponent implements OnInit {
   }
 
   selectPost(post: any): void {
-    this.router.navigate(['/blog', post.slug]);
+    this.router.navigate(['/journal', post.slug]);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   deselectPost(): void {
-    this.router.navigate(['/blog']);
+    this.router.navigate(['/journal']);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
