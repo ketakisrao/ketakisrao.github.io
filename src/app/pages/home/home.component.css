@@ -177,26 +177,80 @@
 }
 
 /* ==========================================================================
-   Bento / Ethics Grid
+   Operating Principles Grid & Card Styling
    ========================================================================== */
 
 .ethics-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-lg);
+  gap: var(--space-md);
+  width: 100%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 640px) {
   .ethics-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .ethics-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-xl);
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-md);
   }
+}
+
+.principle-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px 20px;
+  background-color: var(--sys-surface-lowest);
+  border-radius: var(--radius-lg);
+  border: var(--border-sage);
+  box-shadow: var(--shadow-neumorphic-outset);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.principle-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-neumorphic-outset), 0 12px 24px rgba(0, 0, 0, 0.04);
+  border-color: rgba(82, 100, 66, 0.35);
+}
+
+.principle-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.principle-number {
+  font-family: var(--font-label);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--sys-outline);
+  opacity: 0.6;
+}
+
+.principle-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--sys-on-bg);
+  line-height: 1.25;
+  margin: 0;
+}
+
+.principle-core {
+  font-size: 0.88rem;
+  color: var(--sys-outline);
+  line-height: 1.55;
+  margin: 0;
 }
 
 /* Premium Card Scaffold */
@@ -334,30 +388,340 @@
 }
 
 /* ==========================================================================
-   Stack Section
+   Capabilities & Impact (Segmented Matrix Studio Prototype - Option 2)
    ========================================================================== */
 
-.stack-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-lg);
+.capabilities-section {
+  position: relative;
+  width: 100%;
+  scroll-margin-top: 100px;
+}
+
+/* Modern Segmented Control Bar */
+.segmented-control-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: var(--space-xl);
+  padding: 6px;
+  background-color: color-mix(in srgb, var(--sys-outline) 7%, var(--sys-surface-lowest));
+  border-radius: var(--radius-full);
+  border: var(--border-sage);
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.segmented-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+  padding: 10px 20px;
+  color: var(--sys-outline);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.segmented-tab .tab-icon {
+  font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.segmented-tab .tab-label {
+  letter-spacing: -0.01em;
+}
+
+.segmented-tab .tab-count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--sys-outline) 14%, transparent);
+  color: inherit;
+  font-size: 0.7rem;
+  font-family: var(--font-label);
+  font-weight: 700;
+}
+
+.segmented-tab:hover {
+  color: var(--sys-on-bg);
+  background-color: color-mix(in srgb, var(--sys-primary) 6%, transparent);
+}
+
+.segmented-tab.is-active {
+  background-color: var(--sys-surface-lowest);
+  border-color: color-mix(in srgb, var(--sys-primary) 25%, transparent);
+  color: var(--sys-on-bg);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.segmented-tab.is-active .tab-icon {
+  color: var(--sys-primary);
+  transform: scale(1.1);
+}
+
+.segmented-tab.is-active .tab-count {
+  background-color: color-mix(in srgb, var(--sys-primary) 14%, transparent);
+  color: var(--sys-primary);
+}
+
+/* Studio Stage Container */
+.studio-stage-container {
+  position: relative;
+  width: 100%;
+  background-color: var(--sys-surface-lowest);
+  border-radius: var(--radius-xl);
+  border: var(--border-sage);
+  padding: 28px;
+  box-shadow: var(--shadow-neumorphic-outset);
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
-  .stack-grid {
+  .studio-stage-container {
+    padding: 36px 40px;
+  }
+}
+
+/* Ambient Canvas Backdrop */
+.ambient-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+/* Active Pillar Stage Header */
+.stage-header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  border-bottom: 1px solid color-mix(in srgb, var(--sys-outline) 12%, transparent);
+  margin-bottom: 28px;
+}
+
+.stage-header-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.stage-icon-box {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.stage-icon-box.accent-primary {
+  background-color: color-mix(in srgb, var(--sys-primary) 14%, transparent);
+  color: var(--sys-primary);
+}
+
+.stage-icon-box.accent-secondary {
+  background-color: color-mix(in srgb, var(--sys-secondary) 14%, transparent);
+  color: var(--sys-secondary);
+}
+
+.stage-icon-box .material-symbols-outlined {
+  font-size: 24px;
+}
+
+.stage-title-group {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.stage-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 2px;
+}
+
+.stage-badge {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: color-mix(in srgb, var(--sys-primary) 12%, transparent);
+  color: var(--sys-primary);
+  font-weight: 700;
+}
+
+.stage-domain-tag {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 8px;
+  border-radius: var(--radius-full);
+  background: color-mix(in srgb, var(--sys-outline) 8%, transparent);
+  color: var(--sys-outline);
+  font-weight: 600;
+}
+
+.stage-title {
+  font-family: var(--font-display);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--sys-on-bg);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.stage-subtitle {
+  font-size: 0.92rem;
+  color: var(--sys-outline);
+  line-height: 1.5;
+  margin: 0;
+  max-width: 720px;
+}
+
+/* 4-Module Telemetry Matrix Grid */
+.stage-matrix-grid {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 900px) {
+  .stage-matrix-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
   }
 }
 
-@media (min-width: 1200px) {
-  .stack-grid {
-    gap: var(--space-xl);
-  }
+/* Matrix Module */
+.matrix-module {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 22px 24px;
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--sys-surface-lowest) 92%, transparent);
+  border: 1px solid color-mix(in srgb, var(--sys-outline) 14%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.28s ease,
+              box-shadow 0.28s ease;
 }
 
-.stack-card {
-  padding: 40px;
+.matrix-module:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--sys-primary) 35%, transparent);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
+
+.matrix-module.is-highlight {
+  border-color: color-mix(in srgb, var(--sys-primary) 30%, transparent);
+}
+
+.module-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.module-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.module-tag {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--sys-outline);
+  font-weight: 700;
+}
+
+.module-metric-pill {
+  font-family: var(--font-label);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  background-color: color-mix(in srgb, var(--sys-primary) 12%, var(--sys-surface-lowest));
+  color: var(--sys-primary);
+  border: 1px solid color-mix(in srgb, var(--sys-primary) 28%, transparent);
+  letter-spacing: -0.01em;
+}
+
+.module-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--sys-on-bg);
+  line-height: 1.25;
+  margin: 0;
+}
+
+.module-body {
+  flex-grow: 1;
+}
+
+.module-impact {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--sys-on-bg);
+  margin: 0;
+}
+
+.module-footer {
+  margin-top: auto;
+  padding-top: 10px;
+  border-top: 1px solid color-mix(in srgb, var(--sys-outline) 10%, transparent);
+}
+
+.module-tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.module-tech-chip {
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: var(--radius-xs);
+  background: color-mix(in srgb, var(--sys-outline) 7%, var(--sys-surface-lowest));
+  border: 1px solid color-mix(in srgb, var(--sys-outline) 14%, transparent);
+  color: var(--sys-outline);
+  font-weight: 500;
+}
+
+/* Prompt state when no skill is selected */
+
 
 /* ==========================================================================
    Quote Section

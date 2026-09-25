@@ -1,12 +1,12 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-deterministic-evals-blog',
+  selector: 'app-staff-mindset-blog',
   standalone: true,
   imports: [],
-  templateUrl: './deterministic-evals-blog.component.html',
+  templateUrl: './staff-mindset-blog.component.html',
   styleUrl: './blog.component.css'
 })
-export class DeterministicEvalsBlogComponent {
+export class StaffMindsetBlogComponent {
   @Output() back = new EventEmitter<void>();
 }

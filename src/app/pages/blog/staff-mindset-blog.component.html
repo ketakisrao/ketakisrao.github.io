@@ -1,0 +1,190 @@
+<!-- Blog Post Detail View -->
+<div class="blog-detail-container animate-slide-up">
+  <button class="btn btn-secondary neumorphic-outset btn-back" (click)="back.emit()">
+    <span class="material-symbols-outlined">arrow_back</span>
+    <span>Back to Journal</span>
+  </button>
+
+  <article class="blog-post-content">
+    <header class="post-detail-header">
+      <div class="post-detail-meta font-label-sm">
+        <span class="category-badge">Staff Engineering & AI</span>
+        <span class="divider">/</span>
+        <span>September 24, 2026</span>
+        <span class="divider">•</span>
+        <span>5 min read</span>
+      </div>
+      <h1 class="font-display post-detail-title">
+        Becoming a Staff Engineer in the Age of AI: 5 Unlearnings
+      </h1>
+
+      <div class="author-badge neumorphic-inset">
+        <div class="avatar">
+          <span class="material-symbols-outlined">psychology</span>
+        </div>
+        <div class="author-info">
+          <span class="author-name">Ketaki Rao</span>
+          <span class="author-role">Staff Software Engineer • HCI & Data Science</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="post-body font-body-md">
+      <p class="lead-text">
+        A recent post on "unlearnings" in the AI era really stuck with me. Moving toward staff engineering is rarely about
+        adopting new tools; it is about letting go of the instincts that made you feel competent earlier in your career.
+      </p>
+
+      <p>
+        Engineering progression long rewarded heads-down execution: syntax mastery, closed tickets, and grinding through
+        problems alone. As AI absorbs much of that mechanical heavy lifting, it accelerates the shift toward what staff-level
+        engineering has always demanded: judgment, architectural clarity, and durable business outcomes.
+      </p>
+
+      <p>
+        Here are the five unlearnings from that post and my engineering lens on them.
+      </p>
+
+      <hr class="post-divider" />
+
+      <!-- 1. Unlearn doing everything yourself -->
+      <h2>1. Unlearn doing everything yourself</h2>
+
+      <p>
+        This one stings when your professional identity was forged by being the person who can always figure it out
+        alone.
+        At junior and senior levels, writing every line yourself feels like craftsmanship. At staff level, it is a
+        bottleneck.
+      </p>
+
+      <p><strong>Here's how I do it:</strong></p>
+      <ul>
+        <li><strong>End-to-end vision before delegation:</strong> I solidify the initial architecture and decide how
+          each piece fits in before delegating the code generation and scaffolding to AI tools.</li>
+        <li><strong>Focus energy on critical review:</strong> I spend my cognitive budget stress-testing edge cases,
+          security boundaries, and failure modes rather than syntax generation.</li>
+      </ul>
+
+      <!-- 2. Unlearn equating effort with value -->
+      <h2>2. Unlearn equating effort with value</h2>
+
+      <p>
+        There is a quiet guilt in engineering when something takes thirty minutes instead of three days. We have been
+        conditioned
+        to associate sweat equity with value. But users do not care how many hours you sat in your IDE; they care
+        whether the problem is solved.
+      </p>
+
+      <p><strong>Here's how I do it:</strong></p>
+      <ul>
+        <li><strong>Instrument telemetry on day one:</strong> I measure real post-launch metrics like user adoption,
+          latency, and drop-offs rather than tracking hours logged or tickets closed.</li>
+        <li><strong>Partner closely with data analysts:</strong> Numbers tell you what is happening in production. I
+          work with analysts to translate technical performance into business impact narratives that code alone cannot
+          tell.</li>
+      </ul>
+
+      <!-- 3. Unlearn waiting until you know how -->
+      <h2>3. Unlearn waiting until you know how</h2>
+
+      <p>
+        The urge to feel fully prepared before touching an unfamiliar codebase is deeply wired. Historically, entering
+        an unfamiliar domain meant
+        wading through mounds of stale, disjointed docs, hitting permission walls, or scheduling meetings with senior
+        teammates just to get oriented.
+        Today, AI tools make it frictionless to cut through that noise and extract personalized, context-rich
+        information from massive corpuses of internal documentation, surfacing exactly what matters to you and your
+        specific use case.
+      </p>
+
+      <p><strong>Here's how I do it:</strong></p>
+      <ul>
+        <li><strong>Extract personalized insights from mounds of docs:</strong> Instead of manually sifting through
+          hundreds of wiki pages and RFCs, I prompt AI tools to synthesize internal documentation directly against my
+          exact use case, constraints, and service dependencies.</li>
+        <li><strong>Converse with the codebase directly:</strong> Before filing a ticket or scheduling a sync, I query
+          internal knowledge bases and repo contexts to test assumptions and build end-to-end mental models in minutes.
+        </li>
+      </ul>
+
+      <!-- 4. Unlearn protecting expertise by staying in your lane -->
+      <h2>4. Unlearn protecting your expertise by staying in your lane</h2>
+
+      <p>
+        Honestly, the "stay in your lane" mindset bothered me even as a junior engineer. Breadth matters.
+        Understanding the full spectrum makes you sharper, not less specialized.
+      </p>
+
+      <p><strong>Here's how I do it:</strong></p>
+      <ul>
+        <li><strong>Trace the full request lifecycle:</strong> When working on frontend code, I do not stop at the UI; I
+          dig into the API gateway, database queries, and caching layers to see the whole system.</li>
+        <li><strong>Design for platform reusability:</strong> I look for patterns that can be abstracted into shared
+          primitives, making it easy for multiple squads to solve the same problem reliably.</li>
+      </ul>
+
+      <!-- 5. Unlearn decomposing work by role -->
+      <h2>5. Unlearn decomposing work by role or ticket</h2>
+
+      <p>
+        Senior engineers complete Jira tickets efficiently. Staff engineers look beyond the ticket to the company's
+        broader trajectory.
+      </p>
+
+      <p><strong>Here's how I do it:</strong></p>
+      <ul>
+        <li><strong>Tie engineering choices to business health:</strong> Before writing a spec, I ask whether this will
+          improve NPS, customer trust, revenue, or retention.</li>
+        <li><strong>Sit in on user research:</strong> I watch real users interact with our features to see where they
+          hesitate, ensuring technical designs fit human mental models rather than system convenience.</li>
+        <li><strong>Co-design telemetry with data analysts:</strong> I involve data analysts during early architecture
+          and
+          data modeling to decide exactly how key metrics will be tracked. Thinking across engineering, product, and
+          data
+          perspectives up front ensures we measure true impact rather than scrambling for retroactive analytics.</li>
+      </ul>
+
+      <hr class="post-divider" />
+
+      <!-- The Horizon -->
+      <h2>Stepping into Staff Thinking</h2>
+
+      <p>
+        The step from senior to staff engineering is notoriously tricky because it requires
+        setting aside the very instincts that brought you early success:
+      </p>
+
+      <blockquote>
+        Less execution, more judgment.<br />
+        Less ownership of individual tasks, more ownership of outcomes.<br />
+        Less <em>"I built this,"</em> more <em>"this is why it mattered."</em>
+      </blockquote>
+
+      <p>
+        Working alongside AI doesn't diminish engineering; it simply reallocates where our attention goes. When syntax,
+        scaffolding, and initial drafts take minutes instead of days, the work that remains (architectural judgment,
+        deep empathy for users, cross-functional alignment, and strategic clarity) is what engineering leadership has
+        always been about.
+      </p>
+
+      <p>
+        Unlearning old habits is uncomfortable, but it makes space for the kind of work that truly moves teams and
+        products forward.
+      </p>
+    </section>
+
+    <!-- Post Footer -->
+    <footer class="post-detail-footer">
+      <div class="post-tags-detail">
+        <span class="chip font-label-sm">Staff Engineering</span>
+        <span class="chip font-label-sm">AI Mindset</span>
+        <span class="chip font-label-sm">Career Growth</span>
+        <span class="chip font-label-sm">Engineering Culture</span>
+      </div>
+      <button class="btn btn-secondary neumorphic-outset" (click)="back.emit()">
+        <span class="material-symbols-outlined">arrow_back</span>
+        <span>Back to Journal</span>
+      </button>
+    </footer>
+  </article>
+</div>
